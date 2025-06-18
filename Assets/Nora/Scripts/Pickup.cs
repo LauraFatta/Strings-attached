@@ -50,10 +50,10 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
                 {
                     textComponent.text = gameItem.itemName;
                 }
-                else
-                {
-                    Debug.LogWarning("لم يتم العثور على TextMeshProUGUI!");
-                }
+                // else
+                // {
+                //     Debug.LogWarning("لم يتم العثور على TextMeshProUGUI!");
+                // }
 
                 inventory.items[i] = 1;
                 Destroy(gameObject);

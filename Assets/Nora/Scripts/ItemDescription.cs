@@ -6,7 +6,7 @@ public class ItemDescription : MonoBehaviour, IPointerEnterHandler, IPointerExit
 {
     public GameItem gameItem;
     public TextMeshProUGUI descriptionText;
-    public float displayDuration = 1f;
+    private float displayDuration = 1f;
     private Coroutine descriptionCoroutine;
 
     public void OnPointerEnter(PointerEventData eventData)
