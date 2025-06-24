@@ -18,47 +18,54 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
         }
     }
 
+
     // public void OnPointerDown(PointerEventData eventData)
     // {
-    //     if (inventory == null) return;
-
     //     for (int i = 0; i < inventory.items.Length; i++)
     //     {
     //         if (inventory.items[i] == 0)
     //         {
+    //             GameObject button = Instantiate(gameItem.itemButton, inventory.slots[i].transform, false);
+
+
+    //             TextMeshProUGUI textComponent = button.GetComponentInChildren<TextMeshProUGUI>();
+    //             if (textComponent != null)
+    //             {
+    //                 textComponent.text = gameItem.itemName;
+    //             }
+
 
     //             inventory.items[i] = 1;
-    //             Instantiate(gameItem.itemButton, inventory.slots[i].transform, false);
-
-
     //             Destroy(gameObject);
     //             break;
     //         }
     //     }
     // }
     public void OnPointerDown(PointerEventData eventData)
+{
+    for (int i = 0; i < inventory.items.Length; i++)
     {
-        for (int i = 0; i < inventory.items.Length; i++)
+        if (inventory.items[i] == 0)
         {
-            if (inventory.items[i] == 0)
+            GameObject button = Instantiate(gameItem.itemButton, inventory.slots[i].transform, false);
+
+            TextMeshProUGUI textComponent = button.GetComponentInChildren<TextMeshProUGUI>();
+            if (textComponent != null)
             {
-                GameObject button = Instantiate(gameItem.itemButton, inventory.slots[i].transform, false);
+                textComponent.text = gameItem.itemName;
 
-                
-                TextMeshProUGUI textComponent = button.GetComponentInChildren<TextMeshProUGUI>();
-                if (textComponent != null)
+            
+                if (gameItem.itemType == ItemType.Word)
                 {
-                    textComponent.text = gameItem.itemName;
+                    textComponent.color = Color.yellow;
                 }
-                // else
-                // {
-                //     Debug.LogWarning("لم يتم العثور على TextMeshProUGUI!");
-                // }
-
-                inventory.items[i] = 1;
-                Destroy(gameObject);
-                break;
             }
+
+            inventory.items[i] = 1;
+            Destroy(gameObject);
+            break;
         }
     }
+}
+
 }

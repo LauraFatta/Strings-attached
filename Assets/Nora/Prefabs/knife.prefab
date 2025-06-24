@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 320611889289197678}
   - component: {fileID: 1917256180532591137}
   - component: {fileID: 8913015742412063571}
+  - component: {fileID: 3979398355802501475}
   m_Layer: 0
   m_Name: knife
   m_TagString: Untagged
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 20
   m_Sprite: {fileID: -5208233660972903108, guid: 629f91c6d37b4f84d8a5249f2efc576c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -139,3 +140,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.64, y: 2.59}
   m_Direction: 0
+--- !u!114 &3979398355802501475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8905201295445356391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2367c78b9a68c040afee27e490dbc25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameItem: {fileID: 11400000, guid: d129654b2bca5384ea0958ad36f4f018, type: 2}
+  descriptionText: {fileID: 0}
