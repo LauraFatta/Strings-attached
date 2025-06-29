@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: Word
   itemButton: {fileID: 9036696208694164122, guid: 3a2da348b730db8479dd06232b63cc12, type: 3}
   itemType: 1
-  itemDescription: Word item
+  itemDescription: 
