@@ -10,7 +10,6 @@ public class MenuButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 	[SerializeField] AnimatorFunctions animatorFunctions;
 	[SerializeField] int thisIndex;
 
-    // Update is called once per frame
     void Update()
     {
 		if(menuButtonController.index == thisIndex)
@@ -29,7 +28,6 @@ public class MenuButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // Simulate the same logic as keyboard "Submit"
         if (menuButtonController.index == thisIndex)
         {
             animator.SetBool("pressed", true);
@@ -39,13 +37,11 @@ public class MenuButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // Set this button as selected when mouse hovers over
         menuButtonController.index = thisIndex;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // Optionally, deselect when mouse leaves (or keep selected)
         animator.SetBool("selected", false); 
     }
 }
