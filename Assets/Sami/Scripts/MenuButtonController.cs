@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MenuButtonController : MonoBehaviour {
 
+	// Use this for initialization
 	public int index;
 	[SerializeField] bool keyDown;
 	[SerializeField] int maxIndex;
@@ -13,6 +14,7 @@ public class MenuButtonController : MonoBehaviour {
 		audioSource = GetComponent<AudioSource>();
 	}
 	
+	// Update is called once per frame
 	void Update () {
 		if(Input.GetAxis ("Vertical") != 0){
 			if(!keyDown){

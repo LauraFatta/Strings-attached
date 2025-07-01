@@ -8,6 +8,7 @@ public class BackButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
     void Start()
     {
+        // Get components if not assigned
         if (animator == null)
             animator = GetComponent<Animator>();
         if (animatorFunctions == null)
@@ -16,6 +17,7 @@ public class BackButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        // Trigger hover animation
         if (animator != null)
         {
             animator.SetBool("selected", true);
@@ -24,6 +26,7 @@ public class BackButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        // Stop hover animation
         if (animator != null)
         {
             animator.SetBool("selected", false);
@@ -32,6 +35,7 @@ public class BackButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        // Trigger click animation
         if (animator != null)
         {
             animator.SetBool("pressed", true);
@@ -45,8 +49,10 @@ public class BackButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
     void Update()
     {
+        // Reset the pressed state after animation
         if (animator != null && animator.GetBool("pressed"))
         {
+            // Check if mouse button is released
             if (!Input.GetMouseButton(0))
             {
                 animator.SetBool("pressed", false);
