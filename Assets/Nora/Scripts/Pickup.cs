@@ -7,18 +7,12 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
     public GameItem gameItem; // ScriptableObject 
 
     private Inventory inventory;
-<<<<<<< Updated upstream
     private InventoryUI inventoryUI;
-=======
->>>>>>> Stashed changes
 
     private void Start()
     {
         inventory = FindObjectOfType<Inventory>();
-<<<<<<< Updated upstream
         inventoryUI = FindObjectOfType<InventoryUI>();
-=======
->>>>>>> Stashed changes
         if (inventory == null)
         {
             Debug.LogError("Inventory not found in the scene!");
@@ -27,31 +21,6 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
     }
 
 
-<<<<<<< Updated upstream
-=======
-    // public void OnPointerDown(PointerEventData eventData)
-    // {
-    //     for (int i = 0; i < inventory.items.Length; i++)
-    //     {
-    //         if (inventory.items[i] == 0)
-    //         {
-    //             GameObject button = Instantiate(gameItem.itemButton, inventory.slots[i].transform, false);
-
-
-    //             TextMeshProUGUI textComponent = button.GetComponentInChildren<TextMeshProUGUI>();
-    //             if (textComponent != null)
-    //             {
-    //                 textComponent.text = gameItem.itemName;
-    //             }
-
-
-    //             inventory.items[i] = 1;
-    //             Destroy(gameObject);
-    //             break;
-    //         }
-    //     }
-    // }
->>>>>>> Stashed changes
     public void OnPointerDown(PointerEventData eventData)
 {
     for (int i = 0; i < inventory.items.Length; i++)
@@ -73,10 +42,7 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
             }
 
             inventory.items[i] = 1;
-<<<<<<< Updated upstream
             inventoryUI.UpdateItemCount();
-=======
->>>>>>> Stashed changes
             Destroy(gameObject);
             break;
         }

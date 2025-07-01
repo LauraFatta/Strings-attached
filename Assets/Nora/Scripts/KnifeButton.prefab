@@ -14,10 +14,6 @@ GameObject:
   - component: {fileID: 305370889535152774}
   - component: {fileID: 803316615169643855}
   - component: {fileID: 3330666785467340093}
-<<<<<<< Updated upstream
-=======
-  - component: {fileID: 8117883824221955549}
->>>>>>> Stashed changes
   m_Layer: 5
   m_Name: KnifeButton
   m_TagString: Untagged
@@ -154,21 +150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNameText: {fileID: 81911923908681256}
-<<<<<<< Updated upstream
-=======
---- !u!114 &8117883824221955549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3824888801463719307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1ac350aab6e90849a076c47383c15d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
->>>>>>> Stashed changes
 --- !u!1 &8227327845578437380
 GameObject:
   m_ObjectHideFlags: 0

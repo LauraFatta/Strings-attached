@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Laura/Nora's.unity
+- path: Assets/Nora/Nora's.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
