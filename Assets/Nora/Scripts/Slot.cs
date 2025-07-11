@@ -19,7 +19,8 @@ public class Slot : MonoBehaviour
     {
         if (transform.childCount <= 0)
         {
-            inventory.items[index] = 0;
+           
+            inventory.items[index] = null;
         }
     }
 
@@ -32,7 +33,11 @@ public class Slot : MonoBehaviour
             {
                 spawner.SpawnItem();
             }
+
             Destroy(child.gameObject);
         }
+
+        
+        inventory.items[index] = null;
     }
 }

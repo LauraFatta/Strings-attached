@@ -7,12 +7,12 @@ public class InventoryUI : MonoBehaviour
     public TextMeshProUGUI itemCountText;
     public int totalItems = 2;
 
-    private Inventory inventory; 
+    private Inventory inventory;
 
     private void Start()
     {
         inventory = FindObjectOfType<Inventory>();
-        UpdateItemCount(); 
+        UpdateItemCount();
         inventoryPanel.SetActive(false);
     }
 
@@ -27,9 +27,11 @@ public class InventoryUI : MonoBehaviour
             return;
 
         int collected = 0;
-        foreach (int i in inventory.items)
+
+        foreach (GameItem item in inventory.items)
         {
-            if (i == 1) collected++;
+            if (item != null && item.itemType != ItemType.ComponentOnly)
+                collected++;
         }
 
         itemCountText.text = $"{collected} / {totalItems}";

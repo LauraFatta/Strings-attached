@@ -3,7 +3,9 @@ using UnityEngine;
 public enum ItemType
 {
     Object,
-    Word 
+    Word,
+    Composite,
+    ComponentOnly 
 }
 [CreateAssetMenu(fileName = "GameItem", menuName = "ScriptableObjects/GameItem")]
 public class GameItem : ScriptableObject
@@ -13,7 +15,10 @@ public class GameItem : ScriptableObject
     public GameObject itemButton;
     public ItemType itemType;
 
-    [TextArea(3, 10)] 
+    [TextArea(3, 10)]
     public string itemDescription;
+    
+    public GameItem requiredItemA;
+    public GameItem requiredItemB;
 }
 

@@ -20,33 +20,40 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
         }
     }
 
-
     public void OnPointerDown(PointerEventData eventData)
-{
-    for (int i = 0; i < inventory.items.Length; i++)
     {
-        if (inventory.items[i] == 0)
+        
+        if (gameItem.itemType == ItemType.ComponentOnly)
         {
-            GameObject button = Instantiate(gameItem.itemButton, inventory.slots[i].transform, false);
-
-            TextMeshProUGUI textComponent = button.GetComponentInChildren<TextMeshProUGUI>();
-            if (textComponent != null)
-            {
-                textComponent.text = gameItem.itemName;
-
-            
-                if (gameItem.itemType == ItemType.Word)
-                {
-                    textComponent.color = Color.yellow;
-                }
-            }
-
-            inventory.items[i] = 1;
-            inventoryUI.UpdateItemCount();
+            inventory.AddItem(gameItem); 
             Destroy(gameObject);
-            break;
+            return;
+        }
+
+        
+        for (int i = 0; i < inventory.items.Length; i++)
+        {
+            if (inventory.items[i] == null)
+            {
+                inventory.items[i] = gameItem;
+
+                GameObject button = Instantiate(gameItem.itemButton, inventory.slots[i].transform, false);
+
+                TextMeshProUGUI textComponent = button.GetComponentInChildren<TextMeshProUGUI>();
+                if (textComponent != null)
+                {
+                    textComponent.text = gameItem.itemName;
+
+                    if (gameItem.itemType == ItemType.Word)
+                    {
+                        textComponent.color = Color.yellow;
+                    }
+                }
+
+                inventoryUI.UpdateItemCount();
+                Destroy(gameObject);
+                break;
+            }
         }
     }
-}
-
 }
