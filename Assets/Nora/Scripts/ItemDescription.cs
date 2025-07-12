@@ -14,16 +14,16 @@ public class ItemDescription : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
         if (descriptionCoroutine != null)
             StopCoroutine(descriptionCoroutine);
-            
+
         ShowDescription();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
- 
+
         if (descriptionCoroutine != null)
             StopCoroutine(descriptionCoroutine);
-            
+
         descriptionCoroutine = StartCoroutine(HideDescriptionAfterDelay());
     }
 
@@ -36,16 +36,37 @@ public class ItemDescription : MonoBehaviour, IPointerEnterHandler, IPointerExit
         }
     }
 
+    // private System.Collections.IEnumerator HideDescriptionAfterDelay()
+    // {
+    //     yield return new WaitForSeconds(displayDuration);
+    //     descriptionText.gameObject.SetActive(false);
+    // }
+
+
+    // private void OnDestroy()
+    // {
+    //     if (descriptionText != null)
+    //         descriptionText.gameObject.SetActive(false);
+    // }
+    private void OnDestroy()
+    {
+        if (descriptionCoroutine != null)
+        {
+            StopCoroutine(descriptionCoroutine);
+        }
+
+        if (descriptionText != null && descriptionText.gameObject != null)
+        {
+            descriptionText.gameObject.SetActive(false);
+        }
+    }
+    
     private System.Collections.IEnumerator HideDescriptionAfterDelay()
     {
         yield return new WaitForSeconds(displayDuration);
-        descriptionText.gameObject.SetActive(false);
-    }
-
- 
-    private void OnDestroy()
-    {
-        if (descriptionText != null)
+        if (descriptionText != null && descriptionText.gameObject != null)
+        {
             descriptionText.gameObject.SetActive(false);
+        }
     }
 }

@@ -4,10 +4,12 @@ public class Slot : MonoBehaviour
 {
     public int index;
     private Inventory inventory;
+    private InventoryUI inventoryUI;
 
     private void Start()
     {
         inventory = FindObjectOfType<Inventory>();
+        inventoryUI = FindObjectOfType<InventoryUI>();
         if (inventory == null)
         {
             Debug.LogError("Inventory not found!");
@@ -15,12 +17,20 @@ public class Slot : MonoBehaviour
         }
     }
 
-    private void Update()
+    // private void Update()
+    // {
+    //     if (transform.childCount <= 0)
+    //     {
+           
+    //         inventory.items[index] = null;
+    //     }
+    // }
+    private void OnTransformChildrenChanged()
     {
         if (transform.childCount <= 0)
         {
-           
             inventory.items[index] = null;
+            inventoryUI.UpdateItemCount();
         }
     }
 
@@ -37,7 +47,8 @@ public class Slot : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        
+
         inventory.items[index] = null;
+        inventoryUI.UpdateItemCount();
     }
 }

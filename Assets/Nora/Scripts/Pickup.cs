@@ -20,40 +20,47 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
         }
     }
 
+    // public void OnPointerDown(PointerEventData eventData)
+    // {
+
+    //     if (gameItem.itemType == ItemType.ComponentOnly)
+    //     {
+    //         inventory.AddItem(gameItem); 
+    //         Destroy(gameObject);
+    //         return;
+    //     }
+
+
+    //     for (int i = 0; i < inventory.items.Length; i++)
+    //     {
+    //         if (inventory.items[i] == null)
+    //         {
+    //             inventory.items[i] = gameItem;
+
+    //             GameObject button = Instantiate(gameItem.itemButton, inventory.slots[i].transform, false);
+
+    //             TextMeshProUGUI textComponent = button.GetComponentInChildren<TextMeshProUGUI>();
+    //             if (textComponent != null)
+    //             {
+    //                 textComponent.text = gameItem.itemName;
+
+    //                 if (gameItem.itemType == ItemType.Word)
+    //                 {
+    //                     textComponent.color = Color.yellow;
+    //                 }
+    //             }
+
+    //             inventoryUI.UpdateItemCount();
+    //             Destroy(gameObject);
+    //             break;
+    //         }
+    //     }
+    // }
     public void OnPointerDown(PointerEventData eventData)
     {
-        
-        if (gameItem.itemType == ItemType.ComponentOnly)
+        if (inventory.AddItem(gameItem))
         {
-            inventory.AddItem(gameItem); 
             Destroy(gameObject);
-            return;
-        }
-
-        
-        for (int i = 0; i < inventory.items.Length; i++)
-        {
-            if (inventory.items[i] == null)
-            {
-                inventory.items[i] = gameItem;
-
-                GameObject button = Instantiate(gameItem.itemButton, inventory.slots[i].transform, false);
-
-                TextMeshProUGUI textComponent = button.GetComponentInChildren<TextMeshProUGUI>();
-                if (textComponent != null)
-                {
-                    textComponent.text = gameItem.itemName;
-
-                    if (gameItem.itemType == ItemType.Word)
-                    {
-                        textComponent.color = Color.yellow;
-                    }
-                }
-
-                inventoryUI.UpdateItemCount();
-                Destroy(gameObject);
-                break;
-            }
         }
     }
 }
