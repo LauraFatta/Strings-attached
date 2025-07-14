@@ -474,6 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a650842ffd4f7de459f4cca3c6f1501e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredTag: BlueClue
 --- !u!61 &169336398
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -687,6 +688,7 @@ GameObject:
   - component: {fileID: 331645527}
   - component: {fileID: 331645528}
   - component: {fileID: 331645529}
+  - component: {fileID: 331645530}
   m_Layer: 0
   m_Name: ColoredField1_0
   m_TagString: RedClue
@@ -834,6 +836,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.49, y: 0.75}
   m_EdgeRadius: 0
+--- !u!50 &331645530
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331645524}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &348472094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,6 +2116,7 @@ GameObject:
   - component: {fileID: 1159288133}
   - component: {fileID: 1159288134}
   - component: {fileID: 1159288135}
+  - component: {fileID: 1159288136}
   m_Layer: 0
   m_Name: ColoredField_0 (2)
   m_TagString: BlueClue
@@ -2234,6 +2264,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.44, y: 0.75}
   m_EdgeRadius: 0
+--- !u!50 &1159288136
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159288130}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1199085961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,6 +2392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a650842ffd4f7de459f4cca3c6f1501e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredTag: RedClue
 --- !u!61 &1199085965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2754,6 +2812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a650842ffd4f7de459f4cca3c6f1501e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredTag: BlueClue
 --- !u!61 &1478877583
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3397,6 +3456,7 @@ GameObject:
   - component: {fileID: 1879329924}
   - component: {fileID: 1879329925}
   - component: {fileID: 1879329926}
+  - component: {fileID: 1879329927}
   m_Layer: 0
   m_Name: ColoredField_0
   m_TagString: BlueClue
@@ -3544,6 +3604,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.44, y: 0.75}
   m_EdgeRadius: 0
+--- !u!50 &1879329927
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879329921}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1889100780
 GameObject:
   m_ObjectHideFlags: 0

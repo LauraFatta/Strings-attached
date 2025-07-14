@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DraggableItem2D : MonoBehaviour
+public class Draggable2D : MonoBehaviour
 {
     private Vector3 offset;
     private Vector3 originalPosition;
@@ -46,6 +46,11 @@ public class DraggableItem2D : MonoBehaviour
         // Snap back if no valid slot found
         transform.position = originalPosition;
     }
+    public void ResetPosition()
+    {
+        transform.position = originalPosition;
+    }
+
 
     Vector3 GetMouseWorldPosition()
     {
