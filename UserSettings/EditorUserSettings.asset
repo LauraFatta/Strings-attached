@@ -6,19 +6,22 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 5a05055e04025b085a5d5c7b46740d4440161e7e7f2972652c7e4a60e7b96d6c
-      flags: 0
-    RecentlyUsedSceneGuid-1:
       value: 5400055257055a0f0b5e5a7243740f44434f412b782b7268292a4f35bab9353a
       flags: 0
-    RecentlyUsedSceneGuid-2:
+    RecentlyUsedSceneGuid-1:
       value: 5455555755050b5e5c5f587b422108444715417d2f2c7f622c2b1c61b2e66769
       flags: 0
+    RecentlyUsedSceneGuid-2:
+      value: 510305070403595d55080a7140225944444f4a7c7c2b2469792c4f31b2b4303c
+      flags: 0
     RecentlyUsedSceneGuid-3:
-      value: 5703565403040d5a545e087114710b44154f1c2c7a792235287d4c30e6b3306c
+      value: 5a05055e04025b085a5d5c7b46740d4440161e7e7f2972652c7e4a60e7b96d6c
       flags: 0
     RecentlyUsedSceneGuid-4:
-      value: 510305070403595d55080a7140225944444f4a7c7c2b2469792c4f31b2b4303c
+      value: 5703565403040d5a545e087114710b44154f1c2c7a792235287d4c30e6b3306c
+      flags: 0
+    RecentlyUsedSceneGuid-5:
+      value: 5154045207575f08095659204621094445154f2b2a2d24632c7a4431e4e43569
       flags: 0
     lightmappingBakingProfile:
       value: 51

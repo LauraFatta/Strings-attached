@@ -1,40 +1,56 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
-public class InventoryDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggableItem2D : MonoBehaviour
 {
-    private CanvasGroup canvasGroup;
-    private RectTransform rectTransform;
+    private Vector3 offset;
+    private Vector3 originalPosition;
     private Transform originalParent;
+    private bool isDragging = false;
 
-    void Awake()
+    private void Start()
     {
-        canvasGroup = GetComponent<CanvasGroup>();
-        rectTransform = GetComponent<RectTransform>();
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
+        originalPosition = transform.position;
         originalParent = transform.parent;
-        transform.SetParent(transform.root); // move to top level so it doesn't get clipped
-        canvasGroup.blocksRaycasts = false;  // let raycasts pass through this while dragging
     }
 
-    public void OnDrag(PointerEventData eventData)
+    void OnMouseDown()
     {
-        rectTransform.anchoredPosition += eventData.delta / GetCanvas().scaleFactor;
+        offset = transform.position - GetMouseWorldPosition();
+        isDragging = true;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    void OnMouseDrag()
     {
-        transform.SetParent(originalParent);
-        canvasGroup.blocksRaycasts = true;
-        rectTransform.anchoredPosition = Vector2.zero;
+        if (isDragging)
+        {
+            transform.position = GetMouseWorldPosition() + offset;
+        }
     }
 
-    private Canvas GetCanvas()
+    void OnMouseUp()
     {
-        return GetComponentInParent<Canvas>();
+        isDragging = false;
+
+        // Check for collision with drop slots
+        Collider2D[] hits = Physics2D.OverlapPointAll(transform.position);
+        foreach (var hit in hits)
+        {
+            if (hit.CompareTag("DropSlot"))
+            {
+                // Snap to center of drop slot
+                transform.position = hit.transform.position;
+                return;
+            }
+        }
+
+        // Snap back if no valid slot found
+        transform.position = originalPosition;
+    }
+
+    Vector3 GetMouseWorldPosition()
+    {
+        Vector3 screenPos = Input.mousePosition;
+        screenPos.z = 10f; // Distance from camera
+        return Camera.main.ScreenToWorldPoint(screenPos);
     }
 }
