@@ -13,15 +13,17 @@ public class GameItemEditor : Editor
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("itemName"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("itemButton"));
+        // EditorGUILayout.PropertyField(serializedObject.FindProperty("itemIcon"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("itemType"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("itemDescription"));
 
-        if (item.itemType == ItemType.Composite)
+        if (item.itemType == ItemType.actions)
         {
             EditorGUILayout.Space();
             EditorGUILayout.LabelField("Composite Components", EditorStyles.boldLabel);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("requiredItemA"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("requiredItemB"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("requiredItemC"));
         }
 
         serializedObject.ApplyModifiedProperties();

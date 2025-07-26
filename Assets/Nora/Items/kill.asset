@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: kill
   m_EditorClassIdentifier: 
   itemName: kill
-  itemButton: {fileID: 4610567596577002544, guid: 72b09b4aabbdff94aa2fd16883078eb8, type: 3}
+  itemButton: {fileID: 3412098824037010654, guid: 72b09b4aabbdff94aa2fd16883078eb8, type: 3}
   itemType: 2
   itemDescription: 
   requiredItemA: {fileID: 11400000, guid: 691bf583630ee8740b4454ebdfbc3024, type: 2}
   requiredItemB: {fileID: 11400000, guid: f37ad47b2b335d241bba8c6d097f55e0, type: 2}
+  requiredItemC: {fileID: 11400000, guid: fcd25f79685809f4f9705953ea257cc0, type: 2}

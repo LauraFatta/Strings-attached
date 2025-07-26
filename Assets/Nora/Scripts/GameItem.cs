@@ -3,22 +3,23 @@ using UnityEngine;
 public enum ItemType
 {
     Object,
-    Word,
-    Composite,
-    ComponentOnly 
+    names,
+    actions ,
+    ComponentOnly,
+    locations 
 }
 [CreateAssetMenu(fileName = "GameItem", menuName = "ScriptableObjects/GameItem")]
 public class GameItem : ScriptableObject
 {
     public string itemName;
-    // public GameObject itemPrefab;
     public GameObject itemButton;
     public ItemType itemType;
 
-    [TextArea(3, 10)]
+    [TextArea(3, 2)]
     public string itemDescription;
-    
+
     public GameItem requiredItemA;
     public GameItem requiredItemB;
+    public GameItem requiredItemC;
 }
 

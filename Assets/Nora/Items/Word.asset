@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Word
   m_EditorClassIdentifier: 
   itemName: Word
-  itemButton: {fileID: 9036696208694164122, guid: 3a2da348b730db8479dd06232b63cc12, type: 3}
+  itemButton: {fileID: 3022212704876593045, guid: c595e20ed18e221439e2f7e72fba14b0, type: 3}
   itemType: 1
   itemDescription: 
+  requiredItemA: {fileID: 0}
+  requiredItemB: {fileID: 0}

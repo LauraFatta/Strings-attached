@@ -1,66 +1,62 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using System.Collections.Generic;
 
 public class Pickup : MonoBehaviour, IPointerDownHandler
 {
-    public GameItem gameItem; // ScriptableObject 
+    public GameItem gameItem;
+    public static List<Pickup> activePickups = new List<Pickup>();
 
     private Inventory inventory;
-    private InventoryUI inventoryUI;
+    private Renderer objectRenderer;
+    
+
+    private void OnEnable()
+    {
+        activePickups.Add(this);
+    }
+
+    private void OnDisable()
+    {
+        activePickups.Remove(this);
+    }
 
     private void Start()
     {
         inventory = FindObjectOfType<Inventory>();
-        inventoryUI = FindObjectOfType<InventoryUI>();
-        if (inventory == null)
+        objectRenderer = GetComponent<Renderer>();
+    }
+
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        InventoryUI ui = FindObjectOfType<InventoryUI>();
+        if (ui != null)
         {
-            Debug.LogError("Inventory not found in the scene!");
-            enabled = false;
+            ui.NotifyPickupClick();
+        }
+
+        if (inventory.AddItem(gameItem))
+        {
+            if (gameItem.itemType != ItemType.ComponentOnly)
+            {
+                Destroy(gameObject);
+            }
+
+            if (gameItem.itemType == ItemType.ComponentOnly)
+            {
+                ShowUncollectedVisual(true);
+            }
         }
     }
 
-    // public void OnPointerDown(PointerEventData eventData)
-    // {
-
-    //     if (gameItem.itemType == ItemType.ComponentOnly)
-    //     {
-    //         inventory.AddItem(gameItem); 
-    //         Destroy(gameObject);
-    //         return;
-    //     }
-
-
-    //     for (int i = 0; i < inventory.items.Length; i++)
-    //     {
-    //         if (inventory.items[i] == null)
-    //         {
-    //             inventory.items[i] = gameItem;
-
-    //             GameObject button = Instantiate(gameItem.itemButton, inventory.slots[i].transform, false);
-
-    //             TextMeshProUGUI textComponent = button.GetComponentInChildren<TextMeshProUGUI>();
-    //             if (textComponent != null)
-    //             {
-    //                 textComponent.text = gameItem.itemName;
-
-    //                 if (gameItem.itemType == ItemType.Word)
-    //                 {
-    //                     textComponent.color = Color.yellow;
-    //                 }
-    //             }
-
-    //             inventoryUI.UpdateItemCount();
-    //             Destroy(gameObject);
-    //             break;
-    //         }
-    //     }
-    // }
-    public void OnPointerDown(PointerEventData eventData)
+    public void ShowUncollectedVisual(bool show)
     {
-        if (inventory.AddItem(gameItem))
+        if (objectRenderer != null && gameItem.itemType == ItemType.ComponentOnly)
         {
-            Destroy(gameObject);
+            objectRenderer.material.color = show ? Color.red : Color.white;
         }
+    
     }
 }

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: medicine
   m_EditorClassIdentifier: 
   itemName: medicine
-  itemButton: {fileID: 0}
+  itemButton: {fileID: 2183578426569024684, guid: 41e88db333991034db602dc7d5f0752d, type: 3}
   itemType: 3
   itemDescription: 
   requiredItemA: {fileID: 0}
   requiredItemB: {fileID: 0}
+  requiredItemC: {fileID: 0}

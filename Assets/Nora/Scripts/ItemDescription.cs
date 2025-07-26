@@ -36,18 +36,6 @@ public class ItemDescription : MonoBehaviour, IPointerEnterHandler, IPointerExit
         }
     }
 
-    // private System.Collections.IEnumerator HideDescriptionAfterDelay()
-    // {
-    //     yield return new WaitForSeconds(displayDuration);
-    //     descriptionText.gameObject.SetActive(false);
-    // }
-
-
-    // private void OnDestroy()
-    // {
-    //     if (descriptionText != null)
-    //         descriptionText.gameObject.SetActive(false);
-    // }
     private void OnDestroy()
     {
         if (descriptionCoroutine != null)
@@ -60,7 +48,7 @@ public class ItemDescription : MonoBehaviour, IPointerEnterHandler, IPointerExit
             descriptionText.gameObject.SetActive(false);
         }
     }
-    
+
     private System.Collections.IEnumerator HideDescriptionAfterDelay()
     {
         yield return new WaitForSeconds(displayDuration);
@@ -70,3 +58,4 @@ public class ItemDescription : MonoBehaviour, IPointerEnterHandler, IPointerExit
         }
     }
 }
+

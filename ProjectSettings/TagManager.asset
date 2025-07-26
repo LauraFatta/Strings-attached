@@ -7,6 +7,7 @@ TagManager:
   - DropSlot
   - BlueClue
   - RedClue
+  - InventoryContent
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - Pickup
   - Typewriter
-  - 
+  - Notebook
   - 
   - 
   - 
