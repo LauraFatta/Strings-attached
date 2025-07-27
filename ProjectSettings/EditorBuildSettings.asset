@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nora/PoliceStation.unity
     guid: 221aa60f8ff30af428260cb94e2b04dd
+  - enabled: 1
+    path: Assets/Nora/final.unity
+    guid: 74ee0b0dba4eaef44996a63f606d5552
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
