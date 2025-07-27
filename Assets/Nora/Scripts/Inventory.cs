@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement; 
 using System.Collections.Generic;
 
@@ -22,6 +22,17 @@ public class Inventory : MonoBehaviour
         else
         {
             Destroy(gameObject); 
+        }
+    }
+
+    private void Start()
+    {
+        inventoryUI = FindObjectOfType<InventoryUI>();
+        
+        // Add save system integration
+        if (SaveSystem.instance != null)
+        {
+            SaveSystem.instance.RemoveCollectedPickupsInScene();
         }
     }
 
@@ -49,9 +60,21 @@ public class Inventory : MonoBehaviour
             inventoryContentParent = contentGO.transform;
             RebuildInventoryButtons(); 
         }
+
+        // Add save system integration for scene loading
+        StartCoroutine(DelayedRemovePickups());
     }
 
-    
+    private System.Collections.IEnumerator DelayedRemovePickups()
+    {
+        // Wait a frame to ensure SaveSystem is initialized
+        yield return null;
+        if (SaveSystem.instance != null)
+        {
+            SaveSystem.instance.RemoveCollectedPickupsInScene();
+        }
+    }
+
     private void RebuildInventoryButtons()
     {
         foreach (GameItem item in items)
@@ -66,11 +89,6 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void Start()
-    {
-        inventoryUI = FindObjectOfType<InventoryUI>();
     }
 
     public bool AddItem(GameItem item)
@@ -121,10 +139,43 @@ public class Inventory : MonoBehaviour
                 tempComponents.Contains(item.requiredItemB) &&
                 tempComponents.Contains(item.requiredItemC))
             {
+                // Animate each component before building composite
+                AnimateComponentsBeforeComposite(item.requiredItemA, item.requiredItemB, item.requiredItemC);
+                
                 AddItem(item);
                 DisableSceneObject(item.requiredItemA);
                 DisableSceneObject(item.requiredItemB);
                 DisableSceneObject(item.requiredItemC);
+                break;
+            }
+        }
+    }
+
+    private void AnimateComponentsBeforeComposite(GameItem itemA, GameItem itemB, GameItem itemC)
+    {
+        AnimateSceneObject(itemA);
+        AnimateSceneObject(itemB);
+        AnimateSceneObject(itemC);
+    }
+
+    private void AnimateSceneObject(GameItem item)
+    {
+        foreach (var pickup in Pickup.activePickups)
+        {
+            if (pickup != null && pickup.gameItem == item)
+            {
+                // Use pickup animation for components when building composite
+                var pref = Resources.Load<GameObject>("Prefabs/sns/PickupAnimator");
+                if (pref != null)
+                {
+                    var animatorObj = Instantiate(pref, pickup.transform.position, Quaternion.identity);
+                    pickup.transform.SetParent(animatorObj.transform);
+                    var pickupComponent = pickup.GetComponent<Pickup>();
+                    if (pickupComponent != null)
+                    {
+                        Destroy(pickupComponent);
+                    }
+                }
                 break;
             }
         }
@@ -140,6 +191,26 @@ public class Inventory : MonoBehaviour
                 Destroy(pickup.gameObject);
                 break;
             }
+        }
+    }
+
+    // Add save system methods
+    public List<string> GetCollectedItemIDs()
+    {
+        var ids = new List<string>();
+        foreach (var itm in items)
+            if (itm != null)
+                ids.Add(itm.itemName);
+        return ids;
+    }
+
+    public void LoadFromIDs(List<string> ids)
+    {
+        foreach (var id in ids)
+        {
+            GameItem item = Resources.Load<GameItem>("Items/" + id);
+            if (item != null)
+                AddItem(item);
         }
     }
 }
