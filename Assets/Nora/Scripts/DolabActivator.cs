@@ -28,7 +28,7 @@ public class DolabActivator : MonoBehaviour
     public void OpenDolabAnimation()
     {
         DolabAnimator.SetBool("open", true);
-        StartCoroutine(ShowSwitchButtonAfterDelay(1f)); //delay before showing the switch button
+        StartCoroutine(ShowSwitchButtonAfterDelay(1.2f)); //delay before showing the switch button
     }
 
     private IEnumerator ShowSwitchButtonAfterDelay(float delay)
