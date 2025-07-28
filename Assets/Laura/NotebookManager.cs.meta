@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: cce1dc973ecf08d4d876028bb64995ed
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - notebookClueContainer: {instanceID: 0}
+  - cluePrefab: {fileID: 1843990201144445117, guid: 7e6eb019a6d2f0f408d9cda148f60095, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
