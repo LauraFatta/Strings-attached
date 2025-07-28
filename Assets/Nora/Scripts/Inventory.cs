@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
     public GameItem[] items;
     public Transform inventoryContentParent;
     private InventoryUI inventoryUI;
+    private NotebookManager notebook;
 
     private List<GameItem> tempComponents = new List<GameItem>();
     public GameItem[] allCompositeItems;
@@ -121,6 +122,11 @@ public class Inventory : MonoBehaviour
                 }
 
                 inventoryUI.UpdateItemCount();
+                inventoryUI.UpdateNotebookClues();
+                if (notebook != null)
+                {
+                    notebook.AddClue(item);
+                }
                 return true;
             }
         }

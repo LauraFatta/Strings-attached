@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 20622264228036822}
   - component: {fileID: 4110592406477254879}
   - component: {fileID: 496246415099999494}
-  - component: {fileID: 6513457939169527975}
   m_Layer: 5
   m_Name: namesButton-Blue
   m_TagString: Untagged
@@ -136,18 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNameText: {fileID: 1866008899690604862}
---- !u!114 &6513457939169527975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3022212704876593045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1ac350aab6e90849a076c47383c15d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &9039825383334859623
 GameObject:
   m_ObjectHideFlags: 0

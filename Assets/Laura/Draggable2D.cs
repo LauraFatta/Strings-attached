@@ -1,61 +1,44 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Draggable2D : MonoBehaviour
+public class Draggable2D : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private Vector3 offset;
-    private Vector3 originalPosition;
-    private Transform originalParent;
-    private bool isDragging = false;
+    private RectTransform rectTransform;
+    private CanvasGroup canvasGroup;
+    private Canvas canvas;
 
-    private void Start()
+    private Vector2 originalPosition;
+
+    private void Awake()
     {
-        originalPosition = transform.position;
-        originalParent = transform.parent;
+        rectTransform = GetComponent<RectTransform>();
+        canvasGroup = GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+            canvasGroup = gameObject.AddComponent<CanvasGroup>();
+
+        canvas = GetComponentInParent<Canvas>();
     }
 
-    void OnMouseDown()
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        offset = transform.position - GetMouseWorldPosition();
-        isDragging = true;
+        originalPosition = rectTransform.anchoredPosition;
+        canvasGroup.blocksRaycasts = false;
     }
 
-    void OnMouseDrag()
+    public void OnDrag(PointerEventData eventData)
     {
-        if (isDragging)
-        {
-            transform.position = GetMouseWorldPosition() + offset;
-        }
+        if (canvas == null) return;
+        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
-    void OnMouseUp()
+    public void OnEndDrag(PointerEventData eventData)
     {
-        isDragging = false;
-
-        // Check for collision with drop slots
-        Collider2D[] hits = Physics2D.OverlapPointAll(transform.position);
-        foreach (var hit in hits)
-        {
-            if (hit.CompareTag("DropSlot"))
-            {
-                // Snap to center of drop slot
-                transform.position = hit.transform.position;
-                return;
-            }
-        }
-
-        // Snap back if no valid slot found
-        transform.position = originalPosition;
+        canvasGroup.blocksRaycasts = true;
     }
+
+    
     public void ResetPosition()
     {
-        transform.position = originalPosition;
-    }
-
-
-    Vector3 GetMouseWorldPosition()
-    {
-        Vector3 screenPos = Input.mousePosition;
-        screenPos.z = 10f; // Distance from camera
-        return Camera.main.ScreenToWorldPoint(screenPos);
+        rectTransform.anchoredPosition = originalPosition;
     }
 }

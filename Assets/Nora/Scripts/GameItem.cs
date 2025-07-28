@@ -21,5 +21,7 @@ public class GameItem : ScriptableObject
     public GameItem requiredItemA;
     public GameItem requiredItemB;
     public GameItem requiredItemC;
+    [Tooltip("Used for notebook clues — e.g. 'BlueClue', 'RedClue'.")]
+    public string clueTag;
 }
 

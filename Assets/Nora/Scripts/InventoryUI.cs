@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class InventoryUI : MonoBehaviour
 
     private Inventory inventory;
     private bool clickedOnPickup = false;
+    //Laura's Edit:
+    public Transform notebookClueContainer;
+    public GameObject notebookCluePrefabRed;
+    public GameObject notebookCluePrefabBlue;
 
 
     private void Start()
@@ -86,6 +91,55 @@ public class InventoryUI : MonoBehaviour
         }
 
         clickedOnPickup = false; 
+    }
+    public void UpdateNotebookClues()
+    {
+        foreach (Transform child in notebookClueContainer)
+            Destroy(child.gameObject);
+
+        foreach (GameItem item in inventory.items)
+        {
+            if (item == null) continue;
+
+            // Declare it once before if/else
+            GameObject clue;
+
+            if (item.itemType == ItemType.Object)
+            {
+                clue = Instantiate(notebookCluePrefabRed, notebookClueContainer, false);
+            }
+            else
+            {
+                clue = Instantiate(notebookCluePrefabBlue, notebookClueContainer, false);
+            }
+
+            // Make it draggable only in the notebook
+            if (clue.GetComponent<Draggable2D>() == null)
+                clue.AddComponent<Draggable2D>();
+
+            // Make it properly sized for the notebook
+            LayoutElement layout = clue.GetComponent<LayoutElement>();
+            if (layout == null) layout = clue.AddComponent<LayoutElement>();
+            layout.preferredWidth = 160;
+            layout.preferredHeight = 40;
+
+            // Update text + color
+            TextMeshProUGUI text = clue.GetComponentInChildren<TextMeshProUGUI>();
+            if (text != null)
+            {
+                text.text = item.itemName;
+            }
+
+            // Force center anchor/position
+            RectTransform textRT = text.GetComponent<RectTransform>();
+            if (textRT != null)
+            {
+                textRT.anchorMin = new Vector2(0.5f, 0.5f);
+                textRT.anchorMax = new Vector2(0.5f, 0.5f);
+                textRT.pivot = new Vector2(0.5f, 0.5f);
+                textRT.anchoredPosition = Vector2.zero;
+            }
+        }
     }
 
 
