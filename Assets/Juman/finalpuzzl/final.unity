@@ -422,7 +422,7 @@ PrefabInstance:
     - target: {fileID: 7949344060878522299, guid: f28972bc1810a3d49baf2c946c9bbba9, type: 3}
       propertyPath: buttonStart
       value: 
-      objectReference: {fileID: 5773184086956990772}
+      objectReference: {fileID: 0}
     - target: {fileID: 7949344060878522299, guid: f28972bc1810a3d49baf2c946c9bbba9, type: 3}
       propertyPath: puzzlePanel
       value: 
@@ -485,11 +485,19 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 832045674579747293, guid: d57307a52a78bab49846bccd19431cd8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1215490396526427513, guid: d57307a52a78bab49846bccd19431cd8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3494371001173775461}
     - target: {fileID: 2124702840654477785, guid: d57307a52a78bab49846bccd19431cd8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2340021262921857547, guid: d57307a52a78bab49846bccd19431cd8, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -525,6 +533,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1987648417}
+    - target: {fileID: 7520131088802937303, guid: d57307a52a78bab49846bccd19431cd8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8048360350117368606, guid: d57307a52a78bab49846bccd19431cd8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -610,7 +622,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3494371001173775461}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8867838138719771988, guid: d57307a52a78bab49846bccd19431cd8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57307a52a78bab49846bccd19431cd8, type: 3}
@@ -691,17 +704,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43a4996b77e650843ab7d14a61000561, type: 3}
---- !u!114 &5773184086956990772 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1879116080212374713, guid: d57307a52a78bab49846bccd19431cd8, type: 3}
-  m_PrefabInstance: {fileID: 5336077575855412621}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6110634108810676073
 MonoBehaviour:
   m_ObjectHideFlags: 0
