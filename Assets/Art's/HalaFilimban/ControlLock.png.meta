@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ControlLock_0: -4491836860963267883
+      ControlLock_1: 8677557669855938784
+      ControlLock_2: 3906542098871275567
+      ControlLock_3: 479258636151562159
+      ControlLock_4: 6891935146483267807
+      ControlLock_5: -7820626344599077453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -19,11 +19,13 @@ public class TypewriterActivator : MonoBehaviour
     {
 
         typewriter.SetActive(true);
+        Typewriterbackground.SetActive(true);
         blurVolume.weight = 1;
         typewriterCamera.SetActive(true);
         closeButton.SetActive(true);
         AllButton.SetActive(false);
         playTypewriterAnimationButton.SetActive(true);
+
 
     }
     public void PlayTypewriterAnimation()
@@ -39,6 +41,7 @@ public class TypewriterActivator : MonoBehaviour
     public void CloseTypewriter()
     {
         typewriter.SetActive(false);
+        Typewriterbackground.SetActive(false);
         blurVolume.weight = 0;
         typewriterCamera.SetActive(false);
         closeButton.SetActive(false);
