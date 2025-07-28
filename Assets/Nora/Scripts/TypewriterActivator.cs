@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class TypewriterActivator : MonoBehaviour
 {
     [SerializeField] public GameObject typewriter;
+    [SerializeField] private GameObject Typewriterbackground;
     [SerializeField] private Volume blurVolume;
 
     [SerializeField] public GameObject typewriterCamera;
