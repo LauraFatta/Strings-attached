@@ -42,14 +42,13 @@
     <UnityVersion>6000.0.49f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\Noura\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\juman\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.49f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.49f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.49f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Nora\Scripts\GameItem.cs" />
-    <Compile Include="Assets\Juman\SimpleStepManager.cs" />
     <Compile Include="Assets\SamiMM\Scripts\ScreenSummoner.cs" />
     <Compile Include="Assets\Laura\DropZone2D.cs" />
     <Compile Include="Assets\Juman\ArrowButton.cs" />
@@ -82,6 +81,7 @@
     <Compile Include="Assets\Nora\Scripts\NotebookActivator.cs" />
     <Compile Include="Assets\Nora\Scripts\ItemDescription.cs" />
     <Compile Include="Assets\Nora\Scripts\SceneSwitcher.cs" />
+    <Compile Include="Assets\Nora\SimpleStepManager.cs" />
     <Compile Include="Assets\SamiMM\Scripts\savemanager.cs" />
   </ItemGroup>
   <ItemGroup>
