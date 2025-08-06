@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 using System.Collections.Generic;
-
 public class Pickup : MonoBehaviour, IPointerDownHandler
 {
     public GameItem gameItem;
@@ -10,6 +9,10 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
 
     private Inventory inventory;
     private Renderer objectRenderer;
+
+    private bool isCollected = false;
+    public bool isMarkedForLinking = false;
+    public bool IsMarkedForLinking => isMarkedForLinking;
 
     private void OnEnable()
     {
@@ -27,6 +30,18 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
         objectRenderer = GetComponent<Renderer>();
     }
 
+    public static bool HasAnyMarked()
+    {
+        foreach (Pickup p in activePickups)
+        {
+            if (p != null && p.isMarkedForLinking)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         InventoryUI ui = FindObjectOfType<InventoryUI>();
@@ -35,42 +50,50 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
             ui.NotifyPickupClick();
         }
 
+        if (gameItem.itemType == ItemType.ComponentOnly)
+        {
+            if (!isCollected)
+            {
+                if (inventory.AddItem(gameItem))
+                {
+                    isCollected = true;
+                    PlayPopAnimation();
+
+                    if (SaveSystem.instance != null)
+                        SaveSystem.instance.MarkItemCollected(gameItem);
+                }
+            }
+            else if (!isMarkedForLinking)
+            {
+                isMarkedForLinking = true;
+                ShowUncollectedVisual(true);
+                Inventory.Instance.TryBuildComposite();
+            }
+            return;
+        }
+
         if (inventory.AddItem(gameItem))
         {
-            // Add save system integration
             if (SaveSystem.instance != null)
-            {
                 SaveSystem.instance.MarkItemCollected(gameItem);
-            }
 
-            if (gameItem.itemType == ItemType.ComponentOnly)
+            var pref = Resources.Load<GameObject>("Prefabs/sns/PickupAnimator");
+            if (pref != null)
             {
-                ShowUncollectedVisual(true);
-                // Add "pop" animation for ComponentOnly items
-                PlayPopAnimation();
+                var animatorObj = Instantiate(pref, transform.position, Quaternion.identity);
+                transform.SetParent(animatorObj.transform);
+                Destroy(this);
             }
             else
             {
-                // Use pickup animation instead of immediate destroy
-                var pref = Resources.Load<GameObject>("Prefabs/sns/PickupAnimator");
-                if (pref != null)
-                {
-                    var animatorObj = Instantiate(pref, transform.position, Quaternion.identity);
-                    transform.SetParent(animatorObj.transform);
-                    Destroy(this);
-                }
-                else
-                {
-                    // Fallback to immediate destroy if animation prefab not found
-                    Destroy(gameObject);
-                }
+                Destroy(gameObject);
             }
         }
     }
 
     public void ShowUncollectedVisual(bool show)
     {
-        if (objectRenderer != null && gameItem.itemType == ItemType.ComponentOnly)
+        if (objectRenderer != null)
         {
             objectRenderer.material.color = show ? Color.red : Color.white;
         }
@@ -78,7 +101,6 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
 
     private void PlayPopAnimation()
     {
-        // Create a simple "pop" scale animation
         StartCoroutine(PopAnimationCoroutine());
     }
 
@@ -89,7 +111,6 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
         float animTime = 0.3f;
         float elapsed = 0f;
 
-        // Scale up
         while (elapsed < animTime / 2)
         {
             elapsed += Time.deltaTime;
@@ -98,7 +119,6 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
             yield return null;
         }
 
-        // Scale back down
         elapsed = 0f;
         while (elapsed < animTime / 2)
         {

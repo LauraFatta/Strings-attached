@@ -2275,6 +2275,7 @@ MonoBehaviour:
   - {fileID: 1462160884}
   - {fileID: 647559868}
   - {fileID: 876990401}
+  - {fileID: 1806909071}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2

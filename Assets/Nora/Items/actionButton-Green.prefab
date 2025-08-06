@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 7324181306048692337}
   - component: {fileID: 7168661818381865764}
   m_Layer: 5
-  m_Name: KillButton
+  m_Name: actionButton-Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5892036098782354760, guid: 1bb8a1f14ee86e64a966862c79e9c401, type: 3}
+  m_Sprite: {fileID: -5872298720332463074, guid: bcfb6e1aead00084fae54575f1a8363d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

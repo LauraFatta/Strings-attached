@@ -1,5 +1,6 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour
@@ -22,7 +23,7 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
     }
 
@@ -30,7 +31,6 @@ public class Inventory : MonoBehaviour
     {
         inventoryUI = FindObjectOfType<InventoryUI>();
         
-        // Add save system integration
         if (SaveSystem.instance != null)
         {
             SaveSystem.instance.RemoveCollectedPickupsInScene();
@@ -55,20 +55,18 @@ public class Inventory : MonoBehaviour
             inventoryUI.UpdateItemCount();
         }
 
-        GameObject contentGO = GameObject.FindGameObjectWithTag("InventoryContent"); 
+        GameObject contentGO = GameObject.FindGameObjectWithTag("InventoryContent");
         if (contentGO != null)
         {
             inventoryContentParent = contentGO.transform;
-            RebuildInventoryButtons(); 
+            RebuildInventoryButtons();
         }
 
-        // Add save system integration for scene loading
         StartCoroutine(DelayedRemovePickups());
     }
 
     private System.Collections.IEnumerator DelayedRemovePickups()
     {
-        // Wait a frame to ensure SaveSystem is initialized
         yield return null;
         if (SaveSystem.instance != null)
         {
@@ -90,6 +88,50 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ResetAllMarkedComponents()
+    {
+        foreach (Pickup pickup in Pickup.activePickups)
+        {
+            if (pickup != null && pickup.IsMarkedForLinking)
+            {
+                pickup.isMarkedForLinking = false;
+                pickup.ShowUncollectedVisual(false);
+            }
+        }
+    }
+
+    private bool IsRelatedToMarkedComponents(GameItem newItem)
+    {
+        foreach (var composite in allCompositeItems)
+        {
+            bool containsNewItem = composite.requiredItemA == newItem ||
+                                  composite.requiredItemB == newItem ||
+                                  composite.requiredItemC == newItem;
+
+            bool containsMarked = false;
+            foreach (var markedPickup in Pickup.activePickups)
+            {
+                if (markedPickup.IsMarkedForLinking)
+                {
+                    if (composite.requiredItemA == markedPickup.gameItem ||
+                        composite.requiredItemB == markedPickup.gameItem ||
+                        composite.requiredItemC == markedPickup.gameItem)
+                    {
+                        containsMarked = true;
+                        break;
+                    }
+                }
+            }
+
+            if (containsNewItem && containsMarked)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public bool AddItem(GameItem item)
@@ -118,7 +160,17 @@ public class Inventory : MonoBehaviour
                 if (item.itemType == ItemType.ComponentOnly)
                 {
                     tempComponents.Add(item);
-                    TryBuildComposite();
+                    
+                    
+                    if (Pickup.HasAnyMarked() && !IsRelatedToMarkedComponents(item))
+                    {
+                        ResetAllMarkedComponents();
+                    }
+                }
+                else 
+                {
+                    
+                    ResetAllMarkedComponents();
                 }
 
                 inventoryUI.UpdateItemCount();
@@ -134,20 +186,28 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    private void TryBuildComposite()
+    public void TryBuildComposite()
     {
+        List<GameItem> readyToLink = new List<GameItem>();
+
+        foreach (var pickup in Pickup.activePickups)
+        {
+            if (pickup != null && pickup.gameItem != null && pickup.IsMarkedForLinking)
+            {
+                readyToLink.Add(pickup.gameItem);
+            }
+        }
+
         foreach (var item in allCompositeItems)
         {
             if (item.itemType != ItemType.actions) continue;
-            if (item.requiredItemA == null || item.requiredItemB == null) continue;
+            if (item.requiredItemA == null || item.requiredItemB == null || item.requiredItemC == null) continue;
 
-            if (tempComponents.Contains(item.requiredItemA) &&
-                tempComponents.Contains(item.requiredItemB) &&
-                tempComponents.Contains(item.requiredItemC))
+            if (readyToLink.Contains(item.requiredItemA) &&
+                readyToLink.Contains(item.requiredItemB) &&
+                readyToLink.Contains(item.requiredItemC))
             {
-                // Animate each component before building composite
                 AnimateComponentsBeforeComposite(item.requiredItemA, item.requiredItemB, item.requiredItemC);
-                
                 AddItem(item);
                 DisableSceneObject(item.requiredItemA);
                 DisableSceneObject(item.requiredItemB);
@@ -170,7 +230,6 @@ public class Inventory : MonoBehaviour
         {
             if (pickup != null && pickup.gameItem == item)
             {
-                // Use pickup animation for components when building composite
                 var pref = Resources.Load<GameObject>("Prefabs/sns/PickupAnimator");
                 if (pref != null)
                 {
@@ -200,7 +259,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    // Add save system methods
     public List<string> GetCollectedItemIDs()
     {
         var ids = new List<string>();
