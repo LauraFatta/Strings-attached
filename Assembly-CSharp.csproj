@@ -42,7 +42,7 @@
     <UnityVersion>6000.0.49f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\Noura\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\juman\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.49f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.49f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.49f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -52,27 +52,33 @@
     <Compile Include="Assets\SamiMM\Scripts\ScreenSummoner.cs" />
     <Compile Include="Assets\Laura\DropZone2D.cs" />
     <Compile Include="Assets\Nora\Scripts\CabinetActivator.cs" />
-    <Compile Include="Assets\Juman\ArrowButton.cs" />
     <Compile Include="Assets\SamiMM\Scripts\PickupAnimator.cs" />
+    <Compile Include="Assets\Juman\finalpuzzeleditjuman\ClosedBagClick.cs" />
     <Compile Include="Assets\Sami\Scripts\MenuButtonController.cs" />
     <Compile Include="Assets\Nora\Scripts\InventoryUI.cs" />
     <Compile Include="Assets\SamiMM\Scripts\MenuController.cs" />
-    <Compile Include="Assets\Juman\BagCloseHandler.cs" />
+    <Compile Include="Assets\Juman\finalpuzzeleditjuman\ArrowButton.cs" />
     <Compile Include="Assets\SamiMM\Scripts\CoroutineRunner.cs" />
-    <Compile Include="Assets\Juman\UnlockBagTrigger.cs" />
     <Compile Include="Assets\Sami\Scripts\AnimatorFunctions.cs" />
+    <Compile Include="Assets\Juman\finalpuzzeleditjuman\CheckButton.cs" />
     <Compile Include="Assets\Sami\Scripts\SceneTransition.cs" />
+    <Compile Include="Assets\Juman\finalpuzzeleditjuman\BagCloseHandler.cs" />
     <Compile Include="Assets\SamiMM\Scripts\VignettePulse.cs" />
     <Compile Include="Assets\SamiMM\Scripts\SaveSystem.cs" />
+    <Compile Include="Assets\Juman\finalpuzzeleditjuman\TypewriterEffect1.cs" />
+    <Compile Include="Assets\Juman\finalpuzzeleditjuman\StartToBag.cs" />
+    <Compile Include="Assets\Juman\finalpuzzeleditjuman\SimplePuzzleController.cs" />
     <Compile Include="Assets\Nora\Scripts\ItemButtonText.cs" />
+    <Compile Include="Assets\Juman\finalpuzzeleditjuman\DigitArrow.cs" />
     <Compile Include="Assets\Nora\Scripts\Pickup.cs" />
-    <Compile Include="Assets\Juman\SimplePuzzleController.cs" />
+    <Compile Include="Assets\CabinetPuzzleToggle.cs" />
     <Compile Include="Assets\Laura\NotebookManager.cs" />
     <Compile Include="Assets\Sami\Scripts\MenuButton.cs" />
     <Compile Include="Assets\Laura\Draggable2D.cs" />
-    <Compile Include="Assets\Juman\TypewriterEffect1.cs" />
+    <Compile Include="Assets\Juman\finalpuzzeleditjuman\PuzzleManager.cs" />
     <Compile Include="Assets\Laura\DropZonell2D1.cs" />
     <Compile Include="Assets\Nora\Scripts\DolabActivator.cs" />
+    <Compile Include="Assets\Juman\finalpuzzeleditjuman\OpenLockClick.cs" />
     <Compile Include="Assets\Laura\ToggleLayer.cs" />
     <Compile Include="Assets\Nora\Scripts\TypewriterActivator.cs" />
     <Compile Include="Assets\Sami\Scripts\BackButton.cs" />
@@ -81,6 +87,7 @@
     <Compile Include="Assets\Laura\NotebookUIController.cs" />
     <Compile Include="Assets\Nora\Scripts\NotebookActivator.cs" />
     <Compile Include="Assets\Nora\Scripts\ItemDescription.cs" />
+    <Compile Include="Assets\Juman\finalpuzzeleditjuman\UnlockBagTrigger.cs" />
     <Compile Include="Assets\Nora\Scripts\SceneSwitcher.cs" />
     <Compile Include="Assets\Nora\SimpleStepManager.cs" />
     <Compile Include="Assets\SamiMM\Scripts\savemanager.cs" />
