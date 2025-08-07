@@ -43,7 +43,11 @@ public static class SceneManagerTransitioner
 		CoroutineRunner.instance.StartCoroutine(SceneLoader(screenColor, lerpTime, sceneName));
 		GameObject.DontDestroyOnLoad(CoroutineRunner.instance.gameObject);
 	}
-
+	public static void LoadSceneWithTransition(Color screenColor, float lerpTime, Scene scene)
+	{
+		CoroutineRunner.instance.StartCoroutine(SceneLoader(screenColor, lerpTime, scene.name));
+		GameObject.DontDestroyOnLoad(CoroutineRunner.instance.gameObject);
+	}
 	private static IEnumerator SceneLoader(Color screenColor, float lerpTime, string sceneName)
 	{
 		ScreenSummoner.SummonScreen(screenColor, lerpTime, true);

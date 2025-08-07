@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,23 +9,39 @@ public class SaveSystem : MonoBehaviour
 	private Inventory inventory;
 	private SaveData saveData;
 
+	public bool dontOverrideScene;
+
 	private void Awake()
 	{
-		if (instance != null) Destroy(gameObject);
-		else
-			instance = this;
+		if (instance != null)
+		{
+			Destroy(gameObject);
+			return;
+		}
+
+		instance = this;
+		DontDestroyOnLoad(gameObject);
+
+		// Subscribe immediately so saveData is never null on scene load
+		SceneManager.sceneLoaded += OnSceneLoaded;
+
+		// Load or initialize saveData
+		saveData = SaveManager.LoadGame() ?? new SaveData();
 	}
 
 	private void Start()
 	{
+		// Inventory depends on scene objects�delay one frame
+		Invoke(nameof(LoadInventory), 0.1f);
+	}
+
+	private void LoadInventory()
+	{
 		inventory = FindFirstObjectByType<Inventory>();
-		// Load or initialize
-		saveData = SaveManager.LoadGame() ?? new SaveData();
+
 		// Restore inventory (global list)
 		if (inventory != null)
 			inventory.LoadFromIDs(saveData.collectedItemIDs);
-		// Hook scene events
-		SceneManager.sceneLoaded += OnSceneLoaded;
 	}
 
 	private void OnDestroy()
@@ -34,7 +51,13 @@ public class SaveSystem : MonoBehaviour
 
 	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
-		// Remove pickups already collected in this scene
+		// Remove pickups already collected in this scene, after one frame
+		StartCoroutine(DelayedRemovePickups());
+	}
+
+	private IEnumerator DelayedRemovePickups()
+	{
+		yield return null;
 		RemoveCollectedPickupsInScene();
 	}
 
@@ -45,6 +68,18 @@ public class SaveSystem : MonoBehaviour
 	/// </summary>
 	public void MarkItemCollected(GameItem item)
 	{
+		if (saveData == null) saveData = new SaveData();
+    
+		// Find inventory if not already found
+		if (inventory == null)
+			inventory = FindFirstObjectByType<Inventory>();
+        
+		if (inventory == null)
+		{
+			Debug.LogError("[SaveSystem] No Inventory found in scene!");
+			return;
+		}
+
 		string scene = SceneManager.GetActiveScene().name;
 
 		// Find (or create) the ScenePickupData for this scene
@@ -74,15 +109,34 @@ public class SaveSystem : MonoBehaviour
 	/// </summary>
 	public void RemoveCollectedPickupsInScene()
 	{
+		if (saveData == null || saveData.pickupsByScene == null)
+			return;
+
 		string scene = SceneManager.GetActiveScene().name;
 		var entry = saveData.pickupsByScene
 			.FirstOrDefault(e => e.sceneName == scene);
-		if (entry == null) return;
+		if (entry == null || entry.itemIDs == null)
+			return;
 
-		foreach (var pickup in FindObjectsByType<Pickup>(FindObjectsSortMode.None))
+		// Include inactive in case pickups start disabled
+		var allPickups = FindObjectsByType<Pickup>(
+			FindObjectsInactive.Include,
+			FindObjectsSortMode.None);
+
+		foreach (var pickup in allPickups)
 		{
-			if (entry.itemIDs.Contains(pickup.gameItem.itemName))
+			if (pickup == null || pickup.gameItem == null)
+				continue;
+
+			string id = pickup.gameItem.itemName;
+			if (string.IsNullOrEmpty(id))
+				continue;
+
+			if (entry.itemIDs.Contains(id))
+			{
+				Debug.Log($"[SaveSystem] Destroying collected pickup: {id}");
 				Destroy(pickup.gameObject);
+			}
 		}
 	}
 
@@ -93,7 +147,7 @@ public class SaveSystem : MonoBehaviour
 	{
 		SaveManager.DeleteData();
 		saveData = new SaveData();
-		// Optionally, refresh the scene to respawn all pickups:
+		// Optionally respawn pickups:
 		// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 }
