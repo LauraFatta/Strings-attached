@@ -4,7 +4,7 @@ public class StartToBag : MonoBehaviour
 {
     public GameObject closedBag;
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         closedBag.SetActive(true);      // تظهر الشنطة
         gameObject.SetActive(false);    // تخفي الزر نفسه
