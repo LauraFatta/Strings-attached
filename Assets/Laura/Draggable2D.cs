@@ -36,7 +36,7 @@ public class Draggable2D : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         canvasGroup.blocksRaycasts = true;
     }
 
-    
+
     public void ResetPosition()
     {
         rectTransform.anchoredPosition = originalPosition;

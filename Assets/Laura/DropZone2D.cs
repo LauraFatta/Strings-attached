@@ -1,60 +1,51 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.EventSystems;
+using TMPro;
 
-public class DropZone2D : MonoBehaviour
+public class DropZone2D : MonoBehaviour, IDropHandler
 {
-    [Tooltip("This should match the tag of the correct clue (e.g., BlueClue or RedClue).")]
-    public string requiredTag;
+    [Tooltip("The hidden TMP text with the correct answer")]
+    public TextMeshProUGUI tmp;
 
-    private Vector3 originalPosition;
+    private string assignedClue;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("Triggered by: " + other.name);
+        GameObject droppedObj = eventData.pointerDrag;
+        if (droppedObj == null) return;
 
-        if (other.CompareTag("BlueClue") || other.CompareTag("RedClue"))
-        {
-            Draggable2D draggable = other.GetComponent<Draggable2D>();
-            if (draggable == null) return;
+        Draggable2D draggable = droppedObj.GetComponent<Draggable2D>();
+        if (draggable == null) return;
 
-            if (other.tag == requiredTag)
-            {
-                // Correct drop
-                other.transform.position = transform.position;
-                other.transform.SetParent(transform);
-                Debug.Log("Correct drop: " + other.name);
-            }
-            else
-            {
-                // Incorrect drop — shake slot and reset clue
-                Debug.Log("Wrong clue dropped: " + other.name);
-                StartCoroutine(Shake());
-                draggable.ResetPosition(); // Return clue to original position
-            }
-        }
+        TextMeshProUGUI clueText = droppedObj.GetComponentInChildren<TextMeshProUGUI>();
+        if (clueText == null) return;
+
+        assignedClue = clueText.text;
+
+        // Snap it in place and center it
+        RectTransform droppedRect = droppedObj.GetComponent<RectTransform>();
+        droppedObj.transform.SetParent(transform, false);
+        droppedRect.localScale = Vector3.one;
+
+        // Set pivot and anchors to center
+        droppedRect.anchorMin = new Vector2(0.5f, 0.5f);
+        droppedRect.anchorMax = new Vector2(0.5f, 0.5f);
+        droppedRect.pivot = new Vector2(0.5f, 0.5f);
+
+        // Reset position to center inside drop zone
+        droppedRect.anchoredPosition = Vector2.zero;
+
+
+        Debug.Log($"Dropped '{assignedClue}' into {name}");
     }
 
-    private IEnumerator Shake()
+    public string GetAssignedClue()
     {
-        float duration = 0.2f;
-        float strength = 5f; // Degrees of rotation
-        float time = 0;
-
-        Quaternion originalRotation = transform.rotation;
-
-        while (time < duration)
-        {
-            float zRotation = Mathf.Sin(time * 40f) * strength;
-            transform.rotation = Quaternion.Euler(0f, 0f, zRotation);
-            time += Time.deltaTime;
-            yield return null;
-        }
-
-        transform.rotation = originalRotation;
+        return assignedClue;
     }
 
+    public string GetExpectedClue()
+    {
+        return tmp != null ? tmp.text : "";
+    }
 }
-
-
-
-
