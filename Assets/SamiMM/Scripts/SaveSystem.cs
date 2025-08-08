@@ -20,7 +20,6 @@ public class SaveSystem : MonoBehaviour
 		}
 
 		instance = this;
-		DontDestroyOnLoad(gameObject);
 
 		// Subscribe immediately so saveData is never null on scene load
 		SceneManager.sceneLoaded += OnSceneLoaded;
@@ -42,6 +41,10 @@ public class SaveSystem : MonoBehaviour
 		// Restore inventory (global list)
 		if (inventory != null)
 			inventory.LoadFromIDs(saveData.collectedItemIDs);
+
+		var inventoryUI = FindFirstObjectByType<InventoryUI>();
+		if (inventoryUI != null)
+			inventoryUI.UpdateNotebookClues();
 	}
 
 	private void OnDestroy()

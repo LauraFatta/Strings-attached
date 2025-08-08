@@ -4,12 +4,21 @@ using UnityEngine.EventSystems;
 
 public class ItemDescription : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public GameItem gameItem;
     public TextMeshProUGUI descriptionText;
     private float displayDuration = 1f;
     private Coroutine descriptionCoroutine;
+    private GameItem gameItem;
+	private void Start()
+	{
+		gameItem = GetComponent<Pickup>().gameItem;
+		if (gameItem == null)
+		{
+			Debug.Log("GameItem not found with ItemDescription");
+			return;
+		}
+	}
 
-    public void OnPointerEnter(PointerEventData eventData)
+	public void OnPointerEnter(PointerEventData eventData)
     {
 
         if (descriptionCoroutine != null)
@@ -29,7 +38,7 @@ public class ItemDescription : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     private void ShowDescription()
     {
-        if (descriptionText != null && gameItem != null)
+		if (descriptionText != null && gameItem != null)
         {
             descriptionText.text = gameItem.itemDescription;
             descriptionText.gameObject.SetActive(true);

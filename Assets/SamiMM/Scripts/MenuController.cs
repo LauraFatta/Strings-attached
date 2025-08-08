@@ -9,6 +9,7 @@ using System;
 public class MenuController : MonoBehaviour
 {
 	private bool pressed = false;
+	[SerializeField] private bool loadSavedScene = false;
 	public void ChooseLevel(string sceneToLoad)
 	{
 		if (pressed) return; pressed = true;
@@ -31,7 +32,8 @@ public class MenuController : MonoBehaviour
 
 		if (!string.IsNullOrEmpty(savedScene)
 			&& saveSys != null
-			&& !saveSys.dontOverrideScene)
+			&& !saveSys.dontOverrideScene
+			&& loadSavedScene)
 		{
 			Debug.Log($"Overriding level load: using '{savedScene}' instead of '{originalScene}'");
 			finalScene = savedScene;
@@ -52,7 +54,6 @@ public class MenuController : MonoBehaviour
 
 	#region SettingsMenu
 
-	public AudioMixer audioMixer;
 	public TMP_Dropdown resolutionDropdown;
 	Resolution[] resolutions;
 	private void Start()
@@ -75,22 +76,67 @@ public class MenuController : MonoBehaviour
 		resolutionDropdown.value = currentResolutionIndex;
 		resolutionDropdown.RefreshShownValue();
 	}
-	public void SetCurrentMixer(AudioMixer mixer)
+
+	public AudioMixer masterMixer; // All three groups live in this one mixer asset
+	public AudioMixer musicMixer;  // Music subgroup
+	public AudioMixer sfxMixer;    // SFX subgroup
+
+	// Keep track of the *linear* t from each slider (0…1)
+	float _masterT = 1f;
+	float _musicT = 1f;
+	float _sfxT = 1f;
+
+	// Utility: map sliderValue (say –10…0 or 0…1) to a 0…1 “t”
+	float SliderToT(float sliderValue)
 	{
-		audioMixer = mixer;
+		// if your slider is 0…1, just return sliderValue
+		// if your slider is –10…0 dB, you can do:
+		return Mathf.InverseLerp(-10f, 0f, sliderValue);
 	}
-	public void SetVolume(float volume)
+
+	// Utility: apply a curve and map t (0…1) into –80…0 dB
+	float TtoDb(float t)
 	{
-		float t = Mathf.InverseLerp(-10f, 0f, volume);
-
-		float k = 4f;
-		float curved = 1f - Mathf.Pow(1f - t, k);
-
-		float targetDb = Mathf.Lerp(-80f, 0f, curved);
-
-		audioMixer.SetFloat("volume", targetDb);
+		float curved = 1f - Mathf.Pow(1f - t, 4f);
+		return Mathf.Lerp(-80f, 0f, curved);
 	}
 
+	// Call this whenever any slider changes
+	void ApplyVolumes()
+	{
+		// 1) Compute effective linear gain for each channel
+		float musicEffT = _masterT * _musicT;
+		float sfxEffT = _masterT * _sfxT;
+
+		// 2) Map to dB
+		float masterDb = TtoDb(_masterT);      // you might want to hear master itself
+		float musicDb = TtoDb(musicEffT);
+		float sfxDb = TtoDb(sfxEffT);
+
+		// 3) Set on each exposed parameter
+		masterMixer.SetFloat("volume", masterDb);
+		musicMixer.SetFloat("volume", musicDb);
+		sfxMixer.SetFloat("volume", sfxDb);
+	}
+
+	// These get hooked up to your UI sliders:
+	public void OnMasterSliderChanged(float sliderValue)
+	{
+		_masterT = SliderToT(sliderValue);
+		ApplyVolumes();
+	}
+
+	public void OnMusicSliderChanged(float sliderValue)
+	{
+		_musicT = SliderToT(sliderValue);
+		ApplyVolumes();
+	}
+
+	public void OnSfxSliderChanged(float sliderValue)
+	{
+		_sfxT = SliderToT(sliderValue);
+		ApplyVolumes();
+	}
 
 	public void SetFullscreen(bool isFullscreen)
 	{

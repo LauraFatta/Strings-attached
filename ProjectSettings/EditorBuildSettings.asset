@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SamiMM/Scenes/Menu_Main.unity
+    path: Assets/Scenes/Menu_Main.unity
     guid: 45f7b4bfe74342e4b8b45b9dc82d4732
   - enabled: 1
     path: Assets/Sami/Scenes/MainMenu.unity
