@@ -49,15 +49,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Nora\Scripts\GameItem.cs" />
+    <Compile Include="Assets\Rahaf &amp; Fatima ( UI&apos;s)\CaseFilesUI\BookPageManager.cs" />
     <Compile Include="Assets\SamiMM\Scripts\ScreenSummoner.cs" />
+    <Compile Include="Assets\Rahaf &amp; Fatima ( UI&apos;s)\CaseFilesUI\HideEverythingExceptMe.cs" />
     <Compile Include="Assets\Laura\DropZone2D.cs" />
     <Compile Include="Assets\Nora\Scripts\CabinetActivator.cs" />
     <Compile Include="Assets\SamiMM\Scripts\PickupAnimator.cs" />
+    <Compile Include="Assets\Rahaf &amp; Fatima ( UI&apos;s)\CaseFilesUI\TargetShowImageOnTop.cs" />
+    <Compile Include="Assets\Rahaf &amp; Fatima ( UI&apos;s)\CaseFilesUI\NextButtonLogic.cs" />
     <Compile Include="Assets\Juman\finalpuzzeleditjuman\ClosedBagClick.cs" />
     <Compile Include="Assets\Sami\Scripts\MenuButtonController.cs" />
     <Compile Include="Assets\Nora\Scripts\InventoryUI.cs" />
     <Compile Include="Assets\SamiMM\Scripts\MenuController.cs" />
     <Compile Include="Assets\Juman\finalpuzzeleditjuman\ArrowButton.cs" />
+    <Compile Include="Assets\Rahaf &amp; Fatima ( UI&apos;s)\CaseFilesUI\BackToNormalScene.cs" />
     <Compile Include="Assets\SamiMM\Scripts\CoroutineRunner.cs" />
     <Compile Include="Assets\Laura\ClueVerifier.cs" />
     <Compile Include="Assets\Sami\Scripts\AnimatorFunctions.cs" />
@@ -73,6 +78,7 @@
     <Compile Include="Assets\Juman\finalpuzzeleditjuman\DigitArrow.cs" />
     <Compile Include="Assets\Nora\Scripts\Pickup.cs" />
     <Compile Include="Assets\CabinetPuzzleToggle.cs" />
+    <Compile Include="Assets\Rahaf &amp; Fatima ( UI&apos;s)\CaseFilesUI\BackToMainSprites.cs" />
     <Compile Include="Assets\Laura\NotebookManager.cs" />
     <Compile Include="Assets\Sami\Scripts\MenuButton.cs" />
     <Compile Include="Assets\Laura\Draggable2D.cs" />
@@ -87,11 +93,13 @@
     <Compile Include="Assets\Scripts\MenuButtonParticleEffect.cs" />
     <Compile Include="Assets\Nora\Scripts\Inventory.cs" />
     <Compile Include="Assets\Laura\NotebookUIController.cs" />
+    <Compile Include="Assets\Rahaf &amp; Fatima ( UI&apos;s)\CaseFilesUI\ShowMySprite.cs" />
     <Compile Include="Assets\Nora\Scripts\NotebookActivator.cs" />
     <Compile Include="Assets\Nora\Scripts\ItemDescription.cs" />
     <Compile Include="Assets\Juman\finalpuzzeleditjuman\UnlockBagTrigger.cs" />
     <Compile Include="Assets\Nora\Scripts\SceneSwitcher.cs" />
     <Compile Include="Assets\Nora\SimpleStepManager.cs" />
+    <Compile Include="Assets\Rahaf &amp; Fatima ( UI&apos;s)\CaseFilesUI\RevealBookFromCode.cs" />
     <Compile Include="Assets\SamiMM\Scripts\savemanager.cs" />
   </ItemGroup>
   <ItemGroup>
