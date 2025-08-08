@@ -3,6 +3,25 @@
   "WorkspaceRootPath": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{77595BB7-E0AD-717A-8731-57332AF1E43A}|Assembly-CSharp.csproj|C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\assets\\nora\\scripts\\inventoryui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77595BB7-E0AD-717A-8731-57332AF1E43A}|Assembly-CSharp.csproj|solutionrelative:assets\\nora\\scripts\\inventoryui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77595BB7-E0AD-717A-8731-57332AF1E43A}|Assembly-CSharp.csproj|c:\\users\\laura\\documents\\github\\strings-attached\\assets\\nora\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77595BB7-E0AD-717A-8731-57332AF1E43A}|Assembly-CSharp.csproj|solutionrelative:assets\\nora\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Laura\\Desktop\\InventoryUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77595BB7-E0AD-717A-8731-57332AF1E43A}|Assembly-CSharp.csproj|C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\assets\\laura\\notebookmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77595BB7-E0AD-717A-8731-57332AF1E43A}|Assembly-CSharp.csproj|solutionrelative:assets\\laura\\notebookmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77595BB7-E0AD-717A-8731-57332AF1E43A}|Assembly-CSharp.csproj|C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\assets\\samimm\\scripts\\savesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77595BB7-E0AD-717A-8731-57332AF1E43A}|Assembly-CSharp.csproj|solutionrelative:assets\\samimm\\scripts\\savesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5B252B4F-CEC8-F838-CAE3-D1BB9C8B499E}|Assembly-CSharp-Editor.csproj|C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\library\\packagecache\\com.justinpbarnett.unity-mcp@e075d0848613\\editor\\unitymcpbridge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B252B4F-CEC8-F838-CAE3-D1BB9C8B499E}|Assembly-CSharp-Editor.csproj|solutionrelative:library\\packagecache\\com.justinpbarnett.unity-mcp@e075d0848613\\editor\\unitymcpbridge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -54,11 +73,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InventoryUI.cs",
+              "DocumentMoniker": "C:\\Users\\Laura\\Desktop\\InventoryUI.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Desktop\\InventoryUI.cs",
+              "ToolTip": "C:\\Users\\Laura\\Desktop\\InventoryUI.cs",
+              "RelativeToolTip": "..\\..\\..\\Desktop\\InventoryUI.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAAAI8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T20:42:42.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SaveSystem.cs",
+              "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\SamiMM\\Scripts\\SaveSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\SamiMM\\Scripts\\SaveSystem.cs",
+              "ToolTip": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\SamiMM\\Scripts\\SaveSystem.cs",
+              "RelativeToolTip": "Assets\\SamiMM\\Scripts\\SaveSystem.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAjwC4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T20:35:04.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Nora\\Scripts\\Inventory.cs",
+              "RelativeDocumentMoniker": "Assets\\Nora\\Scripts\\Inventory.cs",
+              "ToolTip": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Nora\\Scripts\\Inventory.cs",
+              "RelativeToolTip": "Assets\\Nora\\Scripts\\Inventory.cs",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAmwDQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T14:17:05.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotebookManager.cs",
+              "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Laura\\NotebookManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Laura\\NotebookManager.cs",
+              "ToolTip": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Laura\\NotebookManager.cs",
+              "RelativeToolTip": "Assets\\Laura\\NotebookManager.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwCEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T17:42:10.385Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "InventoryUI.cs",
+              "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Nora\\Scripts\\InventoryUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Nora\\Scripts\\InventoryUI.cs",
+              "ToolTip": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Nora\\Scripts\\InventoryUI.cs",
+              "RelativeToolTip": "Assets\\Nora\\Scripts\\InventoryUI.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAWwBoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T14:16:34.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "UnityMcpBridge.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Library\\PackageCache\\com.justinpbarnett.unity-mcp@e075d0848613\\Editor\\UnityMcpBridge.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.justinpbarnett.unity-mcp@e075d0848613\\Editor\\UnityMcpBridge.cs",
@@ -66,12 +147,11 @@
               "RelativeToolTip": "Library\\PackageCache\\com.justinpbarnett.unity-mcp@e075d0848613\\Editor\\UnityMcpBridge.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAmwFgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T04:59:24.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-14T04:59:24.545Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "DropZone2D.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Laura\\DropZone2D.cs",
               "RelativeDocumentMoniker": "Assets\\Laura\\DropZone2D.cs",
@@ -83,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Draggable2D.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Laura\\Draggable2D.cs",
               "RelativeDocumentMoniker": "Assets\\Laura\\Draggable2D.cs",
@@ -95,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "InventoryDropZone.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Laura\\InventoryDropZone.cs",
               "RelativeDocumentMoniker": "Assets\\Laura\\InventoryDropZone.cs",
@@ -107,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "NotebookUIController.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Laura\\NotebookUIController.cs",
               "RelativeDocumentMoniker": "Assets\\Laura\\NotebookUIController.cs",
@@ -119,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Spawn.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Nora\\Scripts\\Spawn.cs",
               "RelativeDocumentMoniker": "Assets\\Nora\\Scripts\\Spawn.cs",
@@ -131,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "Slot.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Nora\\Scripts\\Slot.cs",
               "RelativeDocumentMoniker": "Assets\\Nora\\Scripts\\Slot.cs",
@@ -143,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Pickup.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Assets\\Nora\\Scripts\\Pickup.cs",
               "RelativeDocumentMoniker": "Assets\\Nora\\Scripts\\Pickup.cs",
@@ -155,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "TilemapEditorTool.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Library\\PackageCache\\com.unity.2d.tilemap@50cb13262373\\Editor\\EditorTools\\TilemapEditorTool.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.2d.tilemap@50cb13262373\\Editor\\EditorTools\\TilemapEditorTool.cs",
@@ -163,12 +243,11 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.2d.tilemap@50cb13262373\\Editor\\EditorTools\\TilemapEditorTool.cs",
               "ViewState": "AgIAAN0AAAAAAAAAAAAnwOgAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T16:44:19.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T16:44:19.526Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "TileUtility.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Library\\PackageCache\\com.unity.2d.tilemap@50cb13262373\\Editor\\TileUtility.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.2d.tilemap@50cb13262373\\Editor\\TileUtility.cs",
@@ -176,12 +255,11 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.2d.tilemap@50cb13262373\\Editor\\TileUtility.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAnwCAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T16:43:27.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T16:43:27.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "GridBrushEditor.cs",
               "DocumentMoniker": "C:\\Users\\Laura\\Documents\\GitHub\\Strings-attached\\Library\\PackageCache\\com.unity.2d.tilemap@50cb13262373\\Editor\\GridBrushEditor.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.2d.tilemap@50cb13262373\\Editor\\GridBrushEditor.cs",
@@ -189,8 +267,7 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.2d.tilemap@50cb13262373\\Editor\\GridBrushEditor.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAnwJwAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T16:41:18.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T16:41:18.203Z"
             }
           ]
         }

@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            
         }
         else
         {
@@ -48,6 +49,9 @@ public class Inventory : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+
+     
+
         inventoryUI = FindObjectOfType<InventoryUI>();
         if (inventoryUI != null)
         {

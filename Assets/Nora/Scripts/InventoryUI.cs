@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class InventoryUI : MonoBehaviour
             StartCoroutine(CheckToClosePanel());
         }
     }
+
+
 
 
 
@@ -92,7 +95,12 @@ public class InventoryUI : MonoBehaviour
 
         clickedOnPickup = false; 
     }
-    public void UpdateNotebookClues()
+
+
+   
+
+
+       public void UpdateNotebookClues()
     {
         foreach (Transform child in notebookClueContainer)
             Destroy(child.gameObject);

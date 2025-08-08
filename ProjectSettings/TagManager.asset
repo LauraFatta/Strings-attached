@@ -8,6 +8,7 @@ TagManager:
   - BlueClue
   - RedClue
   - InventoryContent
+  - NotebookClueContainer
   layers:
   - Default
   - TransparentFX

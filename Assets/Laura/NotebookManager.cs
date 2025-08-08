@@ -29,6 +29,8 @@ public class NotebookManager : MonoBehaviour
         if (text != null)
             text.text = item.itemName;
 
-        clue.tag = item.clueTag;  // Important for DropZone tag checking
+     
     }
+   
+
 }
