@@ -7,6 +7,7 @@ public class DolabActivator : MonoBehaviour
 {
     [SerializeField] public GameObject Dolab;
     [SerializeField] private Volume blurVolume;
+    [SerializeField] public GameObject bag;
 
     [SerializeField] public GameObject DolabCamera;
     [SerializeField] private GameObject closeButton;
@@ -47,5 +48,6 @@ public class DolabActivator : MonoBehaviour
         playDolabAnimationButton.SetActive(false);
         DolabAnimator.SetBool("open", false);
         switchButton.SetActive(false);
+        bag.SetActive(false);
     }
 }
