@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0d20688b3b6d83e4b9c8d14357a0c670
+guid: d102f59c56b5e7c44b938cbb80c373e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2105434160995606196
-    second: PoliceStation (Home UI)_0
+      213: -6705085998215403490
+    second: Sounds2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PoliceStation (Home UI)_0
+      name: Sounds2_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 1921
-        height: 1081
+        x: 0
+        y: 0
+        width: 6
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4be9d10e631083d10800000000000000
-      internalID: 2105434160995606196
+      spriteID: e18ece74fcfb2f2a0800000000000000
+      internalID: -6705085998215403490
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      PoliceStation (Home UI)_0: 2105434160995606196
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
