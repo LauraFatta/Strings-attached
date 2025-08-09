@@ -27,13 +27,6 @@ public class InventoryUI : MonoBehaviour
         inventoryPanel.SetActive(false);
     }
 
-    // private void Update()
-    // {
-    //     if (inventoryPanel.activeSelf && Input.GetMouseButtonDown(0))
-    //     {
-    //         StartCoroutine(CheckToClosePanel());
-    //     }
-    // }
     private void Update()
     {
         if (inventoryPanel != null && inventoryPanel.activeSelf && Input.GetMouseButtonDown(0))
