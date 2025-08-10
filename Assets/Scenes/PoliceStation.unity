@@ -3826,7 +3826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 1128586574}
   itemCountText: {fileID: 1118497099}
-  totalItems: 2
+  totalItems: 6
   notebookClueContainer: {fileID: 816973012}
   notebookCluePrefabRed: {fileID: 2847915620202928803, guid: b8f427f1404e8104688e6a298ba7c83a, type: 3}
   notebookCluePrefabBlue: {fileID: 2847915620202928803, guid: 336289bad7174f848bd1904b5cfd377d, type: 3}
@@ -3843,8 +3843,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

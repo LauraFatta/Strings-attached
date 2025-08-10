@@ -36,6 +36,7 @@ public class DolabActivator : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         switchButton.SetActive(true);
+        playDolabAnimationButton.SetActive(false);
     }
 
     public void CloseDolab()
