@@ -77,6 +77,7 @@
     <Compile Include="Assets\Nora\Scripts\ItemButtonText.cs" />
     <Compile Include="Assets\Juman\finalpuzzeleditjuman\DigitArrow.cs" />
     <Compile Include="Assets\Nora\Scripts\Pickup.cs" />
+    <Compile Include="Assets\Juman\HideSquaresOnClick.cs" />
     <Compile Include="Assets\CabinetPuzzleToggle.cs" />
     <Compile Include="Assets\Rahaf &amp; Fatima ( UI&apos;s)\CaseFilesUI\BackToMainSprites.cs" />
     <Compile Include="Assets\Laura\NotebookManager.cs" />
