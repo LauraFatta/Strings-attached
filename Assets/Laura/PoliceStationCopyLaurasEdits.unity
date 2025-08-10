@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a650842ffd4f7de459f4cca3c6f1501e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredTag: BlueClue
+  tmp: {fileID: 0}
 --- !u!61 &169336398
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3098,7 +3098,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364bfa8de3537ea40a3c0c1940f78dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlePanel: {fileID: 1680278163}
 --- !u!114 &1057729716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3111,19 +3110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0483d2adad470c04cb69ddd911f1759b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  symbols:
-  - {fileID: -6231044458718751821, guid: 3dd639dada110964abcf5c2b2e284e52, type: 3}
-  - {fileID: 9164359298635338950, guid: db0b57be0456fb142b505cd632152422, type: 3}
-  - {fileID: -1843197933104017171, guid: 79f38db28801d9c4993bd9f9a1e8764f, type: 3}
-  - {fileID: 4815476061570213978, guid: 2d1c09643bd7f014580e7f5059905d60, type: 3}
-  - {fileID: -205270267638800340, guid: a1705fa8603accc4fadbdb5f9d9e6fe1, type: 3}
-  symbolSlots:
-  - {fileID: 27317174}
-  - {fileID: 1144947461}
-  - {fileID: 737210704}
-  resultText: {fileID: 2018396069}
-  currentIndices: 000000000000000000000000
-  correctIndices: 000000000100000002000000
 --- !u!4 &1057729717
 Transform:
   m_ObjectHideFlags: 0
@@ -4021,7 +4007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a650842ffd4f7de459f4cca3c6f1501e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredTag: RedClue
+  tmp: {fileID: 0}
 --- !u!61 &1199085965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4375,6 +4361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typewriter: {fileID: 1311088706}
+  Typewriterbackground: {fileID: 0}
   blurVolume: {fileID: 1536541717}
   typewriterCamera: {fileID: 1462160881}
   closeButton: {fileID: 156476868}
@@ -5036,7 +5023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a650842ffd4f7de459f4cca3c6f1501e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredTag: BlueClue
+  tmp: {fileID: 0}
 --- !u!61 &1478877583
 BoxCollider2D:
   m_ObjectHideFlags: 0
