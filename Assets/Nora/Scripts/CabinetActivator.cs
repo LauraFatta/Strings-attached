@@ -11,6 +11,7 @@ public class DrawerActivator : MonoBehaviour
     [SerializeField] public GameObject drawerCamera;
     [SerializeField] private GameObject closeButton;
     [SerializeField] private GameObject allButton;
+    [SerializeField] private GameObject InventoryButton; 
 
     [Header("Main Buttons")]
     [SerializeField] private GameObject DlabFileButton;   // زر 1
@@ -80,6 +81,7 @@ public class DrawerActivator : MonoBehaviour
         drawerCamera.SetActive(true);
         closeButton.SetActive(true);
         allButton.SetActive(false);
+        InventoryButton.SetActive(false); 
 
         DlabFileButton.SetActive(true);
         DlabFileButton2.SetActive(true);
@@ -100,6 +102,7 @@ public class DrawerActivator : MonoBehaviour
         drawerCamera.SetActive(false);
         closeButton.SetActive(false);
         allButton.SetActive(true);
+        InventoryButton.SetActive(true);
 
         DlabFileButton.SetActive(false);
         DlabFileButton2.SetActive(false);

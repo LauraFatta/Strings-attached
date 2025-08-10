@@ -11,6 +11,7 @@ public class TypewriterActivator : MonoBehaviour
     [SerializeField] public GameObject typewriterCamera;
     [SerializeField] private GameObject closeButton;
     [SerializeField] private GameObject AllButton;
+    [SerializeField] private GameObject InventoryButton;
     [SerializeField] private GameObject playTypewriterAnimationButton;
     [SerializeField] private Animator typewriterAnimator;
 
@@ -24,6 +25,7 @@ public class TypewriterActivator : MonoBehaviour
         typewriterCamera.SetActive(true);
         closeButton.SetActive(true);
         AllButton.SetActive(false);
+        InventoryButton.SetActive(false);
         playTypewriterAnimationButton.SetActive(true);
 
 
@@ -46,6 +48,7 @@ public class TypewriterActivator : MonoBehaviour
         typewriterCamera.SetActive(false);
         closeButton.SetActive(false);
         AllButton.SetActive(true);
+        InventoryButton.SetActive(true);
         playTypewriterAnimationButton.SetActive(false);
         typewriterAnimator.SetBool("play", false);
 

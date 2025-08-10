@@ -11,6 +11,7 @@ public class NotebookActivator : MonoBehaviour
     [SerializeField] private GameObject closeButton;
     [SerializeField] private GameObject notebookUI;
     [SerializeField] private GameObject AllButton;
+    [SerializeField] private GameObject InventoryButton;
 
     public void OpenNotebook()
     {
@@ -21,6 +22,7 @@ public class NotebookActivator : MonoBehaviour
         NotebookCamera.SetActive(true);
         closeButton.SetActive(true);
         AllButton.SetActive(false);
+        InventoryButton.SetActive(false);
 
     }
 
@@ -32,5 +34,6 @@ public class NotebookActivator : MonoBehaviour
         NotebookCamera.SetActive(false);
         closeButton.SetActive(false);
         AllButton.SetActive(true);
+        InventoryButton.SetActive(true);
     }
 }
