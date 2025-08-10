@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DetectiveTutorial(Color)_0: 1082980829412006020
+      DetectiveTutorial(Color)_1: -8696836352029496482
+      DetectiveTutorial(Color)_2: 4794627243490986618
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
