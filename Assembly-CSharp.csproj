@@ -63,6 +63,7 @@
     <Compile Include="Assets\SamiMM\Scripts\MenuController.cs" />
     <Compile Include="Assets\Juman\finalpuzzeleditjuman\ArrowButton.cs" />
     <Compile Include="Assets\Rahaf &amp; Fatima ( UI&apos;s)\CaseFilesUI\BackToNormalScene.cs" />
+    <Compile Include="Assets\Juman\TypewriterEffectOnClick.cs" />
     <Compile Include="Assets\SamiMM\Scripts\CoroutineRunner.cs" />
     <Compile Include="Assets\Laura\ClueVerifier.cs" />
     <Compile Include="Assets\Sami\Scripts\AnimatorFunctions.cs" />
