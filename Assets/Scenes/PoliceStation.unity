@@ -1611,6 +1611,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4684477368781690979, guid: 67c5aa7b5a365074f881906cda5d108e, type: 3}
+      propertyPath: m_CellSize.x
+      value: 550
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684477368781690979, guid: 67c5aa7b5a365074f881906cda5d108e, type: 3}
+      propertyPath: m_CellSize.y
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684477368781690979, guid: 67c5aa7b5a365074f881906cda5d108e, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 260
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684477368781690979, guid: 67c5aa7b5a365074f881906cda5d108e, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4811511146283348291, guid: 67c5aa7b5a365074f881906cda5d108e, type: 3}
       propertyPath: m_SizeDelta.x
       value: -224.151
