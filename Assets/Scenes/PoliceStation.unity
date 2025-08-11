@@ -5005,7 +5005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7823424015825111147, guid: 67c5aa7b5a365074f881906cda5d108e, type: 3}
       propertyPath: m_text
-      value: Knife
+      value: 'Necklace '
       objectReference: {fileID: 0}
     - target: {fileID: 8446054757344796729, guid: 67c5aa7b5a365074f881906cda5d108e, type: 3}
       propertyPath: m_SizeDelta.x
