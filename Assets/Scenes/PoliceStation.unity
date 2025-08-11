@@ -5005,7 +5005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7823424015825111147, guid: 67c5aa7b5a365074f881906cda5d108e, type: 3}
       propertyPath: m_text
-      value: Mona
+      value: Knife
       objectReference: {fileID: 0}
     - target: {fileID: 8446054757344796729, guid: 67c5aa7b5a365074f881906cda5d108e, type: 3}
       propertyPath: m_SizeDelta.x
@@ -14060,7 +14060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1462160882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16179,7 +16179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1634163187
 MonoBehaviour:
   m_ObjectHideFlags: 0
