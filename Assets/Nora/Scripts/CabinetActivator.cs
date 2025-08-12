@@ -44,9 +44,9 @@ public class DrawerActivator : MonoBehaviour
     [SerializeField] private GameObject EvidencesBook4;
 
     [Header("Button 3 Files (خانات خاصة بزر 3)")]
-    [SerializeField] private GameObject CharacterFileBook;
-    [SerializeField] private GameObject CharacterFileBook2;
-    [SerializeField] private GameObject CharacterFileBook3;
+    [SerializeField] private GameObject CaseRosterBook;
+    [SerializeField] private GameObject CaseRosterBook2;
+    [SerializeField] private GameObject CaseRosterBook3;
 
     // ===== Helpers =====
     private void SetActiveSafe(GameObject go, bool state)
@@ -71,9 +71,9 @@ public class DrawerActivator : MonoBehaviour
 
     private void HideBtn3Files()
     {
-        SetActiveSafe(CharacterFileBook, false);
-        SetActiveSafe(CharacterFileBook2, false);
-        SetActiveSafe(CharacterFileBook3, false);
+        SetActiveSafe(CaseRosterBook, false);
+        SetActiveSafe(CaseRosterBook2, false);
+        SetActiveSafe(CaseRosterBook3, false);
     }
 
     private void HideAllFiles()
@@ -329,25 +329,25 @@ public class DrawerActivator : MonoBehaviour
     //--------------Third Book Arrows-----------------
     public void nextCharacterFileBook()
     {
-        if (CharacterFileBook2) CharacterFileBook2.SetActive(true);
-        if (CharacterFileBook) CharacterFileBook.SetActive(false);
+        if (CaseRosterBook2) CaseRosterBook2.SetActive(true);
+        if (CaseRosterBook) CaseRosterBook.SetActive(false);
     }
 
     public void nextCharacterFileBook2()
     {
-        if (CharacterFileBook3) CharacterFileBook3.SetActive(true);
-        if (CharacterFileBook2) CharacterFileBook2.SetActive(false);
+        if (CaseRosterBook3) CaseRosterBook3.SetActive(true);
+        if (CaseRosterBook2) CaseRosterBook2.SetActive(false);
     }
 
     public void previousCharacterFileBook()
     {
-        if (CharacterFileBook) CharacterFileBook.SetActive(true);
-        if (CharacterFileBook2) CharacterFileBook2.SetActive(false);
+        if (CaseRosterBook) CaseRosterBook.SetActive(true);
+        if (CaseRosterBook2) CaseRosterBook2.SetActive(false);
     }
 
     public void previousCharacterFileBook2()
     {
-        if (CharacterFileBook2) CharacterFileBook2.SetActive(true);
-        if (CharacterFileBook3) CharacterFileBook3.SetActive(false);
+        if (CaseRosterBook2) CaseRosterBook2.SetActive(true);
+        if (CaseRosterBook3) CaseRosterBook3.SetActive(false);
     }
 }
