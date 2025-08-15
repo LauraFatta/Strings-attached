@@ -3882,7 +3882,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &666812693039456616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3914,6 +3914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseKey: 112
   pauseParent: {fileID: 4646826699190187261}
+  PoliceStationCanvas: {fileID: 0}
   pausePanel: {fileID: 6624188413814400577}
   settingsPanel: {fileID: 9045729799669207933}
   pauseButton: {fileID: 8074978804853181744}
@@ -3929,6 +3930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bd9f63f41b3784d9869676639208b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadSavedScene: 0
   resolutionDropdown: {fileID: 7711606464377165566}
   masterMixer: {fileID: 24100000, guid: d232da98a4b03994ba804f91f1fbed2c, type: 2}
   musicMixer: {fileID: 24100000, guid: f68e1d62f8f09e244bd6f1b6f61dea57, type: 2}

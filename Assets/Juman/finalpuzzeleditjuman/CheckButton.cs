@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CheckButton : MonoBehaviour
 {
-    public PuzzleManager puzzleManager;
+    public PuzzleManagerUI puzzleManager;
 
     private void OnMouseDown()
     {

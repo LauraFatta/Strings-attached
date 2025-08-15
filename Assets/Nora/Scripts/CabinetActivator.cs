@@ -3,7 +3,10 @@ using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class DrawerActivator : MonoBehaviour
+
 {
+    [SerializeField] public GameObject policeStationCanvas;
+    [SerializeField] private GameObject TextOfEachDrawer;
     [SerializeField] public GameObject drawer;
     [SerializeField] private GameObject drawerBackground;
     [SerializeField] private Volume blurVolume;
@@ -86,6 +89,8 @@ public class DrawerActivator : MonoBehaviour
     // ===== Drawer =====
     public void OpenDrawer()
     {
+        policeStationCanvas.SetActive(false);
+        TextOfEachDrawer.SetActive(true);
         drawer.SetActive(true);
         drawerBackground.SetActive(true);
         blurVolume.weight = 1;
@@ -111,6 +116,7 @@ public class DrawerActivator : MonoBehaviour
 
     public void BackToDrawer()
     {
+        TextOfEachDrawer.SetActive(true);
         drawer.SetActive(true);
         drawerBackground.SetActive(true);
         blurVolume.weight = 1;
@@ -141,6 +147,8 @@ public class DrawerActivator : MonoBehaviour
 
     public void CloseDrawer()
     {
+        TextOfEachDrawer.SetActive(false);
+     policeStationCanvas.SetActive(true);
         drawer.SetActive(false);
         drawerBackground.SetActive(false);
         blurVolume.weight = 0;
@@ -160,6 +168,7 @@ public class DrawerActivator : MonoBehaviour
         BookPanel2.SetActive(false);
         OpenFileButton3.SetActive(false);
         BookPanel2.SetActive(false);
+       
 
         HideAllFiles();
     }
@@ -171,11 +180,11 @@ public class DrawerActivator : MonoBehaviour
         OpenFileButton.SetActive(true);
 
         SecondcloseButton.SetActive(true);
-
+        
         DlabFileButton.SetActive(false);
         DlabFileButton2.SetActive(false);
         DlabFileButton3.SetActive(false);
-        FirstcloseButton.SetActive(false);
+        FirstcloseButton.SetActive(false);TextOfEachDrawer.SetActive(false);
 
     }
     public void Openfile2()
@@ -188,6 +197,7 @@ public class DrawerActivator : MonoBehaviour
         DlabFileButton2.SetActive(false);
         DlabFileButton3.SetActive(false);
         FirstcloseButton.SetActive(false);
+        TextOfEachDrawer.SetActive(false);
 
     }
     public void Openfile3()
@@ -200,6 +210,7 @@ public class DrawerActivator : MonoBehaviour
         DlabFileButton2.SetActive(false);
         DlabFileButton3.SetActive(false);
         FirstcloseButton.SetActive(false);
+        TextOfEachDrawer.SetActive(false);
 
     }
 
@@ -213,6 +224,8 @@ public class DrawerActivator : MonoBehaviour
         OpenFileButton.SetActive(false);
         OpenFileButton2.SetActive(false);
         OpenFileButton3.SetActive(false);
+         TextOfEachDrawer.SetActive(false);
+        
 
 
     }
@@ -226,6 +239,7 @@ public class DrawerActivator : MonoBehaviour
         OpenFileButton.SetActive(false);
         OpenFileButton2.SetActive(false);
         OpenFileButton3.SetActive(false);
+         TextOfEachDrawer.SetActive(false);
     }
 
     public void openFileBook3()
@@ -238,6 +252,7 @@ public class DrawerActivator : MonoBehaviour
         OpenFileButton.SetActive(false);
         OpenFileButton2.SetActive(false);
         OpenFileButton3.SetActive(false);
+         TextOfEachDrawer.SetActive(false);
     }
     // // ===== زر 2 =====
     // // استدعاء ملفات زر 2 فقط (يستخدم خانات زر 2)
@@ -327,25 +342,25 @@ public class DrawerActivator : MonoBehaviour
     }
 
     //--------------Third Book Arrows-----------------
-    public void nextCharacterFileBook()
+    public void nextCaseRosterFileBook()
     {
         if (CaseRosterBook2) CaseRosterBook2.SetActive(true);
         if (CaseRosterBook) CaseRosterBook.SetActive(false);
     }
 
-    public void nextCharacterFileBook2()
+    public void nextCaseRosterFileBook2()
     {
         if (CaseRosterBook3) CaseRosterBook3.SetActive(true);
         if (CaseRosterBook2) CaseRosterBook2.SetActive(false);
     }
 
-    public void previousCharacterFileBook()
+    public void previousCaseRosterFileBook()
     {
         if (CaseRosterBook) CaseRosterBook.SetActive(true);
         if (CaseRosterBook2) CaseRosterBook2.SetActive(false);
     }
 
-    public void previousCharacterFileBook2()
+    public void previousCaseRosterFileBook2()
     {
         if (CaseRosterBook2) CaseRosterBook2.SetActive(true);
         if (CaseRosterBook3) CaseRosterBook3.SetActive(false);

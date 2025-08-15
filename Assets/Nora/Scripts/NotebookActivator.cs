@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class NotebookActivator : MonoBehaviour
 {
+
     [SerializeField] public GameObject Notebook;
     [SerializeField] private Volume blurVolume;
 
@@ -18,7 +19,7 @@ public class NotebookActivator : MonoBehaviour
 
         Notebook.SetActive(true);
         notebookUI.SetActive(true);
-        blurVolume.weight = 1;
+        blurVolume.weight = 1f;
         NotebookCamera.SetActive(true);
         closeButton.SetActive(true);
         AllButton.SetActive(false);
@@ -28,6 +29,7 @@ public class NotebookActivator : MonoBehaviour
 
     public void CloseNotebook()
     {
+
         Notebook.SetActive(false);
         notebookUI.SetActive(false);
         blurVolume.weight = 0;
@@ -35,5 +37,6 @@ public class NotebookActivator : MonoBehaviour
         closeButton.SetActive(false);
         AllButton.SetActive(true);
         InventoryButton.SetActive(true);
+
     }
 }

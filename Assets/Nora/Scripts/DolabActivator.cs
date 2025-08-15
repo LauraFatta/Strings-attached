@@ -6,14 +6,13 @@ using System.Collections;
 public class DolabActivator : MonoBehaviour
 {
     [SerializeField] public GameObject Dolab;
-    [SerializeField] private Volume blurVolume;
-    [SerializeField] public GameObject bag;
-
+    //[SerializeField] private Volume blurVolume;
+    [SerializeField] public GameObject PuzzelBriefCase;
+    [SerializeField] public GameObject puzzelRoot;
+    [SerializeField] public GameObject policeStationCanvas;
     [SerializeField] public GameObject DolabCamera;
     [SerializeField] private GameObject closeButton;
     [SerializeField] private GameObject bagButton;
-    [SerializeField] private GameObject AllButton;
-    [SerializeField] private GameObject InventoryButton;
     [SerializeField] private GameObject playDolabAnimationButton;
     [SerializeField] private Animator DolabAnimator;
 
@@ -27,23 +26,21 @@ public class DolabActivator : MonoBehaviour
 
     public void OpenDolab()
     {
+        policeStationCanvas.SetActive(false);
         Dolab.SetActive(true);
-        blurVolume.weight = 1f;
-
+        //blurVolume.weight = 1f;
+        DolabCamera.SetActive(true);
         playDolabAnimationButton.SetActive(true);
         bagButton.SetActive(false);
-        bag.SetActive(false);
-
-        DolabCamera.SetActive(true);
         closeButton.SetActive(true);
-        AllButton.SetActive(false);
+
     }
 
     public void OpenDolabAnimation()
     {
         DolabAnimator.SetBool("open", true);
 
- 
+
         if (showBtnCoro != null)
         {
             StopCoroutine(showBtnCoro);
@@ -77,12 +74,37 @@ public class DolabActivator : MonoBehaviour
 
         bagButton.SetActive(false);
         playDolabAnimationButton.SetActive(false);
-        bag.SetActive(false);
 
-        blurVolume.weight = 0f;
+        //blurVolume.weight = 0f;
         DolabCamera.SetActive(false);
         closeButton.SetActive(false);
-        AllButton.SetActive(true);
         Dolab.SetActive(false);
+        policeStationCanvas.SetActive(true);
+        PuzzelBriefCase.SetActive(false);
+        puzzelRoot.SetActive(false);
+
+
     }
+
+    public void OpenBagCloseView()
+    {
+        playDolabAnimationButton.SetActive(false);
+        PuzzelBriefCase.SetActive(true);
+
+        DolabCamera.SetActive(true);
+        closeButton.SetActive(true);
+        Dolab.SetActive(false);
+
+    }
+    public void OpenLockCloseView()
+    {
+        puzzelRoot.SetActive(true);
+        playDolabAnimationButton.SetActive(false);
+        PuzzelBriefCase.SetActive(true);
+
+        DolabCamera.SetActive(true);
+        closeButton.SetActive(true);
+
+    }
+
 }
