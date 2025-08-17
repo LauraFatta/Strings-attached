@@ -2807,7 +2807,9 @@ MonoBehaviour:
   - {fileID: 0}
   inventoryContentParent: {fileID: 261441881}
   allCompositeItems:
-  - {fileID: 11400000, guid: 369b81f45f4aba0418fc7ba683e3488a, type: 2}
+  - {fileID: 11400000, guid: f42db373e800496449d0d82af1fd5f34, type: 2}
+  - {fileID: 11400000, guid: f3f88410c6e0c0444beadcfdb2e00bc9, type: 2}
+  - {fileID: 11400000, guid: 30b21382cee5fa44aad6963f3f2c602e, type: 2}
 --- !u!4 &1794601527
 Transform:
   m_ObjectHideFlags: 0
