@@ -170,7 +170,8 @@ public class InventoryUI : MonoBehaviour
     public Transform notebookClueContainer;
     public GameObject notebookCluePrefabRed;
     public GameObject notebookCluePrefabBlue;
-
+    public GameObject notebookCluePrefabGreen;
+    public GameObject notebookCluePrefabYellow;
 
     private void Start()
     {

@@ -2850,6 +2850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 1112698199}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &159171387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5158,6 +5159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 2094574920}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &332584169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5294,6 +5296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 619661882}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &341274682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5979,6 +5982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 1142844159}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &359895552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6196,6 +6200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 875202094}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &383403291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7533,6 +7538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 1794949981}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &428298178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12221,6 +12227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 598321604}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &719071286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12578,6 +12585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 1770467295}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &758207859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16616,6 +16624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 1261738569}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &968638492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20481,6 +20490,8 @@ MonoBehaviour:
   notebookClueContainer: {fileID: 1131624049076793056}
   notebookCluePrefabRed: {fileID: 2847915620202928803, guid: b8f427f1404e8104688e6a298ba7c83a, type: 3}
   notebookCluePrefabBlue: {fileID: 2847915620202928803, guid: 336289bad7174f848bd1904b5cfd377d, type: 3}
+  notebookCluePrefabGreen: {fileID: 2847915620202928803, guid: dd6acbf974344b7449e7f3b656250002, type: 3}
+  notebookCluePrefabYellow: {fileID: 2847915620202928803, guid: b294dab9c224cd445811805b41020cf1, type: 3}
 --- !u!114 &1278896291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20572,6 +20583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 1872285745}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &1279361239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21165,6 +21177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 277669547}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &1342935887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22600,6 +22613,8 @@ MonoBehaviour:
   notebookClueContainer: {fileID: 1131624049076793056}
   notebookCluePrefabRed: {fileID: 2847915620202928803, guid: b8f427f1404e8104688e6a298ba7c83a, type: 3}
   notebookCluePrefabBlue: {fileID: 2847915620202928803, guid: 336289bad7174f848bd1904b5cfd377d, type: 3}
+  notebookCluePrefabGreen: {fileID: 0}
+  notebookCluePrefabYellow: {fileID: 0}
 --- !u!1 &1425233583
 GameObject:
   m_ObjectHideFlags: 0
@@ -23900,6 +23915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 1573751841}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &1488787111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24735,6 +24751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 1950091740}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &1539639717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26715,6 +26732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 1316561260}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &1668428036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27090,6 +27108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 1132198024}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &1682353999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35131,6 +35150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 894192803}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &2124052366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39051,6 +39071,8 @@ MonoBehaviour:
   notebookClueContainer: {fileID: 1131624049076793056}
   notebookCluePrefabRed: {fileID: 2847915620202928803, guid: b8f427f1404e8104688e6a298ba7c83a, type: 3}
   notebookCluePrefabBlue: {fileID: 2847915620202928803, guid: 336289bad7174f848bd1904b5cfd377d, type: 3}
+  notebookCluePrefabGreen: {fileID: 0}
+  notebookCluePrefabYellow: {fileID: 0}
 --- !u!1 &5871503674512254950
 GameObject:
   m_ObjectHideFlags: 0
@@ -39659,6 +39681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 4712262983967240164}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!114 &6888118785506535526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39856,6 +39879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 3481351698456910867}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!1 &7211586750554605552
 GameObject:
   m_ObjectHideFlags: 0
@@ -41065,6 +41089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmp: {fileID: 7823424017094128650}
   overlapThreshold: 0.3
+  scaleFactor: 0.9
 --- !u!224 &8583909891008176510
 RectTransform:
   m_ObjectHideFlags: 0
