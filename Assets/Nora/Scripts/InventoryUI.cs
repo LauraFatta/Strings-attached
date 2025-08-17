@@ -170,6 +170,8 @@ public class InventoryUI : MonoBehaviour
     public Transform notebookClueContainer;
     public GameObject notebookCluePrefabRed;
     public GameObject notebookCluePrefabBlue;
+    public GameObject notebookCluePrefabGreen;
+    public GameObject notebookCluePrefabYellow;
 
 
     private void Start()
@@ -258,6 +260,7 @@ public class InventoryUI : MonoBehaviour
         clickedOnPickup = false;
     }
 
+    //Laura's Edit
     public void UpdateNotebookClues()
     {
         foreach (Transform child in notebookClueContainer)
@@ -270,9 +273,17 @@ public class InventoryUI : MonoBehaviour
             // Declare it once before if/else
             GameObject clue;
 
-            if (item.itemType == ItemType.Object)
+            if (item.itemType == ItemType.Object || item.itemType == ItemType.ComponentOnly)
             {
                 clue = Instantiate(notebookCluePrefabRed, notebookClueContainer, false);
+            }
+            else if(item.itemType == ItemType.actions)
+            {
+                clue = Instantiate(notebookCluePrefabGreen, notebookClueContainer, false);
+            }
+            else if(item.itemType == ItemType.locations)
+            {
+                clue = Instantiate(notebookCluePrefabYellow, notebookClueContainer, false);
             }
             else
             {
