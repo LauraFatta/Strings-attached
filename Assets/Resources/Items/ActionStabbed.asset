@@ -15,8 +15,8 @@ MonoBehaviour:
   itemName: Stabbed
   itemButton: {fileID: 3412098824037010654, guid: 72b09b4aabbdff94aa2fd16883078eb8, type: 3}
   itemType: 2
+  itemType2: 2
   itemDescription: 
   requiredItemA: {fileID: 11400000, guid: a61645ca24d95124cbde3fc9876ef329, type: 2}
   requiredItemB: {fileID: 11400000, guid: 86e795e2c8b9ba04e955e957ecb82dfd, type: 2}
   requiredItemC: {fileID: 0}
-  clueTag: 

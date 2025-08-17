@@ -16,6 +16,8 @@ public class GameItemEditor : Editor
         // EditorGUILayout.PropertyField(serializedObject.FindProperty("itemIcon"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("itemType"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("itemDescription"));
+        //Laura's Edit 
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("itemType2"));
 
         if (item.itemType == ItemType.actions)
         {

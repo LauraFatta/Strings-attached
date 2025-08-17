@@ -15,8 +15,8 @@ MonoBehaviour:
   itemName: Stole
   itemButton: {fileID: 3412098824037010654, guid: 72b09b4aabbdff94aa2fd16883078eb8, type: 3}
   itemType: 2
+  itemType2: 2
   itemDescription: 
   requiredItemA: {fileID: 11400000, guid: 39586779296e1fc439e32052535c7fa2, type: 2}
   requiredItemB: {fileID: 0}
   requiredItemC: {fileID: 0}
-  clueTag: 

@@ -272,15 +272,15 @@ public class InventoryUI : MonoBehaviour
             // Declare it once before if/else
             GameObject clue;
 
-            if (item.itemType == ItemType.Object || item.itemType == ItemType.ComponentOnly)
+            if (item.itemType2 == ItemType.Object )
             {
                 clue = Instantiate(notebookCluePrefabRed, notebookClueContainer, false);
             }
-            else if(item.itemType == ItemType.actions)
+            else if(item.itemType2 == ItemType.actions)
             {
                 clue = Instantiate(notebookCluePrefabGreen, notebookClueContainer, false);
             }
-            else if(item.itemType == ItemType.locations)
+            else if(item.itemType2 == ItemType.locations)
             {
                 clue = Instantiate(notebookCluePrefabYellow, notebookClueContainer, false);
             }

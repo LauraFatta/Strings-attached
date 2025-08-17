@@ -15,8 +15,8 @@ MonoBehaviour:
   itemName: Poisoned
   itemButton: {fileID: 3412098824037010654, guid: 72b09b4aabbdff94aa2fd16883078eb8, type: 3}
   itemType: 2
+  itemType2: 2
   itemDescription: 
   requiredItemA: {fileID: 11400000, guid: 5bcb6e98d3afcef4c8af3370cbcd3b22, type: 2}
   requiredItemB: {fileID: 11400000, guid: 42618dbd68e3b35479e1f93b96b5d12e, type: 2}
   requiredItemC: {fileID: 0}
-  clueTag: 
