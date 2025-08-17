@@ -75,34 +75,53 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
             return;
         }
 
+        // if (inventory.AddItem(gameItem))
+        // {
+        //     if (SaveSystem.instance != null)
+        //         SaveSystem.instance.MarkItemCollected(gameItem);
+
+        //     var pref = Resources.Load<GameObject>("Prefabs/sns/PickupAnimator");
+        //     if (pref != null)
+        //     {
+        //         var animatorObj = Instantiate(pref, transform.position, Quaternion.identity);
+        //         transform.SetParent(animatorObj.transform);
+        //         Destroy(this);
+        //     }
+        //     else
+        //     {
+        //         Destroy(gameObject);
+        //     }
+        // }
         if (inventory.AddItem(gameItem))
         {
             if (SaveSystem.instance != null)
                 SaveSystem.instance.MarkItemCollected(gameItem);
 
-            var pref = Resources.Load<GameObject>("Prefabs/sns/PickupAnimator");
-            if (pref != null)
+            // Check if the item should disappear on pickup
+            if (gameItem.shouldDisappearOnPickup)
             {
-                var animatorObj = Instantiate(pref, transform.position, Quaternion.identity);
-                transform.SetParent(animatorObj.transform);
-                Destroy(this);
-            }
-            else
-            {
-                Destroy(gameObject);
+                var pref = Resources.Load<GameObject>("Prefabs/sns/PickupAnimator");
+                if (pref != null)
+                {
+                    var animatorObj = Instantiate(pref, transform.position, Quaternion.identity);
+                    transform.SetParent(animatorObj.transform);
+                    Destroy(this);
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
             }
         }
+
     }
 
     public void ShowUncollectedVisual(bool show)
     {
-        // if (objectRenderer != null)
-        // {
-        //     objectRenderer.material.color = show ? Color.red : Color.white;
-        // }
-        if (objectImage != null)  // تحقق إذا كان لديك مكون Image
+
+        if (objectImage != null)  
         {
-            objectImage.color = show ? Color.red : Color.white;  // تغيير اللون إلى الأحمر أو الأبيض
+            objectImage.color = show ? Color.red : Color.white;  
         }
     }
 

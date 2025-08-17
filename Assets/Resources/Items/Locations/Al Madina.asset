@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37c7507428b3eeb4a921d48b9596a86a, type: 3}
-  m_Name: ActionStole
+  m_Name: Al Madina
   m_EditorClassIdentifier: 
-  itemName: Stole
-  itemButton: {fileID: 3412098824037010654, guid: 72b09b4aabbdff94aa2fd16883078eb8, type: 3}
-  itemType: 2
-  itemType2: 2
+  itemName: Al Madina
+  itemButton: {fileID: 3567406695824383920, guid: 4939ad3dac7d71841a81010c9b115dc8, type: 3}
+  itemType: 4
+  itemType2: 4
+  shouldDisappearOnPickup: 0
   itemDescription: 
-  requiredItemA: {fileID: 11400000, guid: 39586779296e1fc439e32052535c7fa2, type: 2}
-  requiredItemB: {fileID: 11400000, guid: 116aa4f0df4cbe8429c4f80657a2795b, type: 2}
+  requiredItemA: {fileID: 0}
+  requiredItemB: {fileID: 0}
   requiredItemC: {fileID: 0}

@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37c7507428b3eeb4a921d48b9596a86a, type: 3}
-  m_Name: ActionStole
+  m_Name: Ramy
   m_EditorClassIdentifier: 
-  itemName: Stole
-  itemButton: {fileID: 3412098824037010654, guid: 72b09b4aabbdff94aa2fd16883078eb8, type: 3}
-  itemType: 2
-  itemType2: 2
+  itemName: Ramy
+  itemButton: {fileID: 3022212704876593045, guid: 7687e6fcbb5f87f4ea6ba643a972c0d0, type: 3}
+  itemType: 3
+  itemType2: 1
+  shouldDisappearOnPickup: 0
   itemDescription: 
-  requiredItemA: {fileID: 11400000, guid: 39586779296e1fc439e32052535c7fa2, type: 2}
-  requiredItemB: {fileID: 11400000, guid: 116aa4f0df4cbe8429c4f80657a2795b, type: 2}
+  requiredItemA: {fileID: 0}
+  requiredItemB: {fileID: 0}
   requiredItemC: {fileID: 0}

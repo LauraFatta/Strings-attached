@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cabniet UI Tutorial2_0: 6727345935314094550
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
