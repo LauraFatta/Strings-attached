@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.UI;
 public class Pickup : MonoBehaviour, IPointerDownHandler
 {
     public GameItem gameItem;
@@ -9,6 +10,7 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
 
     private Inventory inventory;
     private Renderer objectRenderer;
+    private Image objectImage;
 
     private bool isCollected = false;
     public bool isMarkedForLinking = false;
@@ -28,6 +30,7 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
     {
         inventory = FindObjectOfType<Inventory>();
         objectRenderer = GetComponent<Renderer>();
+        objectImage = GetComponent<Image>();
     }
 
     public static bool HasAnyMarked()
@@ -93,9 +96,13 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
 
     public void ShowUncollectedVisual(bool show)
     {
-        if (objectRenderer != null)
+        // if (objectRenderer != null)
+        // {
+        //     objectRenderer.material.color = show ? Color.red : Color.white;
+        // }
+        if (objectImage != null)  // تحقق إذا كان لديك مكون Image
         {
-            objectRenderer.material.color = show ? Color.red : Color.white;
+            objectImage.color = show ? Color.red : Color.white;  // تغيير اللون إلى الأحمر أو الأبيض
         }
     }
 
