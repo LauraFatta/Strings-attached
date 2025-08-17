@@ -10,6 +10,7 @@ public class NotebookActivator : MonoBehaviour
 
     [SerializeField] public GameObject NotebookCamera;
     [SerializeField] private GameObject closeButton;
+    [SerializeField] private GameObject closeButton2;
     [SerializeField] private GameObject notebookUI;
     [SerializeField] private GameObject AllButton;
     [SerializeField] private GameObject InventoryButton;
@@ -39,4 +40,5 @@ public class NotebookActivator : MonoBehaviour
         InventoryButton.SetActive(true);
 
     }
+
 }

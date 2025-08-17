@@ -13,7 +13,7 @@ public class DrawerActivator : MonoBehaviour
 
     [SerializeField] public GameObject drawerCamera;
     [SerializeField] private GameObject FirstcloseButton;
-    [SerializeField] private GameObject SecondcloseButton;    [SerializeField] private GameObject allButton;
+    [SerializeField] private GameObject SecondcloseButton; [SerializeField] private GameObject allButton;
     [SerializeField] private GameObject InventoryButton;
 
     [Header("Main Buttons")]
@@ -45,6 +45,7 @@ public class DrawerActivator : MonoBehaviour
     [SerializeField] private GameObject EvidencesBook2;
     [SerializeField] private GameObject EvidencesBook3;
     [SerializeField] private GameObject EvidencesBook4;
+     [SerializeField] private GameObject EvidencesBook5;
 
     [Header("Button 3 Files (خانات خاصة بزر 3)")]
     [SerializeField] private GameObject CaseRosterBook;
@@ -139,7 +140,7 @@ public class DrawerActivator : MonoBehaviour
         SetActiveSafe(OpenFileButton3, false);
         SetActiveSafe(BookPanel3, false);
 
-      
+
 
     }
 
@@ -148,7 +149,7 @@ public class DrawerActivator : MonoBehaviour
     public void CloseDrawer()
     {
         TextOfEachDrawer.SetActive(false);
-     policeStationCanvas.SetActive(true);
+        policeStationCanvas.SetActive(true);
         drawer.SetActive(false);
         drawerBackground.SetActive(false);
         blurVolume.weight = 0;
@@ -168,7 +169,7 @@ public class DrawerActivator : MonoBehaviour
         BookPanel2.SetActive(false);
         OpenFileButton3.SetActive(false);
         BookPanel2.SetActive(false);
-       
+
 
         HideAllFiles();
     }
@@ -180,11 +181,11 @@ public class DrawerActivator : MonoBehaviour
         OpenFileButton.SetActive(true);
 
         SecondcloseButton.SetActive(true);
-        
+
         DlabFileButton.SetActive(false);
         DlabFileButton2.SetActive(false);
         DlabFileButton3.SetActive(false);
-        FirstcloseButton.SetActive(false);TextOfEachDrawer.SetActive(false);
+        FirstcloseButton.SetActive(false); TextOfEachDrawer.SetActive(false);
 
     }
     public void Openfile2()
@@ -224,8 +225,8 @@ public class DrawerActivator : MonoBehaviour
         OpenFileButton.SetActive(false);
         OpenFileButton2.SetActive(false);
         OpenFileButton3.SetActive(false);
-         TextOfEachDrawer.SetActive(false);
-        
+        TextOfEachDrawer.SetActive(false);
+
 
 
     }
@@ -239,7 +240,7 @@ public class DrawerActivator : MonoBehaviour
         OpenFileButton.SetActive(false);
         OpenFileButton2.SetActive(false);
         OpenFileButton3.SetActive(false);
-         TextOfEachDrawer.SetActive(false);
+        TextOfEachDrawer.SetActive(false);
     }
 
     public void openFileBook3()
@@ -252,7 +253,7 @@ public class DrawerActivator : MonoBehaviour
         OpenFileButton.SetActive(false);
         OpenFileButton2.SetActive(false);
         OpenFileButton3.SetActive(false);
-         TextOfEachDrawer.SetActive(false);
+        TextOfEachDrawer.SetActive(false);
     }
     // // ===== زر 2 =====
     // // استدعاء ملفات زر 2 فقط (يستخدم خانات زر 2)
@@ -322,6 +323,11 @@ public class DrawerActivator : MonoBehaviour
         if (EvidencesBook4) EvidencesBook4.SetActive(true);
         if (EvidencesBook3) EvidencesBook3.SetActive(false);
     }
+    public void nextEvidenceFileBook4()
+    {
+        if (EvidencesBook5) EvidencesBook5.SetActive(true);
+        if (EvidencesBook4) EvidencesBook4.SetActive(false);
+    }
 
     public void previousEvidenceFileBook()
     {
@@ -340,29 +346,42 @@ public class DrawerActivator : MonoBehaviour
         if (EvidencesBook3) EvidencesBook3.SetActive(true);
         if (EvidencesBook4) EvidencesBook4.SetActive(false);
     }
-
+    public void previousEvidenceFileBook4()
+    {
+        if (EvidencesBook4) EvidencesBook4.SetActive(true);
+        if (EvidencesBook5) EvidencesBook5.SetActive(false);
+    }
     //--------------Third Book Arrows-----------------
-    public void nextCaseRosterFileBook()
+    public void nextToSuspectsCategory()
     {
         if (CaseRosterBook2) CaseRosterBook2.SetActive(true);
         if (CaseRosterBook) CaseRosterBook.SetActive(false);
+        if (CaseRosterBook3) CaseRosterBook3.SetActive(false);
     }
 
-    public void nextCaseRosterFileBook2()
+    public void nextToVictimsCategory()
     {
         if (CaseRosterBook3) CaseRosterBook3.SetActive(true);
         if (CaseRosterBook2) CaseRosterBook2.SetActive(false);
+        if (CaseRosterBook) CaseRosterBook.SetActive(false);
     }
-
-    public void previousCaseRosterFileBook()
+    public void nextToWitnessesCategory()
     {
         if (CaseRosterBook) CaseRosterBook.SetActive(true);
         if (CaseRosterBook2) CaseRosterBook2.SetActive(false);
-    }
-
-    public void previousCaseRosterFileBook2()
-    {
-        if (CaseRosterBook2) CaseRosterBook2.SetActive(true);
         if (CaseRosterBook3) CaseRosterBook3.SetActive(false);
     }
+
+
+    // public void previousCaseRosterFileBook()
+    // {
+    //     if (CaseRosterBook) CaseRosterBook.SetActive(true);
+    //     if (CaseRosterBook2) CaseRosterBook2.SetActive(false);
+    // }
+
+    // public void previousCaseRosterFileBook2()
+    // {
+    //     if (CaseRosterBook2) CaseRosterBook2.SetActive(true);
+    //     if (CaseRosterBook3) CaseRosterBook3.SetActive(false);
+    // }
 }

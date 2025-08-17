@@ -5,16 +5,26 @@ using System.Collections;
 
 public class DolabActivator : MonoBehaviour
 {
+    [SerializeField] public GameObject Notebook;
+    [SerializeField] public GameObject notebookContents;
+
     [SerializeField] public GameObject Dolab;
+    [SerializeField] public GameObject Button_Thread;
+    [SerializeField] public GameObject Button_Inventory;
+
     //[SerializeField] private Volume blurVolume;
+    [SerializeField] public GameObject ClosedView_BriefCase;
+
     [SerializeField] public GameObject PuzzelBriefCase;
     [SerializeField] public GameObject puzzelRoot;
     [SerializeField] public GameObject policeStationCanvas;
     [SerializeField] public GameObject DolabCamera;
     [SerializeField] private GameObject closeButton;
+    [SerializeField] private GameObject closeButton2;
     [SerializeField] private GameObject bagButton;
     [SerializeField] private GameObject playDolabAnimationButton;
     [SerializeField] private Animator DolabAnimator;
+    [SerializeField] private AutoHidePanel intPanel;
 
     private Coroutine showBtnCoro;
 
@@ -82,20 +92,43 @@ public class DolabActivator : MonoBehaviour
         policeStationCanvas.SetActive(true);
         PuzzelBriefCase.SetActive(false);
         puzzelRoot.SetActive(false);
-
-
+        Button_Inventory.SetActive(false);
+        Button_Thread.SetActive(false);
+        Notebook.SetActive(false);
+        notebookContents.SetActive(false);
     }
 
     public void OpenBagCloseView()
     {
         playDolabAnimationButton.SetActive(false);
         PuzzelBriefCase.SetActive(true);
+        ClosedView_BriefCase.SetActive(true);
+        Button_Thread.SetActive(true);
+        Button_Inventory.SetActive(true);
 
         DolabCamera.SetActive(true);
         closeButton.SetActive(true);
         Dolab.SetActive(false);
 
+        if (intPanel) intPanel.Restart();
     }
+
+    public void OpenNotebook2()
+    {
+        closeButton.SetActive(false);
+        closeButton2.SetActive(true);
+        Notebook.SetActive(true);
+        notebookContents.SetActive(true);
+    }
+    public void CloseDolab2()
+{
+    closeButton.SetActive(true);
+    closeButton2.SetActive(false);
+    Notebook.SetActive(false);
+    notebookContents.SetActive(false);
+}
+
+
     public void OpenLockCloseView()
     {
         puzzelRoot.SetActive(true);
@@ -104,7 +137,11 @@ public class DolabActivator : MonoBehaviour
 
         DolabCamera.SetActive(true);
         closeButton.SetActive(true);
+         Button_Inventory.SetActive(false);
+        Button_Thread.SetActive(false);
 
     }
+
+
 
 }

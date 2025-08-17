@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4703b7618d2647949ac14b81ba221509
+guid: b6fc318c135510a4289cf6c044818c75
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3104285954664882196
-    second: NotesUI_0
+      213: -4469421166898758352
+    second: CaseFiles(Statments)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,11 +109,37 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NotesUI_0
+      name: CaseFiles(Statments)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 410e809e0a3a41b20800000000000000
-      internalID: 3104285954664882196
+      spriteID: 03d3363f02d69f1c0800000000000000
+      internalID: -4469421166898758352
       vertices: []
       indices: 
       edges: []
@@ -147,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      NotesUI_0: 3104285954664882196
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

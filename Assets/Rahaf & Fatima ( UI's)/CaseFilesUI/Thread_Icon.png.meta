@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0e9da4999c2fcb045b43d3edeff1bd25
+guid: 538aae86e320a8d41a5c32afdaa9139f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2229772530971165413
-    second: CabnietUI_3_0
+      213: -9095211519140845472
+    second: Thread_Icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,17 +109,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CabnietUI_3_0
+      name: Thread_Icon_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 12
+        y: 14
+        width: 175
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1d3a8962b14e01e0800000000000000
-      internalID: -2229772530971165413
+      spriteID: 068a194df4157c180800000000000000
+      internalID: -9095211519140845472
       vertices: []
       indices: 
       edges: []
@@ -147,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      CabnietUI_3_0: -2229772530971165413
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

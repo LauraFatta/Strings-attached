@@ -397,9 +397,9 @@ public class PuzzleManagerUI : MonoBehaviour
     public RectTransform rightLockPiece;   
         public float dropDistance = 120f;     
     public float dropDuration = 0.5f;      
-    public float afterUnlockDelay = 2.0f;  
-    public GameObject resultImage;         
-    public GameObject nextUI;              
+    public float afterUnlockDelay = 2.0f;           
+    public GameObject nextUI;   
+    public GameObject Buttons_Dolab;
 
        public int[] correctCode = new int[3] { 1, 2, 3 };
         public int[] startingDigits = new int[3] { 0, 0, 0 };
@@ -434,7 +434,6 @@ public class PuzzleManagerUI : MonoBehaviour
         if (downArrow_2) downArrow_2.onClick.AddListener(() => ChangeDigit(2, -1));
         if (checkButton) checkButton.onClick.AddListener(CheckResult);
 
-        if (resultImage) resultImage.SetActive(false);
         if (nextUI) nextUI.SetActive(false);
         if (!shakeTarget && puzzleGroup) shakeTarget = puzzleGroup.GetComponent<RectTransform>();
     }
@@ -475,6 +474,8 @@ public class PuzzleManagerUI : MonoBehaviour
         if (ok)
         {
             StartCoroutine(UnlockSequence());
+            Buttons_Dolab.SetActive(true);
+
         }
         else
         {
@@ -492,7 +493,6 @@ public class PuzzleManagerUI : MonoBehaviour
 
         yield return StartCoroutine(DropRightLock());
 
-        if (resultImage) resultImage.SetActive(true);
 
     
         if (afterUnlockDelay > 0f)
