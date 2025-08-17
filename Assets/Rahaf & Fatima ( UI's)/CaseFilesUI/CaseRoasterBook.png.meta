@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CaseRoasterBook_0: -914316548993328825
+      CaseRoasterBook_1: -6472986916887352177
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

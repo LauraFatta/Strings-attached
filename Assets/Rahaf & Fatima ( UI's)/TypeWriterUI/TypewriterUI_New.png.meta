@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TypewriterUI_New_0: 8130469098262760181
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MissingThreads UI (Panels)_0: 165889823589066529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

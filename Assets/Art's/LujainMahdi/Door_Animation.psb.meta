@@ -95,7 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: 8
+  - name: Door_Animation_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -103,11 +103,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 3217
-      y: 4116
-      width: 668
-      height: 1777
-    spriteID: d6be780ffa94ebd49b5ed88d10ef83c4
+      x: 92
+      y: 7732
+      width: 4
+      height: 4
+    spriteID: 259d9a70908493245b1144dbed7b7234
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -115,9 +115,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 2835, y: 4010}
-    spritePosition: {x: 382, y: 106}
-  - name: 7
+    uvTransform: {x: 92, y: 7732}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -125,11 +125,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 1794
-      y: 4116
-      width: 1415
-      height: 1771
-    spriteID: 4347fb5fe9acaa94fb5ddd2e93c9b293
+      x: 775
+      y: 5922
+      width: 601
+      height: 1819
+    spriteID: 3fb02e480667fa146aad22e34ad14283
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -137,9 +137,97 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1355, y: 4010}
-    spritePosition: {x: 439, y: 106}
-  - name: 6
+    uvTransform: {x: 775, y: 5922}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6268
+      width: 88
+      height: 1432
+    spriteID: 6ae0495874d2cbf489637b7ddd16a7b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 6268}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1384
+      y: 7680
+      width: 8
+      height: 12
+    spriteID: 04d0ec87866d6364bb97bd1771783da3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1384, y: 7680}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1454
+      y: 7675
+      width: 22
+      height: 19
+    spriteID: d75566cbd541aa04eb99465ebcc15759
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1454, y: 7675}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1462
+      y: 5922
+      width: 448
+      height: 1792
+    spriteID: d768df86f60542747927981f0bbcc8bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1462, y: 5922}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_7
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -148,10 +236,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 2075
-      y: 5923
-      width: 604
+      y: 5922
+      width: 309
       height: 1787
-    spriteID: 7fa64ada4f254e44cb6548eace75c67e
+    spriteID: 53bb3f1a022e9d34eb02c371cf1ba796
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -159,185 +247,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1627, y: 5823}
-    spritePosition: {x: 448, y: 100}
-  - name: 5
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 1438
-      y: 5923
-      width: 629
-      height: 1789
-    spriteID: 5651dbc93f5d22e45937303cd316be0e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1016, y: 5832}
-    spritePosition: {x: 422, y: 91}
-  - name: 4
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 774
-      y: 5923
-      width: 656
-      height: 1818
-    spriteID: ad68ab66e2a024e40967ded1a6acf7e2
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 379, y: 5847}
-    spritePosition: {x: 395, y: 76}
-  - name: 3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 5923
-      width: 762
-      height: 1899
-    spriteID: bee4196f8890cad4b8e6e2e137a0f58c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: -354, y: 5921}
-    spritePosition: {x: 358, y: 2}
-  - name: 2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 2744
-      y: 2060
-      width: 831
-      height: 1825
-    spriteID: 25e881f60231ecb42a095b42a7a25633
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 2314, y: 1972}
-    spritePosition: {x: 430, y: 88}
-  - name: 1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 2744
-      y: 4
-      width: 1102
-      height: 1907
-    spriteID: 9174e931d75711b4998b04c09eaec9e2
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 2480, y: -20}
-    spritePosition: {x: 264, y: 24}
-  - name: Inserted Image
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 2687
-      y: 5923
-      width: 817
-      height: 685
-    spriteID: 873a528e0e5c66949b9746dc492188ad
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 2077, y: 4775}
-    spritePosition: {x: 610, y: 1148}
-  - name: Drawer_Iron_fence
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4116
-      width: 1782
-      height: 1799
-    spriteID: d8496ceff4b2bae4e8f5dcc670e49036
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: -450, y: 4018}
-    spritePosition: {x: 454, y: 98}
-  - name: Layer 13
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 2732
-      height: 2048
-    spriteID: 7d3a3d68f9ea4b2498fb530b8d8cf8fe
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 2075, y: 5922}
     spritePosition: {x: 0, y: 0}
-  - name: Background
+  - name: Door_Animation_8
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -345,11 +257,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 2060
-      width: 2732
-      height: 2048
-    spriteID: 78e8f5466fa2a504e8009735ffcb8648
+      x: 2020
+      y: 7664
+      width: 8
+      height: 12
+    spriteID: 460ff6795b0f0054ba8e76af5e218202
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -357,7 +269,1261 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 2060}
+    uvTransform: {x: 2020, y: 7664}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2632
+      y: 7660
+      width: 8
+      height: 12
+    spriteID: 9bb714b731b292341b44c7f72434c7fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2632, y: 7660}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1436
+      y: 6228
+      width: 45
+      height: 1248
+    spriteID: 68caa6b904564d3418e1a8cd6c6a03a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1436, y: 6228}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1948
+      y: 7315
+      width: 14
+      height: 41
+    spriteID: 6bc212755ed7c7145ad87ace6c4ccd96
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1948, y: 7315}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2559
+      y: 7315
+      width: 14
+      height: 37
+    spriteID: 12cfd5f1d98a2404a99b2b456736ba72
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2559, y: 7315}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2510
+      y: 6952
+      width: 10
+      height: 72
+    spriteID: 96ba151e285f1994898804c676e1f7bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2510, y: 6952}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1954
+      y: 6752
+      width: 16
+      height: 188
+    spriteID: 3c94e8363e147324e850ea9f7b88e59f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1954, y: 6752}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2566
+      y: 6748
+      width: 12
+      height: 192
+    spriteID: 4a35c5c3a2049d04e9999863ffe29b3d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2566, y: 6748}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1904
+      y: 6712
+      width: 8
+      height: 24
+    spriteID: 53123ec205c3932449ff9033653d21b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1904, y: 6712}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1904
+      y: 6448
+      width: 12
+      height: 48
+    spriteID: 1be7f2bf511ed994b8455e91452d333f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1904, y: 6448}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2515
+      y: 6444
+      width: 11
+      height: 49
+    spriteID: ffc7e597eef4b0845bfc579e99bcc6e1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2515, y: 6444}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1411
+      y: 6296
+      width: 19
+      height: 85
+    spriteID: 1d8ff49933f464c44aa2beb44d5e3ff1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1411, y: 6296}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2050
+      y: 6284
+      width: 16
+      height: 88
+    spriteID: 505b76d65d761674da20d929cf400416
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2050, y: 6284}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2662
+      y: 6284
+      width: 16
+      height: 88
+    spriteID: d707b910155f1074396eea04d5d10a85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2662, y: 6284}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2710
+      y: 6047
+      width: 726
+      height: 341
+    spriteID: d25aaeab4e12d5f4c82f5270d7934c2e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2710, y: 6047}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3412
+      y: 6367
+      width: 22
+      height: 25
+    spriteID: deb2518219154e6438495a3e96bf2944
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3412, y: 6367}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 6148
+      width: 32
+      height: 108
+    spriteID: ea42e5c0758152946a52052ba2a07261
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 6148}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2696
+      y: 6236
+      width: 20
+      height: 109
+    spriteID: 5154b0e7135dce34780b866cfa17adaf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2696, y: 6236}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3438
+      y: 6227
+      width: 15
+      height: 22
+    spriteID: 3a3e288e0e10d6e45b3f75db41ebd5e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3438, y: 6227}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1455
+      y: 6116
+      width: 17
+      height: 96
+    spriteID: 9ff7aa2f731142f4b91e0ec4a7523a43
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1455, y: 6116}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2704
+      y: 6156
+      width: 8
+      height: 8
+    spriteID: b29bf8b735374bf4d82e2a7aee108dfc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2704, y: 6156}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 92
+      y: 6112
+      width: 4
+      height: 32
+    spriteID: 786dafb7d11a7834ab6f068a31c6d189
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 92, y: 6112}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3432
+      y: 6076
+      width: 12
+      height: 52
+    spriteID: e8a180a46dbb0544587de5fff31cd015
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3432, y: 6076}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3432
+      y: 6059
+      width: 12
+      height: 14
+    spriteID: 5ac9f56ab6b4a0e43bf4ba566549e260
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3432, y: 6059}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1419
+      y: 5995
+      width: 14
+      height: 30
+    spriteID: 232f6332740963148be9136b55605f61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1419, y: 5995}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2848
+      y: 6018
+      width: 242
+      height: 28
+    spriteID: 3bbcdb9adea595942bfc6097f390c9e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2848, y: 6018}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2056
+      y: 5987
+      width: 14
+      height: 30
+    spriteID: 348b0033d9fe88f49ab1ea33efbab916
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2056, y: 5987}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2668
+      y: 5987
+      width: 14
+      height: 30
+    spriteID: bd176c87ac22b5f4f972d8bf9fa89f37
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2668, y: 5987}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2688
+      y: 5988
+      width: 4
+      height: 8
+    spriteID: c87cae4a704df0545a8db0e17c738890
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2688, y: 5988}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3012
+      y: 5992
+      width: 80
+      height: 8
+    spriteID: 69270d91950bc414aade1aca0b6bc056
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3012, y: 5992}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3376
+      y: 5964
+      width: 41
+      height: 28
+    spriteID: cd935280ddf11af488bdf124df229c5c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3376, y: 5964}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 544
+      y: 5924
+      width: 60
+      height: 20
+    spriteID: bb180778935cf394f81d1d0848abf26a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 544, y: 5924}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3376
+      y: 5924
+      width: 16
+      height: 8
+    spriteID: 6cc481920fe8f674b8f15114198cc892
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3376, y: 5924}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 9
+      y: 5
+      width: 2742
+      height: 2054
+    spriteID: 08f205871ff072949ba0c7d5fee64c1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 9, y: 5}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3234
+      y: 4114
+      width: 236
+      height: 1778
+    spriteID: 322df1717223b214e826a8adabc2d7aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3234, y: 4114}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3840
+      y: 5844
+      width: 4
+      height: 12
+    spriteID: 027e85158f48bae47a881d303af9b343
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3840, y: 5844}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3196
+      y: 5566
+      width: 17
+      height: 20
+    spriteID: 4da2ae03c578b9b43a518b968b71a45a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3196, y: 5566}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3766
+      y: 5496
+      width: 14
+      height: 44
+    spriteID: a09ebf4a86cdfe941b1e8cd8213a05ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3766, y: 5496}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3715
+      y: 5136
+      width: 11
+      height: 76
+    spriteID: 4a1e7a3acad22904eb850a9b19c3e9fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3715, y: 5136}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3215
+      y: 4908
+      width: 17
+      height: 64
+    spriteID: 906840aa9a990984183563a0085e8d17
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3215, y: 4908}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3772
+      y: 4936
+      width: 14
+      height: 192
+    spriteID: b91de6f620b59734a9f84a6d8f1e5611
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3772, y: 4936}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3723
+      y: 4632
+      width: 11
+      height: 48
+    spriteID: baeab75315d8d0d4a9b56e2e823324cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3723, y: 4632}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3866
+      y: 4472
+      width: 18
+      height: 84
+    spriteID: a9fdb531f84ebb74f92d663918a467a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3866, y: 4472}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2747
+      y: 264
+      width: 153
+      height: 1548
+    spriteID: 4f11a17d75ff70c4d96b0d3e2f1cf4f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2747, y: 264}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2751
+      y: 3124
+      width: 9
+      height: 212
+    spriteID: cf95869019f5c2843804374759706e63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2751, y: 3124}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2752
+      y: 2872
+      width: 4
+      height: 8
+    spriteID: 8c2e2be6981688e44b8d9599d5fe1a76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2752, y: 2872}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2752
+      y: 2576
+      width: 16
+      height: 292
+    spriteID: 70db77363c5a4f949a404a515c4ddcc9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2752, y: 2576}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2759
+      y: 2058
+      width: 819
+      height: 1806
+    spriteID: 30e2d06ff349c3f4cae0e2d09f34eb1e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2759, y: 2058}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_56
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2912
+      y: 0
+      width: 1184
+      height: 1866
+    spriteID: 5dbc4eca3ae0fab4b9f9ceba03a41dac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2912, y: 0}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_57
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2928
+      y: 1868
+      width: 260
+      height: 24
+    spriteID: dc5566dbc07f58e498ab55a629614fd8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2928, y: 1868}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_58
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3874
+      y: 742
+      width: 222
+      height: 3462
+    spriteID: 383f6bae27930854ebb0a841068608c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3874, y: 742}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_59
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2796
+      y: 135
+      width: 52
+      height: 117
+    spriteID: b9b8caf2a344796438e5160208969a64
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2796, y: 135}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2900
+      y: 204
+      width: 4
+      height: 12
+    spriteID: ea11327cdd9d89d469b9d3e4e878bc2b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2900, y: 204}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_61
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2896
+      y: 104
+      width: 8
+      height: 76
+    spriteID: ee92bc3a2eea9ee479eb64c2f3f26c7a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2896, y: 104}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_62
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3644
+      y: 4
+      width: 88
+      height: 12
+    spriteID: a6dd6e7311613c94aa963f2ad40f3a8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3644, y: 4}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 6008
+      width: 706
+      height: 1832
+    spriteID: 9bcc7e252f365474f9de8d727bed8e85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 6008}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_63
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 2073
+      width: 2728
+      height: 2030
+    spriteID: 4d7a79e21d2a96b438cda1f0b09ebd80
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 2073}
+    spritePosition: {x: 0, y: 0}
+  - name: Door_Animation_64
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 4131
+      width: 1771
+      height: 1763
+    spriteID: 25540bd885103f3409519889b1ae1fb7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 4131}
     spritePosition: {x: 0, y: 0}
   spriteImportData: []
   rigSpriteImportData: []

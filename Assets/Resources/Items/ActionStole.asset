@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37c7507428b3eeb4a921d48b9596a86a, type: 3}
-  m_Name: Water
+  m_Name: ActionStole
   m_EditorClassIdentifier: 
-  itemName: Water
-  itemButton: {fileID: 2183578426569024684, guid: 528397fee630c42418814eb5927dcc4d, type: 3}
-  itemType: 3
+  itemName: Stole
+  itemButton: {fileID: 3412098824037010654, guid: 72b09b4aabbdff94aa2fd16883078eb8, type: 3}
+  itemType: 2
   itemDescription: 
-  requiredItemA: {fileID: 0}
+  requiredItemA: {fileID: 11400000, guid: 39586779296e1fc439e32052535c7fa2, type: 2}
   requiredItemB: {fileID: 0}
   requiredItemC: {fileID: 0}
   clueTag: 

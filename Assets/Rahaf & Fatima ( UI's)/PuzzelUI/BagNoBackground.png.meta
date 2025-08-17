@@ -448,7 +448,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BagNoBackground_0: -3238774709894934525
+      BagNoBackground_1: 5654341077757578877
+      BagNoBackground_10: 7510041979773440634
+      BagNoBackground_11: -8049219005264403897
+      BagNoBackground_2: 2243217026395882635
+      BagNoBackground_3: 1835902511188797627
+      BagNoBackground_4: -4823529119905191828
+      BagNoBackground_5: 7004807424390480482
+      BagNoBackground_6: 127058406702152739
+      BagNoBackground_7: -3088188320995121971
+      BagNoBackground_8: -8458998949573183056
+      BagNoBackground_9: 3522174094236039767
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

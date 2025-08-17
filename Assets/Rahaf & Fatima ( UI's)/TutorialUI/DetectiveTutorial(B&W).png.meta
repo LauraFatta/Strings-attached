@@ -223,7 +223,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DetectiveTutorial(B&W)_0: 8260309849186445080
+      DetectiveTutorial(B&W)_1: 8189163431339391031
+      DetectiveTutorial(B&W)_2: 2223192674190703205
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
