@@ -9,7 +9,7 @@ public enum ItemType
     locations 
 }
 
-//Laura's Edit
+
 
 
 [CreateAssetMenu(fileName = "GameItem", menuName = "ScriptableObjects/GameItem")]

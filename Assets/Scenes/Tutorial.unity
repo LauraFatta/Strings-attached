@@ -3193,6 +3193,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667192743}
   m_CullTransparentMesh: 1
+--- !u!1 &668459391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 668459393}
+  - component: {fileID: 668459392}
+  m_Layer: 0
+  m_Name: TutorialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &668459392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668459391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a64c831c802434793b55d998bc0821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialPanels:
+  - {fileID: 282113029}
+  - {fileID: 983077838}
+  - {fileID: 580797963}
+  - {fileID: 488628232}
+  - {fileID: 1271986463}
+  - {fileID: 406337083}
+  - {fileID: 2126527015}
+  - {fileID: 1256323138}
+  - {fileID: 1733704180}
+  - {fileID: 1199948891}
+  - {fileID: 199638856}
+  - {fileID: 704732745}
+  - {fileID: 1484953002}
+  - {fileID: 815311214}
+  - {fileID: 1303586010}
+  - {fileID: 201269698}
+  - {fileID: 1576448159}
+  - {fileID: 1606697536}
+  - {fileID: 146396793}
+  - {fileID: 1702257974}
+  - {fileID: 2071931390}
+  - {fileID: 1645651841}
+  nextSceneName: PoliceStation
+  nextKey: 275
+  previousKey: 276
+  skipKey: 115
+--- !u!4 &668459393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668459391}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 67.67148, y: 142.44376, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &678032119
 GameObject:
   m_ObjectHideFlags: 0
@@ -8833,3 +8904,4 @@ SceneRoots:
   - {fileID: 1061953536}
   - {fileID: 1272315205}
   - {fileID: 1670325527}
+  - {fileID: 668459393}
