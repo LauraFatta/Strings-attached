@@ -1,28 +1,35 @@
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.UI;
+
 
 public class DrawerActivator : MonoBehaviour
 
 {
-    [SerializeField] public GameObject policeStationCanvas;
+    [SerializeField] public GameObject AllButton;
+    [SerializeField] public GameObject ButtonToHide;
+
+    [SerializeField] public GameObject threadBook;
+    [SerializeField] public GameObject ThreadContent;
+
+    [SerializeField] public GameObject policeStation_UI;
     [SerializeField] private GameObject TextOfEachDrawer;
     [SerializeField] public GameObject drawer;
-    [SerializeField] private GameObject drawerBackground;
-    [SerializeField] private Volume blurVolume;
+
 
     [SerializeField] public GameObject drawerCamera;
     [SerializeField] private GameObject FirstcloseButton;
-    [SerializeField] private GameObject SecondcloseButton; [SerializeField] private GameObject allButton;
-    [SerializeField] private GameObject InventoryButton;
+    [SerializeField] private GameObject SecondcloseButton;
+    [SerializeField] private GameObject threadCloseButton;
+
+
 
     [Header("Main Buttons")]
-    [SerializeField] private GameObject DlabFileButton;   // زر 1
-    [SerializeField] private GameObject DlabFileButton2;  // زر 2
-    [SerializeField] private GameObject DlabFileButton3;  // زر 3
-
-    [Header("First Drawer")]
+    [SerializeField] private GameObject DrawerFileButton;   
+    [SerializeField] private GameObject DrawerFileButton2;  
+    [SerializeField] private GameObject DrawerFileButton3;  
     [SerializeField] private GameObject FileBackground;
+    [Header("First Drawer")]
+    
     [SerializeField] private GameObject OpenFileButton;
     [SerializeField] private GameObject BookPanel;
 
@@ -34,145 +41,43 @@ public class DrawerActivator : MonoBehaviour
     [SerializeField] private GameObject OpenFileButton3;
     [SerializeField] private GameObject BookPanel3;
 
-    [Header("Default Files (زر 1/3)")]
+    [Header("Statements Files)")]
     [SerializeField] private GameObject WitnessFileBook;
     [SerializeField] private GameObject SuspectsFileBook;
     [SerializeField] private GameObject SuspectsFileBook2;
 
 
-    [Header("Button 2 Files (خانات خاصة بزر 2)")]
+    [Header("Evidence Files)")]
     [SerializeField] private GameObject EvidencesBook;
     [SerializeField] private GameObject EvidencesBook2;
     [SerializeField] private GameObject EvidencesBook3;
     [SerializeField] private GameObject EvidencesBook4;
-     [SerializeField] private GameObject EvidencesBook5;
+    [SerializeField] private GameObject EvidencesBook5;
 
-    [Header("Button 3 Files (خانات خاصة بزر 3)")]
+    [Header("Case Roster Files)")]
     [SerializeField] private GameObject CaseRosterBook;
     [SerializeField] private GameObject CaseRosterBook2;
     [SerializeField] private GameObject CaseRosterBook3;
 
-    // ===== Helpers =====
-    private void SetActiveSafe(GameObject go, bool state)
-    {
-        if (go != null) go.SetActive(state);
-    }
-
-    private void HideDefaultFiles()
-    {
-        SetActiveSafe(SuspectsFileBook, false);
-        SetActiveSafe(SuspectsFileBook2, false);
-        SetActiveSafe(WitnessFileBook, false);
-    }
-
-    private void HideBtn2Files()
-    {
-        SetActiveSafe(EvidencesBook, false);
-        SetActiveSafe(EvidencesBook2, false);
-        SetActiveSafe(EvidencesBook3, false);
-        SetActiveSafe(EvidencesBook4, false);
-    }
-
-    private void HideBtn3Files()
-    {
-        SetActiveSafe(CaseRosterBook, false);
-        SetActiveSafe(CaseRosterBook2, false);
-        SetActiveSafe(CaseRosterBook3, false);
-    }
-
-    private void HideAllFiles()
-    {
-        HideDefaultFiles();
-        HideBtn2Files();
-        HideBtn3Files();
-    }
 
     // ===== Drawer =====
     public void OpenDrawer()
     {
-        policeStationCanvas.SetActive(false);
+        DrawerFileButton.SetActive(true);
+        DrawerFileButton2.SetActive(true);
+        DrawerFileButton3.SetActive(true);
+        FirstcloseButton.SetActive(true);
         TextOfEachDrawer.SetActive(true);
         drawer.SetActive(true);
-        drawerBackground.SetActive(true);
-        blurVolume.weight = 1;
         drawerCamera.SetActive(true);
-        FirstcloseButton.SetActive(true);
-        allButton.SetActive(false);
-        InventoryButton.SetActive(false);
 
-        DlabFileButton.SetActive(true);
-        DlabFileButton2.SetActive(true);
-        DlabFileButton3.SetActive(true);
-
-        // نظّف الحالة
-        HideAllFiles();
-        SetActiveSafe(FileBackground, false);
-        SetActiveSafe(OpenFileButton, false);
-        SetActiveSafe(BookPanel, false);
-        SetActiveSafe(OpenFileButton2, false);
-        SetActiveSafe(BookPanel2, false);
-        SetActiveSafe(OpenFileButton2, false);
-        SetActiveSafe(BookPanel2, false);
-    }
-
-    public void BackToDrawer()
-    {
-        TextOfEachDrawer.SetActive(true);
-        drawer.SetActive(true);
-        drawerBackground.SetActive(true);
-        blurVolume.weight = 1;
-        drawerCamera.SetActive(true);
-        FirstcloseButton.SetActive(true);
-        allButton.SetActive(false);
-        InventoryButton.SetActive(false);
-
-        DlabFileButton.SetActive(true);
-        DlabFileButton2.SetActive(true);
-        DlabFileButton3.SetActive(true);
-        SecondcloseButton.SetActive(false);
-        // نظّف الحالة
-        HideAllFiles();
-        SetActiveSafe(FileBackground, false);
-        SetActiveSafe(OpenFileButton, false);
-        SetActiveSafe(BookPanel, false);
-        SetActiveSafe(OpenFileButton2, false);
-        SetActiveSafe(BookPanel2, false);
-        SetActiveSafe(OpenFileButton3, false);
-        SetActiveSafe(BookPanel3, false);
-
+        AllButton.SetActive(false);
+        ButtonToHide.SetActive(false);
+        policeStation_UI.SetActive(false);
 
 
     }
 
-
-
-    public void CloseDrawer()
-    {
-        TextOfEachDrawer.SetActive(false);
-        policeStationCanvas.SetActive(true);
-        drawer.SetActive(false);
-        drawerBackground.SetActive(false);
-        blurVolume.weight = 0;
-        drawerCamera.SetActive(false);
-        FirstcloseButton.SetActive(false);
-        allButton.SetActive(true);
-        InventoryButton.SetActive(true);
-
-        DlabFileButton.SetActive(false);
-        DlabFileButton2.SetActive(false);
-        DlabFileButton3.SetActive(false);
-
-        FileBackground.SetActive(false);
-        OpenFileButton.SetActive(false);
-        BookPanel.SetActive(false);
-        OpenFileButton2.SetActive(false);
-        BookPanel2.SetActive(false);
-        OpenFileButton3.SetActive(false);
-        BookPanel2.SetActive(false);
-
-
-        HideAllFiles();
-    }
 
     // ===== Navigation UI =====
     public void Openfile()
@@ -182,9 +87,9 @@ public class DrawerActivator : MonoBehaviour
 
         SecondcloseButton.SetActive(true);
 
-        DlabFileButton.SetActive(false);
-        DlabFileButton2.SetActive(false);
-        DlabFileButton3.SetActive(false);
+        DrawerFileButton.SetActive(false);
+        DrawerFileButton2.SetActive(false);
+        DrawerFileButton3.SetActive(false);
         FirstcloseButton.SetActive(false); TextOfEachDrawer.SetActive(false);
 
     }
@@ -194,9 +99,9 @@ public class DrawerActivator : MonoBehaviour
         OpenFileButton2.SetActive(true);
         SecondcloseButton.SetActive(true);
 
-        DlabFileButton.SetActive(false);
-        DlabFileButton2.SetActive(false);
-        DlabFileButton3.SetActive(false);
+        DrawerFileButton.SetActive(false);
+        DrawerFileButton2.SetActive(false);
+        DrawerFileButton3.SetActive(false);
         FirstcloseButton.SetActive(false);
         TextOfEachDrawer.SetActive(false);
 
@@ -207,9 +112,9 @@ public class DrawerActivator : MonoBehaviour
         OpenFileButton3.SetActive(true);
         SecondcloseButton.SetActive(true);
 
-        DlabFileButton.SetActive(false);
-        DlabFileButton2.SetActive(false);
-        DlabFileButton3.SetActive(false);
+        DrawerFileButton.SetActive(false);
+        DrawerFileButton2.SetActive(false);
+        DrawerFileButton3.SetActive(false);
         FirstcloseButton.SetActive(false);
         TextOfEachDrawer.SetActive(false);
 
@@ -217,11 +122,12 @@ public class DrawerActivator : MonoBehaviour
 
     public void openFileBook()
     {
-        BookPanel.SetActive(true);
 
-        DlabFileButton.SetActive(false);
-        DlabFileButton2.SetActive(false);
-        DlabFileButton3.SetActive(false);
+        BookPanel.SetActive(true);
+        AllButton.SetActive(true);
+        DrawerFileButton.SetActive(false);
+        DrawerFileButton2.SetActive(false);
+        DrawerFileButton3.SetActive(false);
         OpenFileButton.SetActive(false);
         OpenFileButton2.SetActive(false);
         OpenFileButton3.SetActive(false);
@@ -232,11 +138,12 @@ public class DrawerActivator : MonoBehaviour
     }
     public void openFileBook2()
     {
-        BookPanel2.SetActive(true);
 
-        DlabFileButton.SetActive(false);
-        DlabFileButton2.SetActive(false);
-        DlabFileButton3.SetActive(false);
+        BookPanel2.SetActive(true);
+        AllButton.SetActive(true);
+        DrawerFileButton.SetActive(false);
+        DrawerFileButton2.SetActive(false);
+        DrawerFileButton3.SetActive(false);
         OpenFileButton.SetActive(false);
         OpenFileButton2.SetActive(false);
         OpenFileButton3.SetActive(false);
@@ -245,41 +152,20 @@ public class DrawerActivator : MonoBehaviour
 
     public void openFileBook3()
     {
-        BookPanel3.SetActive(true);
 
-        DlabFileButton.SetActive(false);
-        DlabFileButton2.SetActive(false);
-        DlabFileButton3.SetActive(false);
+        BookPanel3.SetActive(true);
+        AllButton.SetActive(true);
+        DrawerFileButton.SetActive(false);
+        DrawerFileButton2.SetActive(false);
+        DrawerFileButton3.SetActive(false);
         OpenFileButton.SetActive(false);
         OpenFileButton2.SetActive(false);
         OpenFileButton3.SetActive(false);
         TextOfEachDrawer.SetActive(false);
     }
-    // // ===== زر 2 =====
-    // // استدعاء ملفات زر 2 فقط (يستخدم خانات زر 2)
-    // public void OpenSuspectAndWitnessFiles_Btn2()
-    // {
-    //     HideDefaultFiles();
-    //     HideBtn3Files();
 
-    //     SetActiveSafe(EvidencesBook, true);
-    //     SetActiveSafe(EvidencesBook2, true);
-    //     SetActiveSafe(EvidencesBook3, true);
-    // }
 
-    // // ===== زر 3 =====
-    // // استدعاء ملفات زر 3 فقط (الخانات الجديدة)
-    // public void OpenSuspectAndWitnessFiles_Btn3()
-    // {
-    //     HideDefaultFiles();
-    //     HideBtn2Files();
 
-    //     SetActiveSafe(Btn3_SuspectsFileBook, true);
-    //     SetActiveSafe(Btn3_WitnessFileBook, true);
-    //     SetActiveSafe(Btn3_SuspectsFileBook2, true);
-    // }
-
-    // ===== التنقل الافتراضي (زر 1/3 الافتراضي) =====
     public void nextWitnessFileBook()
     {
         if (SuspectsFileBook) SuspectsFileBook.SetActive(true);
@@ -372,16 +258,58 @@ public class DrawerActivator : MonoBehaviour
         if (CaseRosterBook3) CaseRosterBook3.SetActive(false);
     }
 
+    public void BackToDrawer()
+    {
+        drawerCamera.SetActive(true);
+        drawer.SetActive(true);
+        TextOfEachDrawer.SetActive(true);
+        FirstcloseButton.SetActive(true);
+        DrawerFileButton.SetActive(true);
+        DrawerFileButton2.SetActive(true);
+        DrawerFileButton3.SetActive(true);
 
-    // public void previousCaseRosterFileBook()
-    // {
-    //     if (CaseRosterBook) CaseRosterBook.SetActive(true);
-    //     if (CaseRosterBook2) CaseRosterBook2.SetActive(false);
-    // }
+        FileBackground.SetActive(false);
+        SecondcloseButton.SetActive(false);
+        ButtonToHide.SetActive(false);
+        AllButton.SetActive(false);
+        threadCloseButton.SetActive(false);
+        WitnessFileBook.SetActive(false);
+        SuspectsFileBook.SetActive(false);
+        SuspectsFileBook2.SetActive(false);
+        EvidencesBook.SetActive(false);
+        EvidencesBook2.SetActive(false);
+        EvidencesBook3.SetActive(false);
+        EvidencesBook4.SetActive(false);
+        EvidencesBook5.SetActive(false);
+        CaseRosterBook.SetActive(false);
+        CaseRosterBook2.SetActive(false);
+        CaseRosterBook3.SetActive(false);
 
-    // public void previousCaseRosterFileBook2()
-    // {
-    //     if (CaseRosterBook2) CaseRosterBook2.SetActive(true);
-    //     if (CaseRosterBook3) CaseRosterBook3.SetActive(false);
-    // }
+    }
+
+
+
+    public void CloseDrawer()
+    {
+        policeStation_UI.SetActive(true);
+        AllButton.SetActive(true);
+        ButtonToHide.SetActive(true);
+
+        DrawerFileButton.SetActive(false);
+        DrawerFileButton2.SetActive(false);
+        DrawerFileButton3.SetActive(false);
+        TextOfEachDrawer.SetActive(false);
+        drawer.SetActive(false);
+        drawerCamera.SetActive(false);
+        FirstcloseButton.SetActive(false);
+        FileBackground.SetActive(false);
+        OpenFileButton.SetActive(false);
+        BookPanel.SetActive(false);
+        OpenFileButton2.SetActive(false);
+        BookPanel2.SetActive(false);
+        OpenFileButton3.SetActive(false);
+        BookPanel2.SetActive(false);
+
+    }
+
 }

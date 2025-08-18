@@ -65,12 +65,14 @@ using UnityEngine.SceneManagement;   // NEW
 
 public class TypewriterActivator : MonoBehaviour
 {
-    [SerializeField] public GameObject policeStationCanvas;
+    [SerializeField] public GameObject policeStationUI;
     [SerializeField] public GameObject typewriter;
     [SerializeField] private GameObject Typewriterbackground;
     [SerializeField] public GameObject typewriterCamera;
     [SerializeField] private GameObject closeButton;
-    [SerializeField] private GameObject AllButton;
+    [SerializeField] public GameObject ButtonToHide1;
+    [SerializeField] public GameObject ButtonToHide2;
+
     [SerializeField] private GameObject InventoryButton;
     [SerializeField] private GameObject playTypewriterAnimationButton;
     [SerializeField] private Animator typewriterAnimator;
@@ -86,12 +88,13 @@ public class TypewriterActivator : MonoBehaviour
     public void OpenTypewriter()
     {
         TextOfTypeWriter.SetActive(true);
-        policeStationCanvas.SetActive(false);
+        policeStationUI.SetActive(false);
         typewriter.SetActive(true);
         Typewriterbackground.SetActive(true);
         typewriterCamera.SetActive(true);
         closeButton.SetActive(true);
-        AllButton.SetActive(false);
+        ButtonToHide1.SetActive(false);
+        ButtonToHide2.SetActive(false);
         InventoryButton.SetActive(false);
         playTypewriterAnimationButton.SetActive(true);
     }
@@ -122,11 +125,12 @@ public class TypewriterActivator : MonoBehaviour
         Typewriterbackground.SetActive(false);
         typewriterCamera.SetActive(false);
         closeButton.SetActive(false);
-        AllButton.SetActive(true);
+        ButtonToHide1.SetActive(true);
+        ButtonToHide2.SetActive(true);
         InventoryButton.SetActive(true);
         playTypewriterAnimationButton.SetActive(false);
         typewriterAnimator.SetBool("play", false);
-        policeStationCanvas.SetActive(true);
+        policeStationUI.SetActive(true);
     }
 
     private System.Collections.IEnumerator WaitForAnimationThenLoad()
