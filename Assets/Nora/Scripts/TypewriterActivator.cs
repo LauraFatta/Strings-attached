@@ -1,61 +1,3 @@
-// using UnityEngine;
-// using UnityEngine.Rendering;
-// using UnityEngine.UI;
-
-// public class TypewriterActivator : MonoBehaviour
-// {
-//     [SerializeField] public GameObject policeStationCanvas;
-//     [SerializeField] public GameObject typewriter;
-//     [SerializeField] private GameObject Typewriterbackground;
-//     [SerializeField] public GameObject typewriterCamera;
-//     [SerializeField] private GameObject closeButton;
-//     [SerializeField] private GameObject AllButton;
-//     [SerializeField] private GameObject InventoryButton;
-//     [SerializeField] private GameObject playTypewriterAnimationButton;
-//     [SerializeField] private Animator typewriterAnimator;
-//     [SerializeField] private GameObject TextOfTypeWriter;
-
-
-//     public void OpenTypewriter()
-//     {
-//         TextOfTypeWriter.SetActive(true);
-//         policeStationCanvas.SetActive(false);
-//         typewriter.SetActive(true);
-//         Typewriterbackground.SetActive(true);
-//         typewriterCamera.SetActive(true);
-//         closeButton.SetActive(true);
-//         AllButton.SetActive(false);
-//         InventoryButton.SetActive(false);
-//         playTypewriterAnimationButton.SetActive(true);
-
-
-//     }
-//     public void PlayTypewriterAnimation()
-//     {
-//         typewriterAnimator.SetBool("play", true);
-//     }
-//     // public void CloseTypewriterAnimation()
-//     // {
-//     //     typewriterAnimator.SetBool("play", false);
-//     // }
-
-
-//     public void CloseTypewriter()
-    
-//     {
-//         TextOfTypeWriter.SetActive(false);
-//         typewriter.SetActive(false);
-//         Typewriterbackground.SetActive(false);
-//         typewriterCamera.SetActive(false);
-//         closeButton.SetActive(false);
-//         AllButton.SetActive(true);
-//         InventoryButton.SetActive(true);
-//         playTypewriterAnimationButton.SetActive(false);
-//         typewriterAnimator.SetBool("play", false);
-//         policeStationCanvas.SetActive(true);
-
-//     }
-// }
 
 
 using UnityEngine;
@@ -72,8 +14,6 @@ public class TypewriterActivator : MonoBehaviour
     [SerializeField] private GameObject closeButton;
     [SerializeField] public GameObject ButtonToHide1;
     [SerializeField] public GameObject ButtonToHide2;
-
-    [SerializeField] private GameObject InventoryButton;
     [SerializeField] private GameObject playTypewriterAnimationButton;
     [SerializeField] private Animator typewriterAnimator;
     [SerializeField] private GameObject TextOfTypeWriter;
@@ -95,7 +35,6 @@ public class TypewriterActivator : MonoBehaviour
         closeButton.SetActive(true);
         ButtonToHide1.SetActive(false);
         ButtonToHide2.SetActive(false);
-        InventoryButton.SetActive(false);
         playTypewriterAnimationButton.SetActive(true);
     }
 
@@ -127,7 +66,6 @@ public class TypewriterActivator : MonoBehaviour
         closeButton.SetActive(false);
         ButtonToHide1.SetActive(true);
         ButtonToHide2.SetActive(true);
-        InventoryButton.SetActive(true);
         playTypewriterAnimationButton.SetActive(false);
         typewriterAnimator.SetBool("play", false);
         policeStationUI.SetActive(true);

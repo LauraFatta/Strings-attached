@@ -52,8 +52,8 @@ public class DolabActivator : MonoBehaviour
         if (closeButton) closeButton.SetActive(true);
         if (AllButton) AllButton.SetActive(false);
         if (ButtonToHide) ButtonToHide.SetActive(false);
-        ResetDoorToClosedActiveSafe();
 
+        ResetDoorToClosedActiveSafe();
         doorPlayedOnce = false;
         if (playDolabAnimationButton && playDolabAnimationButton.TryGetComponent(out Button btn))
             btn.interactable = true;
@@ -125,6 +125,7 @@ public class DolabActivator : MonoBehaviour
      if (AllButton) AllButton.SetActive(true);
         if (ButtonToHide) ButtonToHide.SetActive(true);
         if (DrawerButton) DrawerButton.SetActive(false);
+
         doorPlayedOnce = false;
         if (playDolabAnimationButton && playDolabAnimationButton.TryGetComponent(out Button btn))
             btn.interactable = true;
@@ -141,6 +142,7 @@ public class DolabActivator : MonoBehaviour
         if (DolabCamera) DolabCamera.SetActive(true);
         if (closeButton) closeButton.SetActive(true);
         if (Dolab) Dolab.SetActive(false);
+     
 
         if (intPanel) intPanel.Restart();
     }

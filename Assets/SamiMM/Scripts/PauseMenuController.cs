@@ -5,11 +5,14 @@ public class PauseMenuController : MonoBehaviour
 {
 	[SerializeField] private KeyCode pauseKey;
 	[SerializeField] private GameObject pauseParent;
-	[SerializeField] private GameObject PoliceStationCanvas;
+	
 	[Space(15)]
 
 	[SerializeField] private GameObject settingsPanel;
 	[SerializeField] private GameObject pauseButton;
+	[SerializeField] private GameObject TutoralButton;
+	[SerializeField] private GameObject ThreadButton;
+	[SerializeField] private GameObject InventoryButton;
 
 	private MenuController menuController;
 
@@ -29,19 +32,27 @@ public class PauseMenuController : MonoBehaviour
 			Resume();
 	}
 	public void Pause()
-{
-    if (PoliceStationCanvas) PoliceStationCanvas.SetActive(false);
-    if (pauseParent)         pauseParent.SetActive(true);
-    if (settingsPanel)       settingsPanel.SetActive(false);
-    if (pauseButton)         pauseButton.SetActive(false);
-}
+	{
+		if (pauseParent) pauseParent.SetActive(true);
+		if (settingsPanel) settingsPanel.SetActive(false);
+		if (pauseButton) pauseButton.SetActive(false);
+		if (TutoralButton) TutoralButton.SetActive(false);
+		if (ThreadButton) ThreadButton.SetActive(false);
 
-public void Resume()
-{
-    if (PoliceStationCanvas) PoliceStationCanvas.SetActive(true);
-	if (pauseParent)         pauseParent.SetActive(true);
-    if (pauseButton) pauseButton.SetActive(true);
-    if (pauseParent)         pauseParent.SetActive(false);
+		if (InventoryButton) InventoryButton.SetActive(false);
+
+
+	}
+
+	public void Resume()
+	{
+		if (pauseParent) pauseParent.SetActive(true);
+		if (pauseButton) pauseButton.SetActive(true);
+		if (pauseParent) pauseParent.SetActive(false);
+		if (TutoralButton) TutoralButton.SetActive(true);
+		if (ThreadButton) ThreadButton.SetActive(true);
+		if (InventoryButton) InventoryButton.SetActive(true);
+
 }
 
 	// public void Pause()
