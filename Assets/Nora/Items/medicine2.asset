@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: medicine2
   itemButton: {fileID: 2183578426569024684, guid: 41e88db333991034db602dc7d5f0752d, type: 3}
-  itemType: 3
+  itemType: 0
+  itemType2: 0
+  shouldDisappearOnPickup: 1
   itemDescription: 
   requiredItemA: {fileID: 0}
   requiredItemB: {fileID: 0}

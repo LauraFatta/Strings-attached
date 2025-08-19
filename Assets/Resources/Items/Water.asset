@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Water
   itemButton: {fileID: 2183578426569024684, guid: 528397fee630c42418814eb5927dcc4d, type: 3}
-  itemType: 3
+  itemType: 0
+  itemType2: 0
+  shouldDisappearOnPickup: 1
   itemDescription: 
   requiredItemA: {fileID: 0}
   requiredItemB: {fileID: 0}
   requiredItemC: {fileID: 0}
-  clueTag: 
