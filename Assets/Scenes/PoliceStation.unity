@@ -21281,7 +21281,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1442954676}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8622545486755537190}
+        m_TargetAssemblyTypeName: ClueVerifier, Assembly-CSharp
+        m_MethodName: Win
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1442954676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41418,6 +41430,7 @@ MonoBehaviour:
   - {fileID: 5069525799400998414}
   resultText: {fileID: 4337523239890904232}
   successPanel: {fileID: 1407432604}
+  WinUI: {fileID: 27897092}
 --- !u!1 &8690974571586621680
 GameObject:
   m_ObjectHideFlags: 0

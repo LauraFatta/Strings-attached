@@ -15,6 +15,8 @@ public class ClueVerifier : MonoBehaviour
     private Dictionary<DropZone2D, bool> lastVerificationResults = new Dictionary<DropZone2D, bool>();
     private Coroutine hideTextRoutine;
 
+    public GameObject WinUI;
+
     public void VerifyClues()
     {
         int wrongCount = 0;
@@ -83,5 +85,11 @@ public class ClueVerifier : MonoBehaviour
 
         if (resultText != null)
             resultText.gameObject.SetActive(false);
+    }
+
+    public void Win()
+    {
+        WinUI.SetActive(true);
+
     }
 }
