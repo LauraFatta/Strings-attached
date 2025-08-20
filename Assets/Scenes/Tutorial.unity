@@ -1166,6 +1166,7 @@ GameObject:
   - component: {fileID: 282113030}
   - component: {fileID: 282113032}
   - component: {fileID: 282113031}
+  - component: {fileID: 282113033}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1233,6 +1234,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282113029}
   m_CullTransparentMesh: 1
+--- !u!114 &282113033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282113029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e30537439b9d3b429b2c2b15e42b771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textUI: {fileID: 528971410}
+  fullText: '   Shamaan,
+
+    you made it to the police station!'
+  typingSpeed: 0.1
 --- !u!1 &319817812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,6 +3267,8 @@ MonoBehaviour:
   nextKey: 275
   previousKey: 276
   skipKey: 115
+  fadeDuration: 0.35
+  useUnscaledTime: 1
 --- !u!4 &668459393
 Transform:
   m_ObjectHideFlags: 0
