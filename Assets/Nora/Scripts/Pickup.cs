@@ -31,8 +31,39 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
         inventory = FindObjectOfType<Inventory>();
         objectRenderer = GetComponent<Renderer>();
         objectImage = GetComponent<Image>();
-    }
+	}
+    public void Clone()
+    {
+		TextMeshProUGUI tmp = GetComponent<TextMeshProUGUI>();
+		if (tmp == null)
+			tmp = GetComponentInChildren<TextMeshProUGUI>();
 
+		if (tmp != null)
+		{
+			// Duplicate the GameObject containing the TMP
+			GameObject clone = Instantiate(tmp.gameObject, tmp.transform.position, tmp.transform.rotation, tmp.transform.parent);
+
+			// Remove ALL other components except Transform + TextMeshProUGUI
+			foreach (var comp in clone.GetComponents<Component>())
+			{
+				if (!(comp is Transform) && !(comp is TextMeshProUGUI) && !(comp is CanvasRenderer))
+				{
+					DestroyImmediate(comp);
+				}
+			}
+
+			// Optionally: also remove children (if you want ONLY the text object)
+			for (int i = clone.transform.childCount - 1; i >= 0; i--)
+			{
+				DestroyImmediate(clone.transform.GetChild(i).gameObject);
+			}
+
+			// Make sure the clone does not block clicks/raycast
+			var cloneTMP = clone.GetComponent<TextMeshProUGUI>();
+			if (cloneTMP != null)
+				cloneTMP.raycastTarget = false;
+		}
+	}
     public static bool HasAnyMarked()
     {
         foreach (Pickup p in activePickups)
@@ -97,21 +128,36 @@ public class Pickup : MonoBehaviour, IPointerDownHandler
             if (SaveSystem.instance != null)
                 SaveSystem.instance.MarkItemCollected(gameItem);
 
-            // Check if the item should disappear on pickup
-            if (gameItem.shouldDisappearOnPickup)
-            {
-                var pref = Resources.Load<GameObject>("Prefabs/sns/PickupAnimator");
+			Canvas parentCanvas = GetComponentInParent<Canvas>();
+
+			// Check if the item should disappear on pickup
+			
+                GameObject pref;
+
+                if (parentCanvas != null)
+					pref = Resources.Load<GameObject>("Prefabs/sns/PickupAnimatorUI");
+                else
+                    pref = Resources.Load<GameObject>("Prefabs/sns/PickupAnimator");
+
                 if (pref != null)
                 {
+                    var savedScale = transform.localScale;
+
                     var animatorObj = Instantiate(pref, transform.position, Quaternion.identity);
-                    transform.SetParent(animatorObj.transform);
-                    Destroy(this);
+					transform.SetParent(animatorObj.transform);
+
+					if (parentCanvas != null)
+                    {
+						animatorObj.transform.SetParent(parentCanvas.transform);
+                        transform.localScale = savedScale;
+					}
+
+					Destroy(this);
                 }
                 else
                 {
                     Destroy(gameObject);
                 }
-            }
         }
 
     }

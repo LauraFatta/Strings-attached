@@ -54,6 +54,7 @@ public class SaveData
     public List<string> discoveredClueIds = new List<string>();
     public Dictionary<string, bool> puzzleStates = new Dictionary<string, bool>();
     public List<ScenePickupData> pickupsByScene = new List<ScenePickupData>();
+    public bool tutorialHasPlayed;
 }
 
 [Serializable]

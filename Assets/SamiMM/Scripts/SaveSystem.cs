@@ -31,9 +31,36 @@ public class SaveSystem : MonoBehaviour
 	private void Start()
 	{
 		// Inventory depends on scene objects�delay one frame
+
+		var all = FindObjectsByType<Pickup>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+		foreach (var t in all)
+		{
+			t.Clone();
+		}
+
 		Invoke(nameof(LoadInventory), 0.1f);
 	}
+	private void LoadTutorial()
+	{
+		// Robust cross-version way to find inactive TutorialManager instances
+		TutorialManager t = FindFirstObjectByType<TutorialManager>(FindObjectsInactive.Include);
 
+		if (t != null)
+		{
+			if (saveData == null) saveData = new SaveData();
+			if (saveData.tutorialHasPlayed)
+			{
+				t.gameObject.SetActive(false);
+				return;
+			}
+
+			// Your original behaviour: mark as played immediately and deactivate
+			saveData.tutorialHasPlayed = true;
+			t.gameObject.SetActive(true);
+
+			SaveManager.SaveGame(saveData);
+		}
+	}
 	private void LoadInventory()
 	{
 		inventory = FindFirstObjectByType<Inventory>();
@@ -54,7 +81,19 @@ public class SaveSystem : MonoBehaviour
 
 	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
-		// Remove pickups already collected in this scene, after one frame
+		// Run our delayed init so scene objects (including inactive) are present.
+		StartCoroutine(DelayedSceneInit());
+	}
+
+	private IEnumerator DelayedSceneInit()
+	{
+		// wait one frame so scene hierarchy (including inactive objects) is fully available
+		yield return null;
+
+		// load/handle tutorial according to existing logic
+		LoadTutorial();
+
+		// then remove collected pickups in scene (keeps original flow)
 		StartCoroutine(DelayedRemovePickups());
 	}
 
@@ -72,11 +111,11 @@ public class SaveSystem : MonoBehaviour
 	public void MarkItemCollected(GameItem item)
 	{
 		if (saveData == null) saveData = new SaveData();
-    
+
 		// Find inventory if not already found
 		if (inventory == null)
 			inventory = FindFirstObjectByType<Inventory>();
-        
+
 		if (inventory == null)
 		{
 			Debug.LogError("[SaveSystem] No Inventory found in scene!");

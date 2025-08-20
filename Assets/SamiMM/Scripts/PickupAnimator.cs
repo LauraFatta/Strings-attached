@@ -27,7 +27,11 @@ public class PickupAnimator : MonoBehaviour
         // initial "pop" animation, then delay
         yield return new WaitForSeconds(.8f);
         anim.SetTrigger("Float");
-        var endPos = UIHelper.GetWorldPositionOfOverlayUI(FindInventoryButton(), Camera.main);
+        Vector3 endPos;
+        if (GetComponentInParent<RectTransform>())
+            endPos = FindInventoryButton().position;
+        else
+            endPos = UIHelper.GetWorldPositionOfOverlayUI(FindInventoryButton(), Camera.main);
         Vector3 startPos = transform.position;
         float elapsed = 0f;
         isScalingDown = true;
