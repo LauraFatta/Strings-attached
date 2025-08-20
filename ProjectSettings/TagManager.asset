@@ -9,6 +9,8 @@ TagManager:
   - RedClue
   - InventoryContent
   - NotebookClueContainer
+  - InventoryPanel
+  - ItemCountText
   layers:
   - Default
   - TransparentFX

@@ -10502,7 +10502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4074014301204437329, guid: b0ff581ef74cf9c40ab224035b8320a8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -14.599976
+      value: -14.5997925
       objectReference: {fileID: 0}
     - target: {fileID: 4614107434805279552, guid: b0ff581ef74cf9c40ab224035b8320a8, type: 3}
       propertyPath: m_AnchorMax.x
@@ -14347,6 +14347,7 @@ MonoBehaviour:
   - {fileID: 1702257974}
   - {fileID: 2071931390}
   - {fileID: 1645651841}
+  nextSceneName: PoliceStation
   nextKey: 275
   previousKey: 276
   skipKey: 115
@@ -20931,7 +20932,6 @@ GameObject:
   - component: {fileID: 1061953534}
   - component: {fileID: 1061953537}
   - component: {fileID: 1061953538}
-  - component: {fileID: 1061953539}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -21094,22 +21094,6 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
---- !u!114 &1061953539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061953533}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EventMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_MaxRayIntersections: 0
 --- !u!1 &1070603686
 GameObject:
   m_ObjectHideFlags: 0
@@ -24345,10 +24329,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   inventoryContentParent: {fileID: 0}
-  allCompositeItems:
-  - {fileID: 11400000, guid: f3f88410c6e0c0444beadcfdb2e00bc9, type: 2}
-  - {fileID: 11400000, guid: 30b21382cee5fa44aad6963f3f2c602e, type: 2}
-  - {fileID: 11400000, guid: f42db373e800496449d0d82af1fd5f34, type: 2}
+  allCompositeItems: []
 --- !u!4 &1278896292
 Transform:
   m_ObjectHideFlags: 0
@@ -48976,7 +48957,7 @@ GameObject:
   - component: {fileID: 4078510535355338364}
   m_Layer: 5
   m_Name: Inventory Panel
-  m_TagString: Untagged
+  m_TagString: InventoryPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49244,7 +49225,7 @@ GameObject:
   - component: {fileID: 7913904507151414211}
   m_Layer: 5
   m_Name: Total
-  m_TagString: Untagged
+  m_TagString: ItemCountText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

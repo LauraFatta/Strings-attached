@@ -13,7 +13,7 @@ public class GameItemEditor : Editor
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("itemName"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("itemButton"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("shouldDisappearOnPickup"));
+        // EditorGUILayout.PropertyField(serializedObject.FindProperty("shouldDisappearOnPickup"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("itemType"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("itemDescription"));
         //Laura's Edit 

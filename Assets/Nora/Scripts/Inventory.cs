@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
             
         }
         else

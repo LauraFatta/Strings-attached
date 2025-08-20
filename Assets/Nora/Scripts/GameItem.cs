@@ -25,6 +25,7 @@ public class GameItem : ScriptableObject
     public ItemType itemType;
     //Laura's Edit
     public ItemType itemType2;
+    // public bool shouldDisappearOnPickup = true;
 
     
     [TextArea(3, 2)]

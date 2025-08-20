@@ -16,7 +16,7 @@ MonoBehaviour:
   itemButton: {fileID: 3567406695824383920, guid: 4939ad3dac7d71841a81010c9b115dc8, type: 3}
   itemType: 4
   itemType2: 4
-  shouldDisappearOnPickup: 1
+  shouldDisappearOnPickup: 0
   itemDescription: 
   requiredItemA: {fileID: 0}
   requiredItemB: {fileID: 0}
