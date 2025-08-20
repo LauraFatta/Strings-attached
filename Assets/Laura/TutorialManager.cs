@@ -204,10 +204,10 @@ public class TutorialManager : MonoBehaviour
     private int currentPanelIndex = 0;
     private bool canNavigate = true;
 
-    void Start()
-    {
-        InitializeTutorial();
-    }
+    // void Start()
+    // {
+    //     InitializeTutorial();
+    // }
 
     void Update()
     {
@@ -350,11 +350,6 @@ public class TutorialManager : MonoBehaviour
         canNavigate = true;
     }
 
-    void LoadNextScene()
-    {
-        canNavigate = false;
-        StartCoroutine(LoadSceneWithDelay());
-    }
 
     IEnumerator LoadSceneWithDelay()
     {
