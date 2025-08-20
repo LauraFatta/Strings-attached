@@ -6,7 +6,7 @@ public class AutoHidePanel : MonoBehaviour
     [SerializeField] float showTime = 2f;
     [SerializeField] float popDuration = 0.15f;
     [SerializeField] float fadeOutDuration = 0.25f;
-    [SerializeField] float popScaleFrom = 0.88f;   // بداية البوب
+    [SerializeField] float popScaleFrom = 0.88f;   
     [SerializeField] bool  useUnscaledTime = true;
 
     CanvasGroup cg;
@@ -46,11 +46,11 @@ public class AutoHidePanel : MonoBehaviour
         {
             t += Delta();
             float k = Mathf.Clamp01(t / popDuration);
-            float e = OutBack(k); // 0..1 مع أوفَرشوت بسيط
+            float e = OutBack(k); 
             cg.alpha = k;
             if (rt)
             {
-                float s = popScaleFrom + (1f - popScaleFrom) * e; // يوصل لـ>1 ثم يرجع 1
+                float s = popScaleFrom + (1f - popScaleFrom) * e; 
                 rt.localScale = baseScale * s;
             }
             yield return null;
@@ -68,15 +68,14 @@ public class AutoHidePanel : MonoBehaviour
             t += Delta();
             float k = Mathf.Clamp01(t / fadeOutDuration);
             cg.alpha = 1f - k;
-            if (k >= 0.6f) cg.blocksRaycasts = false; // يسمح بالكلكات خلفه بدري
-            if (rt) rt.localScale = baseScale * (1f - 0.02f * k); // لمسة تصغير خفيفة
+            if (k >= 0.6f) cg.blocksRaycasts = false; 
+            if (rt) rt.localScale = baseScale * (1f - 0.02f * k); 
             yield return null;
         }
         cg.alpha = 0f; cg.blocksRaycasts = false; cg.interactable = false;
         co = null;
     }
 
-    // API سريع لو تبغي تعيدي تشغيله يدويًا
     public void Restart(float newShowTime = -1f)
     {
         if (newShowTime >= 0f) showTime = newShowTime;

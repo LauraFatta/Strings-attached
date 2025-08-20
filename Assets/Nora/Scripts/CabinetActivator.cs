@@ -53,6 +53,8 @@ public class DrawerActivator : MonoBehaviour
     [SerializeField] private GameObject EvidencesBook3;
     [SerializeField] private GameObject EvidencesBook4;
     [SerializeField] private GameObject EvidencesBook5;
+    [SerializeField] private GameObject EvidencesBook6;
+
 
     [Header("Case Roster Files)")]
     [SerializeField] private GameObject CaseRosterBook;
@@ -193,29 +195,35 @@ public class DrawerActivator : MonoBehaviour
 
 
     //--------------Second Book Arrows-----------------
-    public void nextEvidenceFileBook()
+    public void nextEvidenceFileBook2()
     {
         if (EvidencesBook2) EvidencesBook2.SetActive(true);
         if (EvidencesBook) EvidencesBook.SetActive(false);
     }
 
-    public void nextEvidenceFileBook2()
+    public void nextEvidenceFileBook3()
     {
         if (EvidencesBook3) EvidencesBook3.SetActive(true);
         if (EvidencesBook2) EvidencesBook2.SetActive(false);
     }
-    public void nextEvidenceFileBook3()
+    public void nextEvidenceFileBook4()
     {
         if (EvidencesBook4) EvidencesBook4.SetActive(true);
         if (EvidencesBook3) EvidencesBook3.SetActive(false);
     }
-    public void nextEvidenceFileBook4()
+    public void nextEvidenceFileBook5()
     {
         if (EvidencesBook5) EvidencesBook5.SetActive(true);
         if (EvidencesBook4) EvidencesBook4.SetActive(false);
     }
 
-    public void previousEvidenceFileBook()
+   public void nextEvidenceFileBook6()
+   {
+       if (EvidencesBook6) EvidencesBook6.SetActive(true);
+       if (EvidencesBook5) EvidencesBook5.SetActive(false);
+   }
+    
+    public void previousEvidenceFileBook1()
     {
         if (EvidencesBook) EvidencesBook.SetActive(true);
         if (EvidencesBook2) EvidencesBook2.SetActive(false);
@@ -236,6 +244,12 @@ public class DrawerActivator : MonoBehaviour
     {
         if (EvidencesBook4) EvidencesBook4.SetActive(true);
         if (EvidencesBook5) EvidencesBook5.SetActive(false);
+    }
+
+    public void previousEvidenceFileBook5()
+    {
+        if (EvidencesBook5) EvidencesBook5.SetActive(true);
+        if (EvidencesBook6) EvidencesBook6.SetActive(false);
     }
     //--------------Third Book Arrows-----------------
     public void nextToSuspectsCategory()
@@ -281,6 +295,7 @@ public class DrawerActivator : MonoBehaviour
         EvidencesBook3.SetActive(false);
         EvidencesBook4.SetActive(false);
         EvidencesBook5.SetActive(false);
+        EvidencesBook6.SetActive(false);
         CaseRosterBook.SetActive(false);
         CaseRosterBook2.SetActive(false);
         CaseRosterBook3.SetActive(false);
