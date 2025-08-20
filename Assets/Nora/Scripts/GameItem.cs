@@ -8,11 +8,7 @@ public enum ItemType
     ComponentOnly,
     locations,
 }
-// public enum Disappear
-// {
-//     Disappear,
-//     Stay
-// }
+
 
 
 

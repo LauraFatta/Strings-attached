@@ -14,19 +14,7 @@ public class Inventory : MonoBehaviour
     private List<GameItem> tempComponents = new List<GameItem>();
     public GameItem[] allCompositeItems;
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+   
 
     private void Start()
     {

@@ -10502,7 +10502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4074014301204437329, guid: b0ff581ef74cf9c40ab224035b8320a8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -14.5997925
+      value: -14.5998535
       objectReference: {fileID: 0}
     - target: {fileID: 4614107434805279552, guid: b0ff581ef74cf9c40ab224035b8320a8, type: 3}
       propertyPath: m_AnchorMax.x
@@ -14820,6 +14820,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1169591736767406951, guid: cd93d7655957a7049b2d08fce94d4e24, type: 3}
+      propertyPath: dontOverrideScene
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2759109593156072288, guid: cd93d7655957a7049b2d08fce94d4e24, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

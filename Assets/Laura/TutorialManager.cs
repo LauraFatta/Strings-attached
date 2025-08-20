@@ -281,14 +281,16 @@ public class TutorialManager : MonoBehaviour
 
     public void SkipTutorial()
     {
-        Debug.Log("Tutorial skipped");
-        LoadNextScene();
+        // Debug.Log("Tutorial skipped");
+        // LoadNextScene();
+        gameObject.SetActive(false); 
     }
 
     public void FinishTutorial()
     {
-        Debug.Log("Tutorial completed");
-        LoadNextScene();
+        // Debug.Log("Tutorial completed");
+        // LoadNextScene();
+        gameObject.SetActive(false); 
     }
 
     IEnumerator SwitchPanel(int newPanelIndex)
