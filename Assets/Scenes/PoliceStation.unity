@@ -26441,7 +26441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 7489389646538291648}
   itemCountText: {fileID: 7913904507151414211}
-  totalItems: 27
+  totalItems: 26
   notebookClueContainer: {fileID: 8544044111083999420}
   notebookCluePrefabRed: {fileID: 2847915620202928803, guid: b8f427f1404e8104688e6a298ba7c83a, type: 3}
   notebookCluePrefabBlue: {fileID: 2847915620202928803, guid: 336289bad7174f848bd1904b5cfd377d, type: 3}
@@ -26460,7 +26460,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -46682,7 +46681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 408, y: -950}
+  m_AnchoredPosition: {x: 319, y: -950}
   m_SizeDelta: {x: 133.8273, y: 119.9387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2471211930096867900
@@ -49390,7 +49389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 233
+    m_Left: 208
     m_Right: 0
     m_Top: 10
     m_Bottom: 0
@@ -49997,7 +49996,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 1, y: 102}
-  m_SizeDelta: {x: 1518.1721, y: 171.1098}
+  m_SizeDelta: {x: 1720.6, y: 171.1098}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5892807233362616352
 MonoBehaviour:
@@ -52360,8 +52359,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 88, y: 126.532166}
-  m_SizeDelta: {x: 1667.2561, y: 193.9357}
+  m_AnchoredPosition: {x: 109, y: 126.532166}
+  m_SizeDelta: {x: 1812, y: 191.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8208717502757977716
 MonoBehaviour:
