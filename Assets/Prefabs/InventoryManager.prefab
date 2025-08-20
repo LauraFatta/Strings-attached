@@ -65,11 +65,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   inventoryContentParent: {fileID: 0}
-  allCompositeItems:
-  - {fileID: 11400000, guid: f3f88410c6e0c0444beadcfdb2e00bc9, type: 2}
-  - {fileID: 11400000, guid: 30b21382cee5fa44aad6963f3f2c602e, type: 2}
-  - {fileID: 11400000, guid: f42db373e800496449d0d82af1fd5f34, type: 2}
+  allCompositeItems: []
 --- !u!114 &6054384979977914422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 0}
   itemCountText: {fileID: 0}
-  totalItems: 19
+  totalItems: 27
   notebookClueContainer: {fileID: 0}
   notebookCluePrefabRed: {fileID: 2847915620202928803, guid: b8f427f1404e8104688e6a298ba7c83a, type: 3}
   notebookCluePrefabBlue: {fileID: 2847915620202928803, guid: 336289bad7174f848bd1904b5cfd377d, type: 3}
