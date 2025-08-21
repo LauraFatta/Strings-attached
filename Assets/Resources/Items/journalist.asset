@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c7507428b3eeb4a921d48b9596a86a, type: 3}
   m_Name: journalist
   m_EditorClassIdentifier: 
-  itemName: 'Journalist '
+  itemName: Journalist
   itemButton: {fileID: 3022212704876593045, guid: 7687e6fcbb5f87f4ea6ba643a972c0d0, type: 3}
   itemType: 1
   itemType2: 1
-  shouldDisappearOnPickup: 0
   itemDescription: 
   requiredItemA: {fileID: 0}
   requiredItemB: {fileID: 0}
