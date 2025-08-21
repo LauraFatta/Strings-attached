@@ -24,6 +24,7 @@ public class TutorialManager : MonoBehaviour
     private bool canNavigate = true;
 
 
+    
     void Update()
     {
         if (!canNavigate) return;
