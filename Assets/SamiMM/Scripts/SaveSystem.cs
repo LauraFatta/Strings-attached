@@ -204,7 +204,7 @@ public class SaveSystem : MonoBehaviour
 {
 	public static SaveSystem instance;
 	private Inventory inventory;
-	private SaveData saveData;
+	public SaveData saveData;
 
 	public bool dontOverrideScene;
 
@@ -251,11 +251,8 @@ public class SaveSystem : MonoBehaviour
 				return;
 			}
 
-			// Your original behaviour: mark as played immediately and deactivate
-			saveData.tutorialHasPlayed = true;
 			t.gameObject.SetActive(true);
 
-			SaveManager.SaveGame(saveData);
 		}
 	}
 	private void LoadInventory()

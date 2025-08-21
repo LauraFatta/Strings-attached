@@ -225,7 +225,10 @@ public class TutorialManager : MonoBehaviour
         if (!canNavigate) return;
         HandleInput();
     }
-
+    void Start()
+    {
+        InitializeTutorial();
+    }
     void InitializeTutorial()
     {
         foreach (GameObject panel in tutorialPanels)
@@ -291,15 +294,25 @@ public class TutorialManager : MonoBehaviour
 
     public void SkipTutorial()
     {
-        // Debug.Log("Tutorial skipped");
-        // LoadNextScene();
+        // ADD THESE 4 LINES:
+        if (SaveSystem.instance != null)
+        {
+            SaveSystem.instance.saveData.tutorialHasPlayed = true;
+            SaveManager.SaveGame(SaveSystem.instance.saveData);
+        }
+    
         gameObject.SetActive(false); 
     }
 
     public void FinishTutorial()
     {
-        // Debug.Log("Tutorial completed");
-        // LoadNextScene();
+        // ADD THESE 4 LINES:
+        if (SaveSystem.instance != null)
+        {
+            SaveSystem.instance.saveData.tutorialHasPlayed = true;
+            SaveManager.SaveGame(SaveSystem.instance.saveData);
+        }
+    
         gameObject.SetActive(false); 
     }
 
