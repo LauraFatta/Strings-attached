@@ -1,9 +1,9 @@
 using UnityEngine;
-using TMPro; 
+using TMPro;
 
 public class ItemButtonText : MonoBehaviour
 {
-    public TextMeshProUGUI itemNameText; 
+    public TextMeshProUGUI itemNameText;
 
     public void SetItemName(string name)
     {
@@ -13,3 +13,4 @@ public class ItemButtonText : MonoBehaviour
         }
     }
 }
+

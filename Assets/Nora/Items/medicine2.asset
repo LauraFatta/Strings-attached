@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c7507428b3eeb4a921d48b9596a86a, type: 3}
+  m_Name: medicine2
+  m_EditorClassIdentifier: 
+  itemName: medicine2
+  itemButton: {fileID: 2183578426569024684, guid: 41e88db333991034db602dc7d5f0752d, type: 3}
+  itemType: 0
+  itemType2: 0
+  shouldDisappearOnPickup: 1
+  itemDescription: 
+  requiredItemA: {fileID: 0}
+  requiredItemB: {fileID: 0}
+  requiredItemC: {fileID: 0}

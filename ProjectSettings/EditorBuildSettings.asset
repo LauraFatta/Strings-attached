@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Sami/Scenes/MainMenu.unity
-    guid: c5d207e6474914b4988639513fbe8128
+    path: Assets/Scenes/Menu_Main.unity
+    guid: 45f7b4bfe74342e4b8b45b9dc82d4732
   - enabled: 1
-    path: Assets/Sami/Scenes/Level Selection.unity
-    guid: 97568d843edde1f4c9011f208f6e277d
+    path: Assets/Scenes/Tutorial.unity
+    guid: 21aa17c038a76ba4ea4f3648e8cdc3f5
   - enabled: 1
-    path: Assets/Nora/Nora's.unity
-    guid: 42b2f1da90d3d244c8df61dee41cd3d4
+    path: Assets/Scenes/PoliceStation.unity
+    guid: d713ecbef33207e43bf57955092c9e2b
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/PastScene.unity
+    guid: 2105cee68a7e8d64a80ffbdc34d5bc65
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
